@@ -1,0 +1,97 @@
+footer{
+	margin-top: 30px;
+	border-top: 1px solid #cfcfcf;
+	.content{
+		padding: 35px 0 0 0;
+	}
+	.cms_list{
+		dl{
+			width: 268px;
+			float: left;
+			margin: 0;
+			dt{
+				font-size: 14px;
+				font-weight: 700;
+			}
+			dd{
+				padding-top: 10px;
+			}
+		}
+	}
+	.social{
+		margin-bottom: 16px;
+		li{
+			float: left;
+			margin-right: 21px;
+			i{
+				font-size: 44px;
+				color: #808080;
+			}
+			&:hover{
+				i{
+					color: #e73620;
+				}
+			}
+		}
+		li:last-child{
+			margin-right: 0;
+		}
+	}
+	#newsletter{
+		width: 369px;
+		div{
+			height: 41px;
+			background-color: #e73620;
+			border-radius: 1px;
+		}
+		input{
+			height: 100%;
+			width: 247px;
+			height: 39px;
+			line-height: 39px;
+			border:none;
+			padding: 0;
+			margin: 1px 0 0 1px;
+			padding-left: 15px;
+			outline: none;
+		}
+		button{
+			width: 102px;
+			height: 41px;
+			font-size: 18px;
+			color: #fff;
+			display: block;
+			float: right;
+			line-height: 41px;
+			text-align: center;
+			border: none;
+			background-color: #e73620;
+		}
+	}
+	.qIndex{
+		width: 100%;
+		float: left;
+		text-align: center;
+		margin-top: 50px;
+		ul{
+			display: inline;
+			li{
+				display: inline-block;
+				margin-left: 10px;
+			}
+		}
+	}
+	.friendlyImg{
+		width: 100%;
+		float: left;
+		text-align: center;
+		img{
+			display: inline-block;
+		}
+	}
+	.copyright{
+		width: 100%;
+		float: left;
+		text-align: center;
+	}
+}

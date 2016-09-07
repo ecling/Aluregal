@@ -1,0 +1,66 @@
+.progress{
+	height: 150px;
+	width: 100%;
+	position:relative;
+	img{
+		margin:30px auto 0;
+	}
+	.Shopping{
+		margin: 0 auto;
+		li{
+			margin-top:5px;
+			width: 200px;
+			float: left;
+			text-align:center;
+			position:relative;
+			word-break: normal; 
+		}
+		.bag{
+			left:130px;
+		}
+		.PlaceOrder{
+			left:176px;
+		}
+		.pay{
+			left:224px;
+		}
+		.orderComplete{
+			left:272px;
+		}
+	}
+	.colored{
+		height: 20px;
+		position:absolute;
+		top:35px;
+		left: 229px;
+		li{
+			float: left;
+			margin-left: -1px;
+			.span1{
+				width:7px;
+				height:12px;
+				border-radius:12px 0 0 12px  ;
+				display: block;
+				float: left;
+				background:#f39c11;
+			}
+			.span2{
+				width:7px;
+				height:12px;
+				border-radius:0 12px 12px 0;
+				display: block;
+				float: left;
+				background:#f39c11;
+			}
+			i{
+				width:234px;
+				height:3px;
+				background:#f39c11;
+				line-height: 3px;
+				display: block;
+				float: left;
+				margin-top:5px;
+			}
+		}
+	}
+}

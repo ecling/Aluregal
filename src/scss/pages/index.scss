@@ -1,0 +1,56 @@
+@import "../help/_helper";
+@import "../base/_normalize";
+@import "../widget/color.scss";
+@import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+.banners{
+	position: relative;
+}
+.banners-img{
+	position: relative;
+	height: 480px;
+	li{
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition:all 1s ease-in-out;
+	}
+}
+.banners-tab{
+	a{
+		font-size: 50px;
+	}
+}
+.banners-index{
+	width:6*24px;
+	position: absolute;
+	top:440px;
+	left:530px;
+	li{
+		float: left;
+		width: 18px;
+		height: 18px;
+		border:1px solid green;
+		border-radius: 50%;
+		margin-right: 6px;
+		cursor: pointer;
+		&.active{
+			border-color:#333;
+			span{
+				opacity: 1;
+				filter:alpha(opacity=100);
+			}
+		}
+		span{
+			opacity: 0;
+			filter:alpha(opacity=0);
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: black;
+			border-radius: 50%;
+			margin:3px;
+		}
+	}
+}

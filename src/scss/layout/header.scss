@@ -1,0 +1,63 @@
+header{
+	margin: 10px auto;
+	.logo{
+		width: 50%;
+	}
+	.my-orders{
+		width: 50%;
+	}
+	.my-account{
+		li{
+			float: left;
+			padding: 5px 10px;
+			border-right:1px solid #cfcfcf;
+			.title,
+			a{
+				color:#626262;
+				font-size: 14px;
+			}
+		}		
+	}
+	.my-bag{
+		font-family: "Segoe UI";
+		font-size: 16px;
+	}
+	.search-input{
+		width: 405px;
+		height: 35px;
+		border: 1px solid #666;
+		padding-left: 10px;
+		.input-text{
+			border: none;
+			margin-top: 4px;
+			height: 25px;
+			width: 88%;
+			outline: none;
+		}
+	}
+	.top_nav{
+		margin-top: 50px;
+		border-bottom: 1px dashed #333;
+		position: relative;
+		ul{
+			width:815px;
+			position: absolute;
+			top:-30px;
+			left:330px;	
+		}
+		li{
+			float: left;
+			margin-right: 60px;
+			font-size: 16px;
+			font-family: "Cambria";
+			padding-bottom: 13px;
+			border-bottom: 3px solid transparent;
+			&:hover{
+				border-bottom: 3px solid red;
+				a{
+					color:red;
+				}
+			}
+		}
+	}
+}

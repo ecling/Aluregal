@@ -1,0 +1,232 @@
+html, body, div, span,  object,  h1, h2, h3, h4, h5, h6,
+ p, blockquote, pre, a, address, 
+ dfn, em, img, q, strong, 
+ tt,b, u, i, center, dl, dt, dd, ol, ul, li, form, label,
+table, tbody, tfoot, thead, tr, th, td,
+canvas, footer, header, menu, 
+nav,section,  audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html{
+    font-family: arial, georgia, verdana, simsun, helvetica, sans-serif;
+}
+body { font-size: 12px; line-height: 1; font-family: Arial, Tahoma, sans-serif; color: #333; }
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+select:focus,
+input[typr="password"]:focus,
+input[type="text"]:focus{
+    border:1px solid rgba(82, 168, 236, .7); 
+}
+input[type="radio"]:focus,
+input[type="button"]:focus,
+input[type="checkbox"]:focus{
+    outline: none;
+}
+input[type="text"],
+input[type="password"]{
+    text-indent: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+}
+select:hover,
+input[type="text"]:hover,
+input[type="password"]:hover{
+    box-shadow: 0 0 5px rgba(82, 168, 236, 1);
+    border: 1px solid  rgba(82, 168, 236, 1);
+}
+a:hover,i:hover,span:hover,select:hover,
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="submit"]:hover{
+    transition:all .3s ease;
+    -o-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+}
+
+select::-ms-expand { display: none; };
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+
+img{
+	display: block;
+    border:0;
+}
+li{
+	list-style: none;
+}
+button{
+	cursor: pointer;
+}
+.w1200{
+	margin: 0 auto;
+	width: 1200px;
+}
+.mt6{
+	margin-top: 6px;	
+}
+.mt30{
+	margin-top: 30px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+ul:after,.clearfix:after{
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.wrap{
+	.left{
+		width: 250px;
+	}
+	.right{
+		width: 916px;
+	}
+}
+
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes bounceOut {
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    50%, 55% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
+.error {
+    color: $red;
+    font-style: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+button.disabled,a.disabled {
+    cursor: not-allowed!important;
+    background: #ADABA8!important;
+    &:hover {
+        background: #ADABA8!important;
+    }
+}
+input.error, textarea.error ,select.error{
+    border: 1px solid $red !important;
+}
+
+.messages {
+    span {
+        display: block;
+        font-size: pxToRem(14px);
+        margin: 10px;
+        padding: 0px 10px;
+    }
+}
+
+.success-msg {
+    span {
+        color: $green;
+    }
+}
+
+.error-msg {
+    span {
+        color: $red;
+    }
+}
+
+.notice-msg {
+    span {
+        color: $blue;
+    }
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in;
+    opacity: 0.4;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.topBanner{
+    a{
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-width: 1200px;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

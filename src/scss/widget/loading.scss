@@ -1,0 +1,132 @@
+/* loading style css */
+@keyframes square-spin {
+    25% {
+        transform: perspective(100px) rotateX(180deg) rotateY(0);
+    }
+    50% {
+        transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: perspective(100px) rotateX(0) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(100px) rotateX(0) rotateY(0);
+    }
+}
+
+.square-spin > div {
+    animation-fill-mode: both;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+}
+
+.ajax-loading {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes ball-pulse-sync {
+    33% {
+        transform: translateY(10px);
+    }
+    66% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.ball-pulse-sync > div:nth-child(0) {
+    animation: ball-pulse-sync 0.6s -0.21s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(1) {
+    animation: ball-pulse-sync 0.6s -0.14s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(2) {
+    animation: ball-pulse-sync 0.6s -0.07s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div:nth-child(3) {
+    animation: ball-pulse-sync 0.6s 0s infinite ease-in-out;
+}
+
+.ball-pulse-sync > div {
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin: 2px;
+    animation-fill-mode: both;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cssanimations {
+    .popUp {
+        transform-origin: center center;
+        &.active {
+            animation: bounceIn 0.75s forwards;
+        }
+        &.noactive {
+            animation: bounceOut 0.75s both;
+        }
+    }
+}
+
+.popDimmer {
+    position: fixed;
+    display: none;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px;
+    left: 0px;
+    z-index: 12;
+    background: url(../images/alpha.png) repeat;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popUp {
+    background: white;
+    display: none;
+    font-size: pxToRem(14px);
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #ededed;
+    box-sizing: content-box !important;
+    transition:width 0.1s ease,height 0.1s ease;
+    .fa-times-circle {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        cursor: pointer;
+        color: black;
+        font-size: pxToRem(30px);
+        line-height: 1;
+        opacity: 1;
+    }
+}
+
+.popInner {
+    display: inline-block;
+    transition:width 0.1s ease,height 0.1s ease;
+}
+
+
