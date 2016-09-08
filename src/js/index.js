@@ -1,10 +1,20 @@
 jQuery(document).ready(function($) {
+
+	(function(){
+
+	})();
+
+	(function(){
+		
+	})();
+
 	var  $li_list = $(".banners-index li");
 	var  $img_list = $(".banners-img li");
 	var i = $img_list.length;
 	var index = 0;
 	$img_list.hide('slow').eq(0).show('slow');
 	$li_list.on('click', tab);
+	$(".taob").dropDown();
  	function tab(event) {
  		var $index = $(this).index();
 		$img_list.eq($index).show('slow').siblings('li').hide('slow');
