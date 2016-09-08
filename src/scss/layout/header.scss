@@ -1,5 +1,8 @@
 header{
-	margin: 10px auto;
+	margin-bottom: 10px;
+	.tool{
+		padding: 10px 0;
+	}
 	.logo{
 		width: 50%;
 	}
@@ -7,56 +10,122 @@ header{
 		width: 50%;
 	}
 	.my-account{
+		padding-left: 58px;
+		margin-bottom: 20px;
 		li{
 			float: left;
-			padding: 5px 10px;
+			padding:0 10px;
 			border-right:1px solid #cfcfcf;
 			.title,
 			a{
-				color:#626262;
+				color:#808080;
 				font-size: 14px;
 			}
+			span{
+				color:#808080;
+				vertical-align: middle;
+			}
+		}
+		.currency{
+			border-right:none;
+			padding-right:0;
 		}		
 	}
 	.my-bag{
-		font-family: "Segoe UI";
-		font-size: 16px;
+		font-size: 14px;
+		.iconfont{
+			font-size: 22px;
+			margin: 0 15px 0 20px;
+		}
+		.pcs{
+			color:red;
+		}
+	}
+	.big{
+		cursor: pointer;
+		font-size: 25px;
+	}
+	.search{
+		height: 35px;
 	}
 	.search-input{
-		width: 405px;
+		width: 440px;
 		height: 35px;
 		border: 1px solid #666;
 		padding-left: 10px;
+		opacity: 0;
 		.input-text{
 			border: none;
 			margin-top: 4px;
 			height: 25px;
-			width: 88%;
+			width: 91%;
 			outline: none;
+			border-right: 1px solid #cfcfcf;
+		}
+		button{
+			margin-left: 8px;
+			border: none;
+			background: white;
 		}
 	}
-	.top_nav{
-		margin-top: 50px;
+	.top-nav{
+		margin-top: 13px;
 		border-bottom: 1px dashed #333;
-		position: relative;
 		ul{
 			width:815px;
-			position: absolute;
-			top:-30px;
-			left:330px;	
+			margin-left: 330px;
+			margin-bottom: 15px;
+			position: relative;
 		}
 		li{
 			float: left;
 			margin-right: 60px;
-			font-size: 16px;
 			font-family: "Cambria";
-			padding-bottom: 13px;
-			border-bottom: 3px solid transparent;
 			&:hover{
-				border-bottom: 3px solid red;
-				a{
-					color:red;
+				.nav-bar{
+					display: block;
 				}
+			}
+			a{
+				font-size: 16px;
+				padding-bottom: 13px;
+				border-bottom: 3px solid transparent;
+				&:hover{
+					color:red;
+					border-bottom: 3px solid red;
+				}
+			}
+		}
+		.nav-bar{
+			display: none;
+			position: absolute;
+			top:33px;
+			left: -50px;
+			width: 960px;
+			padding: 37px;
+			background: white;
+			z-index: 10;
+			font-family: "Arial";
+			dl{
+				float: left;
+				width: 227px;
+				dt{
+					font-size: 16px;
+				}
+				dd{
+					margin: 8px 0;
+					a{
+						font-size: 12px;
+						&:hover{
+							border: none;
+						}
+					}
+				}
+			}
+			.nav-img{
+				padding-left: 30px;
+				border-left:1px solid #cfcfcf;
+ 				height: 245px;
 			}
 		}
 	}

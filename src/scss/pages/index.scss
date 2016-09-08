@@ -6,6 +6,18 @@
 @import "../layout/footer.scss";
 .banners{
 	position: relative;
+	overflow: hidden;
+	&:hover{
+		.prev{
+			left: 0px;
+		}
+		.next{
+			right:0px;
+		}
+		.banners-index{
+			top:440px;
+		}
+	}
 }
 .banners-img{
 	position: relative;
@@ -17,21 +29,48 @@
 		transition:all 1s ease-in-out;
 	}
 }
+.new-tab,
 .banners-tab{
 	a{
-		font-size: 50px;
+		display: block;
+		width: 50px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		position: absolute;
+		top:50%;
+		margin-top: -50px;
+		transition:all 300ms ease-in-out;
+		span{
+			color:black;
+			font-size: 36px;
+			opacity: 0.5;
+			filter:aplhe(opacity=50);
+		}
+	}
+	.new-prev,
+	.prev{
+		left: -50px;
+	}
+	.new-next,
+	.next{
+		right: -50px;
+	}
+	.new-prev,.new-next{
+		margin-top: -105px;
 	}
 }
 .banners-index{
 	width:6*24px;
 	position: absolute;
-	top:440px;
+	top:490px;
 	left:530px;
+	transition:all 300ms ease-in-out;
 	li{
 		float: left;
 		width: 18px;
 		height: 18px;
-		border:1px solid green;
+		border:1px solid #808080;
 		border-radius: 50%;
 		margin-right: 6px;
 		cursor: pointer;
@@ -51,6 +90,85 @@
 			background: black;
 			border-radius: 50%;
 			margin:3px;
+		}
+	}
+}
+.center{
+	margin: 20px 0;
+	.center-left{
+		width: 600px;
+		height: 500px;
+		background: #d5d1dc;
+	}
+	.right-top{
+		margin-bottom: 20px;
+	}
+	.right-top,.right-bottom{
+		width: 580px;
+		height: 240px;
+		background: #d5d1dc;
+	}
+}
+.home{
+	margin-bottom: 88px;
+	.mgr{
+		margin-right:0;
+	}
+	div{
+		float: left;
+		width: (1160/3)+px;
+		height: 115px;
+		background: #e5e3e8;
+		margin-right:20px;
+	}
+}
+.new-in{
+	border-top: 1px dashed #cfcfcf;
+	padding: 60px 0 107px 0;
+	position: relative;
+	.new-head{
+		position: absolute;
+		top:-58px;
+		left:50%;
+		margin-left: -84px;
+		width: 167px;
+		text-align: center;
+		background: white;
+		h2{
+			font-family: "Cambria";
+			font-size: 30px;
+			margin-bottom: 17px;
+		}
+		a{
+			font-size: 14px;
+			&:hover{
+				color:red;
+			}
+		}
+	}
+	.new-list{
+		overflow: hidden;
+	}
+	ul{
+		position: relative;
+		li{
+			width: 285px;
+			text-align: center;
+			float: left;
+			margin-right: 20px;
+			.biaoti{
+				display: block;
+				width: 205px;
+				overflow: hidden;
+				margin: 15px auto;
+			}
+			.price{
+				font-family: "Cambria";
+				font-size: 22px;
+			}
+			&.mgr{
+				margin-right: 0;
+			}
 		}
 	}
 }

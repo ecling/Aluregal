@@ -1,12 +1,17 @@
 footer{
-	margin-top: 30px;
-	border-top: 1px solid #cfcfcf;
+	border-top: 2px solid #333;
+	padding-bottom: 20px;
+	.newsletter{
+		h2{
+			font-size: 16px;
+		}
+	}
 	.content{
 		padding: 35px 0 0 0;
 	}
 	.cms_list{
 		dl{
-			width: 268px;
+			width: 200px;
 			float: left;
 			margin: 0;
 			dt{
@@ -19,13 +24,13 @@ footer{
 		}
 	}
 	.social{
-		margin-bottom: 16px;
+		margin:10px 0 20px 0;
 		li{
 			float: left;
 			margin-right: 21px;
 			i{
-				font-size: 44px;
-				color: #808080;
+				font-size: 24px;
+				color: #333;
 			}
 			&:hover{
 				i{
@@ -33,22 +38,20 @@ footer{
 				}
 			}
 		}
-		li:last-child{
-			margin-right: 0;
-		}
 	}
 	#newsletter{
-		width: 369px;
+		width: 280px;
 		div{
-			height: 41px;
-			background-color: #e73620;
+			margin-top: 15px;
+			height: 27px;
+			background-color:#000;
 			border-radius: 1px;
 		}
 		input{
 			height: 100%;
-			width: 247px;
-			height: 39px;
-			line-height: 39px;
+			width: 207px;
+			height: 25px;
+			line-height: 25px;
 			border:none;
 			padding: 0;
 			margin: 1px 0 0 1px;
@@ -56,16 +59,16 @@ footer{
 			outline: none;
 		}
 		button{
-			width: 102px;
-			height: 41px;
-			font-size: 18px;
-			color: #fff;
+			width: 55px;
+			height:25px;
+			font-size: 14px;
+			color: white;
 			display: block;
 			float: right;
-			line-height: 41px;
+			line-height:25px;
 			text-align: center;
 			border: none;
-			background-color: #e73620;
+			background-color:#000;
 		}
 	}
 	.qIndex{
@@ -85,6 +88,7 @@ footer{
 		width: 100%;
 		float: left;
 		text-align: center;
+		margin: 10px 0;
 		img{
 			display: inline-block;
 		}
