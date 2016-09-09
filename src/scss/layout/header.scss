@@ -14,8 +14,9 @@ header{
 		margin-bottom: 20px;
 		li{
 			float: left;
-			padding:0 10px;
+			padding:1px 10px;
 			border-right:1px solid #cfcfcf;
+			position: relative;
 			.title,
 			a{
 				color:#808080;
@@ -26,10 +27,112 @@ header{
 				vertical-align: middle;
 			}
 		}
+		.signin{
+			width: 135px;
+			padding: 25px 15px;
+			text-align: center;
+			.in{
+				display: block;
+				padding: 10px 25px;
+				background: #272636;
+				color:white;
+				border-radius: 25px;
+			}
+			.or{
+				display: block;
+				line-height: 30px;
+				color:#aaa;
+			}
+			.iconfont{
+				font-size: 32px;
+			}
+			.icon-google{
+				margin-right: 24px;
+			}
+			.costomer{
+				margin-top: 45px;
+				margin-bottom: 10px;
+				display: block;
+				width: 103px;
+				padding: 10px 0;
+				color:black;
+				font-size: 14px;
+				border-radius: 25px;
+				border: 1px solid #aaa;
+			}
+			.line{
+				position: absolute;
+				top:40%;
+				left:16px;
+			}
+			p{
+				line-height: 35px;
+				text-align: left;
+				span{
+					float: right;
+				}
+			}
+		}
+		.sign{
+			width: 135px;
+			padding:5px 0;
+			a{
+				display: block;
+				padding:12px 15px;
+				&:hover{
+					background: #333;
+					color:white;
+					span{
+						color:white;
+					}
+				}
+			}
+		}
+		.help{
+			width: 310px;
+			padding: 15px;
+			.iconfont{
+				display: block;
+				float: left;
+				font-size: 35px;
+				color: #333;
+			}
+			.help-tel{
+				margin-bottom: 17px;
+			}
+			.sales{
+				width: 217px;
+				h2{
+					font-size: 16px;
+					color: black;
+				}
+				p{
+					margin: 5px 0;
+					line-height: 15px;
+					color:#808080;
+				}
+				a{
+					font-size: 16px;
+					color: black;
+					border-bottom: 1px solid #333;
+				}
+			}
+		}
+		.usd{
+			padding:5px 0;
+			a{
+				display: block;
+				padding: 10px;
+				&:hover{
+					background: #333;
+					color:white;
+				}
+			}
+		}
 		.currency{
 			border-right:none;
 			padding-right:0;
-		}		
+		}	
 	}
 	.my-bag{
 		font-size: 14px;
@@ -54,6 +157,8 @@ header{
 		border: 1px solid #666;
 		padding-left: 10px;
 		opacity: 0;
+		position: relative;
+		z-index: 99;
 		.input-text{
 			border: none;
 			margin-top: 4px;
@@ -66,6 +171,25 @@ header{
 			margin-left: 8px;
 			border: none;
 			background: white;
+		}
+		.search-select{
+			position: absolute;
+			top:33px;
+			left:-1px;
+			width:440px;
+			background: white;
+			border: 1px solid #aaa;
+			transform:translatey(-100%);
+			display: none;
+			li{
+				line-height: 25px;
+				padding-left: 10px;
+				cursor: pointer;
+				&:hover{
+					background: #333;
+					color:white;
+				}
+			}
 		}
 	}
 	.top-nav{
@@ -128,5 +252,39 @@ header{
  				height: 245px;
 			}
 		}
+	}
+}
+.pop{
+	position: absolute;
+	top:26px;
+	right: 0;
+	z-index: 100;			
+	border-right: 3px;
+	border: 1px solid #cfcfcf;
+	background: white;
+	box-shadow: 1px 1px 8px #cfcfcf;
+	&.usd{
+		right: -9px;
+	}
+	em{
+		position: absolute;
+		right: 8px;
+		display: inline-block;
+		width: 0;
+		height: 0;
+		color:#aaa;
+		border-bottom:8px solid #cfcfcf;
+		border-left:8px solid transparent;
+		border-right:8px solid transparent;
+		border-top:8px solid transparent;
+	}
+	.emtop{
+		top:-16px;
+		z-index: 1;
+	}
+	.embottom{
+		top:-14px;
+		border-bottom:8px solid white;
+		z-index: 2;
 	}
 }

@@ -1,0 +1,139 @@
+@import "../help/_helper";
+@import "../base/_normalize";
+@import "../widget/color.scss";
+@import "../widget/page.scss";
+@import "../layout/common.scss";
+@import "../layout/header.scss";
+@import "../layout/footer.scss";
+.home{
+	color:#aaa;
+	margin-bottom: 25px;
+	a{
+		color:#aaa;
+		text-transform: capitalize;
+		margin: 0 2px;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-bottom: 1px solid #aaa;
+		}
+	}
+	.tips{
+		border: 1px solid #aaa;
+		border-radius: 16px;
+		padding: 0 10px;
+		margin-left: 10px;
+		line-height: 16px;
+		display: inline-block;
+		cursor: pointer;
+		&:hover{
+			span{
+				color:red;
+			}
+		}
+	}
+}
+.options{
+	margin-left: 8px;
+	li{
+		float: left;
+		padding-right: 9px;
+		margin-right: 11px;
+		cursor: pointer;
+		color:#aaa;
+		text-transform: capitalize;
+		position: relative;
+		&:hover{
+			color: red;
+			span{
+				color: red;
+			}
+		}
+	}
+	.option{
+		padding: 5px 0;
+		a{
+			display: block;
+			padding: 5px 10px;
+			&:hover{
+				background:#333;
+				color:white;
+			}
+		}
+	}
+}
+.list-head{
+	margin-top: 25px;
+	.tops{
+		font-family: "Cambria";
+		font-size: 16px;
+		color:black;
+		margin-left: 8px;
+	}
+	.shop-by{
+		position: relative;
+		z-index: 2;
+		span{
+			color:#aaa;
+		}
+		select{
+			width: 105px;
+			height: 20px;
+			border: 1px solid #aaa;
+			border-radius: 2px;
+			padding-left: 5px;
+			padding-right: 16px;
+			cursor: pointer;
+		}
+		.iconfont{
+			position: absolute;
+			right: 2px;
+			top: 2px;
+			z-index: 1;
+		}
+	}
+}
+.list-center{
+	margin-top: 15px;
+	li{
+		padding: 5px;
+		width: 285px;
+		float: left;
+		margin:0 20px 30px 0;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		&:hover{
+			border: 1px solid #aaa;
+			box-shadow: 0 1px 5px #cfcfcf;
+		}
+		&.mgr{
+			margin-right: 0;
+		}
+		.biaoti{
+			display: block;
+			width: 250px;
+			color:#aaa;
+			margin:10px auto; 
+			max-height: 25px;
+			overflow: hidden;
+		}
+		.price{
+			color:red;
+			font-size: 18px;
+			margin-right: 5px;
+		}
+		.orig{
+			color:#aaa;
+			text-decoration: line-through;
+		}
+		.off{
+			margin-left: 100px;
+			font-weight: bold;
+			color:black;
+		}
+		.icon-xinshixin{
+			margin-left: 10px;
+			color:#aaa;
+			cursor: pointer;
+		}
+	}
+}

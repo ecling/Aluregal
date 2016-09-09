@@ -4,7 +4,7 @@ html, body, div, span,  object,  h1, h2, h3, h4, h5, h6,
  tt,b, u, i, center, dl, dt, dd, ol, ul, li, form, label,
 table, tbody, tfoot, thead, tr, th, td,
 canvas, footer, header, menu, 
-nav,section,  audio, video,button {
+nav,section,  audio, video,button,select {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,7 +29,6 @@ strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 p { font-size: 1.2em; line-height: 1.0em; color: #333; }
-select:focus,
 input[typr="password"]:focus,
 input[type="text"]:focus{
     border:1px solid rgba(82, 168, 236, .7); 
@@ -45,13 +44,12 @@ input[type="password"]{
     border: 1px solid #dfdfdf;
     border-radius: 3px;
 }
-select:hover,
 input[type="text"]:hover,
 input[type="password"]:hover{
     box-shadow: 0 0 5px rgba(82, 168, 236, 1);
     border: 1px solid  rgba(82, 168, 236, 1);
 }
-a:hover,i:hover,span:hover,select:hover,
+a:hover,i:hover,span:hover,
 input[type="text"]:hover,
 input[type="password"]:hover,
 input[type="submit"]:hover{
