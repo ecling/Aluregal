@@ -1,6 +1,7 @@
 @import "../help/_helper";
 @import "../base/_normalize";
 @import "../widget/color.scss";
+@import "../widget/newin.scss";
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
@@ -122,53 +123,5 @@
 		margin-right:20px;
 	}
 }
-.new-in{
-	border-top: 1px dashed #cfcfcf;
-	padding: 60px 0 107px 0;
-	position: relative;
-	.new-head{
-		position: absolute;
-		top:-58px;
-		left:50%;
-		margin-left: -84px;
-		width: 167px;
-		text-align: center;
-		background: white;
-		h2{
-			font-family: "Cambria";
-			font-size: 30px;
-			margin-bottom: 17px;
-		}
-		a{
-			font-size: 14px;
-			&:hover{
-				color:red;
-			}
-		}
-	}
-	.new-list{
-		overflow: hidden;
-	}
-	ul{
-		position: relative;
-		li{
-			width: 285px;
-			text-align: center;
-			float: left;
-			margin-right: 20px;
-			.biaoti{
-				display: block;
-				width: 205px;
-				overflow: hidden;
-				margin: 15px auto;
-			}
-			.price{
-				font-family: "Cambria";
-				font-size: 22px;
-			}
-			&.mgr{
-				margin-right: 0;
-			}
-		}
-	}
-}
+
+

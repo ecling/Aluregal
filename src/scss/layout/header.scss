@@ -26,6 +26,11 @@ header{
 				color:#808080;
 				vertical-align: middle;
 			}
+			&:hover{
+				.pop{
+					display: block;
+				}
+			}
 		}
 		.signin{
 			width: 135px;
@@ -135,14 +140,16 @@ header{
 		}	
 	}
 	.my-bag{
+		position: relative;
 		font-size: 14px;
 		.iconfont{
 			font-size: 22px;
-			margin: 0 15px 0 20px;
+			margin: 0 5px 0 20px;
 		}
 		.pcs{
 			color:red;
 		}
+
 	}
 	.big{
 		cursor: pointer;
@@ -255,8 +262,9 @@ header{
 	}
 }
 .pop{
+	display: none;
 	position: absolute;
-	top:26px;
+	top:20px;
 	right: 0;
 	z-index: 100;			
 	border-right: 3px;

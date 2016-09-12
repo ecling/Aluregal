@@ -1,0 +1,74 @@
+.new-in{
+	border-top: 1px dashed #cfcfcf;
+	padding: 60px 0 107px 0;
+	position: relative;
+	.new-head{
+		position: absolute;
+		top:-58px;
+		left:50%;
+		margin-left: -84px;
+		width: 167px;
+		text-align: center;
+		background: white;
+		h2{
+			font-family: "Cambria";
+			font-size: 30px;
+			margin-bottom: 17px;
+		}
+		a{
+			font-size: 14px;
+			&:hover{
+				color:red;
+			}
+		}
+	}
+	.new-list{
+		position: relative;
+	}
+	ul{
+		li{
+			width: 285px;
+			text-align: center;
+			float: left;
+			margin-right: 20px;
+			.biaoti{
+				display: block;
+				width: 205px;
+				overflow: hidden;
+				margin: 15px auto;
+			}
+			.price{
+				font-family: "Cambria";
+				font-size: 22px;
+			}
+			&.mgr{
+				margin-right: 0;
+			}
+		}
+	}
+	.new-tab{
+		a{
+			display: block;
+			width: 50px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			position: absolute;
+			top:50%;
+			margin-top: -105px;
+			transition:all 300ms ease-in-out;
+			span{
+				color:black;
+				font-size: 36px;
+				opacity: 0.5;
+				filter:aplhe(opacity=50);
+			}
+		}
+		.new-prev{
+			left: -50px;
+		}
+		.new-next{
+			right: -50px;
+		}
+	}
+}

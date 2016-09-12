@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	(function(){
-		$(".search-input").css({transform:'translatex(-100%)',opacity:0,}, 500);
+		$(".search-input").css({transform:'translatex(-78%)',opacity:0,}, 500);
 		$(".big ").on('click',  function(event) {
 			$(".search-input").css({
 				"opacity":'1',
@@ -10,17 +10,7 @@ jQuery(document).ready(function($) {
 			$(this).hide();
 		});
 	})();
-	(function(){
-		$(".my-account li").find('.pop').hide();
-		$(".my-account li").on('mouseover', showpop);
-		$(".options li").on('mouseover', showpop);
-		function showpop(event) {
-			$(this).find('.pop').show().parent().siblings('li').find('.pop').hide();
-		};
-		$(".pop").mouseout(function(event) {
-			$(this).hide();
-		});
-	})();
+	
 
 /*	var  $li_list = $(".banners-index li");
 	var  $img_list = $(".banners-img li");
