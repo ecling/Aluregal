@@ -159,6 +159,7 @@ header{
 			width: 258px;
 			padding: 5px;
 			.list{
+				margin-bottom: 10px;
 				padding: 5px;
 				border: 1px solid transparent;
 				&:hover{
@@ -180,6 +181,16 @@ header{
 					font-size: 20px;
 					color:red;
 				}
+			}
+		}
+		.checkout{
+			border-top: 1px dashed #cfcfcf;
+			.button{
+				display: block;
+				margin: 18px auto;
+				width: 183px;
+				line-height: 30px;
+				border-radius: 30px;
 			}
 		}
 	}

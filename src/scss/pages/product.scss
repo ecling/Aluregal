@@ -7,8 +7,7 @@
 @import "../layout/footer.scss";
 @import "../widget/newin.scss";
 .product-cont{
-	margin-bottom: 127px;
-	width:990px;
+	margin-bottom:20px;
 	.home{
 		color:#aaa;
 		margin-bottom: 15px;
@@ -218,123 +217,128 @@
 			}
 		}	
 	}
-	.reviews,
-	.description{
-		margin-top:60px;
-		h1{
-			font-family: "Cambria";
-			font-size:24px;
+}
+.reviews,
+.description{
+	margin-top:60px;
+	h1{
+		font-family: "Cambria";
+		font-size:24px;
+		color:black;
+		margin-bottom:20px;
+		text-transform: uppercase;
+	}
+	.description-content{
+		border-top:1px dashed #aaa;
+		padding:35px 30px;
+		h2{
+			font-size:18px;
 			color:black;
-			margin-bottom:20px;
-			text-transform: uppercase;
+			margin-bottom:5px;
 		}
-		.description-content{
-			border-top:1px dashed #aaa;
-			padding:35px 30px;
-			h2{
-				font-size:18px;
-				color:black;
-				margin-bottom:5px;
-			}
-			p{
-				line-height:20px;
-			}
-			.sizechart{
-				font-size:15px;
-				display:block;
-				margin-top:70px;
-				margin-bottom:5px;
-			}
+		p{
+			line-height:20px;
+		}
+		.sizechart{
+			font-size:15px;
+			display:block;
+			margin-top:70px;
+			margin-bottom:5px;
 		}
 	}
-	.reviews-content{
-		padding-left:30px;
-		border-top:1px dashed #aaa;
-		.reviews-head{
-			padding:20px 20px 10px 40px;
-			border-bottom:1px dashed #aaa;
+}
+.reviews-content{
+	padding-left:30px;
+	border-top:1px dashed #aaa;
+	.reviews-head{
+		padding:20px 20px 10px 40px;
+		border-bottom:1px dashed #aaa;
+	}
+	.head-based{
+		margin:25px 0 0 47px;
+		p{
+			line-height:18px;
 		}
-		.head-based{
-			margin:25px 0 0 47px;
-			p{
-				line-height:18px;
+	}
+	.head-icon{
+		margin-top:25px;
+		span,
+		i{
+			font-size:20px;
+			color:#fe7726;
+		}
+		span{
+			vertical-align: middle;
+			font-size:24px;
+			margin-left:25px  ;
+		}
+	}
+	.head-a {
+		text-align:center;
+	}
+	.write{
+		margin-bottom:30px;
+		display:block;
+		width:180px;
+		line-height:29px;
+		border-radius:29px;
+		i{
+			font-weight:normal;
+		}
+	}
+	.see{
+		font-size:13px;
+		border-bottom:2px solid #333;
+		display:inline-block;
+		font-weight:bold;
+	}
+	.reviews-bycarlos{
+		position:relative;
+		padding:20px 0;
+		border-bottom:1px dashed #aaa;
+		h2,h3{
+			display:inline-block;
+			font-size:15px;
+			margin-bottom:20px;
+		}
+		h2{
+			font-weight:bold;
+			margin-right:25px;
+		}
+		h3{
+			color:#aaa;
+		}
+		ul{
+			margin-bottom:15px;
+			li{
+				float:left;
+				margin-right:20px;
 			}
 		}
-		.head-icon{
-			margin-top:25px;
-			span,
+		.xing{
+			position:absolute;
+			right:20px;
+			top:50%;
+			color:#fe7726;
 			i{
-				font-size:20px;
-				color:#fe7726;
+				font-size:16px;
 			}
 			span{
-				vertical-align: middle;
-				font-size:24px;
-				margin-left:25px  ;
-			}
-		}
-		.head-a {
-			text-align:center;
-		}
-		.write{
-			margin-bottom:30px;
-			display:block;
-			width:180px;
-			line-height:29px;
-			border-radius:29px;
-			i{
-				font-weight:normal;
-			}
-		}
-		.see{
-			font-size:13px;
-			border-bottom:2px solid #333;
-			display:inline-block;
-			font-weight:bold;
-		}
-		.reviews-bycarlos{
-			position:relative;
-			padding:20px 0;
-			border-bottom:1px dashed #aaa;
-			h2,h3{
-				display:inline-block;
-				font-size:15px;
-				margin-bottom:20px;
-			}
-			h2{
-				font-weight:bold;
-				margin-right:25px;
-			}
-			h3{
-				color:#aaa;
-			}
-			ul{
-				margin-bottom:15px;
-				li{
-					float:left;
-					margin-right:20px;
-				}
-			}
-			.xing{
-				position:absolute;
-				right:20px;
-				top:50%;
-				color:#fe7726;
-				i{
-					font-size:16px;
-				}
-				span{
-					vertical-align: middle; 
-					font-size:16px;
-					margin-left:10px;
-				}
+				vertical-align: middle; 
+				font-size:16px;
+				margin-left:10px;
 			}
 		}
 	}
 }
+.left-product{
+	width: 980px;
+}
+.product-drr{
+	margin-bottom: 127px;
+}
 .right-relative{
 	padding:20px;
-	margin-top:540px;
 	width:195px;
 	border:1px solid #aaa;
 	text-align:center;
