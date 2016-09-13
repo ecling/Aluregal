@@ -142,6 +142,7 @@ header{
 	.my-bag{
 		position: relative;
 		font-size: 14px;
+		line-height: 30px;
 		&:hover{
 			.baglist{
 				display: block;
@@ -156,20 +157,23 @@ header{
 		}
 		.baglist{
 			width: 258px;
-			padding: 10px;
+			padding: 5px;
 			.list{
+				padding: 5px;
+				border: 1px solid transparent;
+				&:hover{
+					border: 1px solid #333;
+				}
 				img{
 					display: block;
 					float: left;
 					margin-right: 8px;
 				}
-				a{
+				.biaoti{
 					display: block;
-					float:left;
-					width: 160px;
 					overflow: hidden;
-					margin-top: 5px;
-					margin-bottom: 15px;
+					max-height: 27px;
+					margin-bottom: 10px;
 					word-wrap: break-word;
 				}
 				.price{
@@ -178,10 +182,9 @@ header{
 				}
 			}
 		}
-
-
 	}
 	.big{
+		line-height: 35px;
 		cursor: pointer;
 		font-size: 25px;
 	}
@@ -294,13 +297,13 @@ header{
 .pop{
 	display: none;
 	position: absolute;
-	top:20px;
+	top:19px;
 	right: 0;
 	z-index: 100;			
-	border-right: 3px;
-	border: 1px solid #cfcfcf;
+	border-radius: 3px;
+	border: 1px solid #dfdfdf;
 	background: white;
-	box-shadow: 1px 1px 8px #cfcfcf;
+	box-shadow: 1px 1px 8px #dfdfdf;
 	&.usd{
 		right: -9px;
 	}
@@ -321,8 +324,14 @@ header{
 		z-index: 1;
 	}
 	.embottom{
-		top:-14px;
+		top:-15px;
 		border-bottom:8px solid white;
 		z-index: 2;
+	}
+	&.baglist{
+		top:33px;
+		em{
+			right:83px;
+		}
 	}
 }
