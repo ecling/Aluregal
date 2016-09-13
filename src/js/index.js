@@ -10,7 +10,19 @@ jQuery(document).ready(function($) {
 			$(this).hide();
 		});
 	})();
-	
+	$(".write").on('click',show);
+	$(".quickview").on('click',show);
+	$(".icon-guanbi").on('click',hide);
+	 function show(){
+    	$(".popup").show(300);
+		$(".mask").css("height",$(document).height());     
+        $(".mask").css("width",$(document).width());     
+        $(".mask").show(300); 
+    }
+    function hide(){
+    	$(".popup").hide(300);
+		$(".mask").hide(300);
+    }
 
 /*	var  $li_list = $(".banners-index li");
 	var  $img_list = $(".banners-img li");

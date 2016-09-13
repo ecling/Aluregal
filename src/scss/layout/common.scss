@@ -224,3 +224,14 @@ input.error, textarea.error ,select.error{
         }
     }
 }
+.mask
+{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    background-color: #333;
+    filter: alpha(opacity=60);
+    -moz-opacity: .5;
+}
