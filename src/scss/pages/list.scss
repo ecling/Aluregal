@@ -30,6 +30,9 @@
 				color:red;
 			}
 		}
+		span{
+			vertical-align: middle;
+		}
 	}
 }
 .options{
@@ -114,7 +117,7 @@
 		}
 		.biaoti{
 			display: block;
-			width: 250px;
+			width: 270px;
 			color:#aaa;
 			margin:10px auto; 
 			max-height: 25px;

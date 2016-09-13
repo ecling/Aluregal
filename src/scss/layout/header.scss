@@ -142,6 +142,11 @@ header{
 	.my-bag{
 		position: relative;
 		font-size: 14px;
+		&:hover{
+			.baglist{
+				display: block;
+			}
+		}
 		.iconfont{
 			font-size: 22px;
 			margin: 0 5px 0 20px;
@@ -149,6 +154,31 @@ header{
 		.pcs{
 			color:red;
 		}
+		.baglist{
+			width: 258px;
+			padding: 10px;
+			.list{
+				img{
+					display: block;
+					float: left;
+					margin-right: 8px;
+				}
+				a{
+					display: block;
+					float:left;
+					width: 160px;
+					overflow: hidden;
+					margin-top: 5px;
+					margin-bottom: 15px;
+					word-wrap: break-word;
+				}
+				.price{
+					font-size: 20px;
+					color:red;
+				}
+			}
+		}
+
 
 	}
 	.big{

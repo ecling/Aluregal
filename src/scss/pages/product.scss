@@ -7,6 +7,7 @@
 @import "../layout/footer.scss";
 @import "../widget/newin.scss";
 .product-cont{
+	margin-bottom: 127px;
 	width:990px;
 	.home{
 		color:#aaa;
@@ -171,9 +172,9 @@
 			margin:30px 0;
 			li{
 				font-size:14px;
-				width:44px;
-				height:44px;
-				padding-top:12px;
+				padding: 8px;
+				min-width: 44px;
+				min-height: 40px;
 				text-align:center;			
 			}
 		}
@@ -349,9 +350,6 @@
 	li{
 		margin-bottom:8px;
 	}
-}
-.new-in{
-	margin-top:127px;
 }
 
 
