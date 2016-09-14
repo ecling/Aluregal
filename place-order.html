@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>place order</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<head>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1473751129_2150466.css">
+		<link rel="stylesheet" type="text/css" href="src/css/place-order.css" />
+		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/index.js"></script>
+		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
+		<!--[if lt IE 9]> 
+		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
+		<![endif]-->
+	</head>
+	<body class="cms-index-index">
+		<header>
+			<div class="tool w1200 clearfix">
+				<div class="logo fl">
+					<a href="" title=""><img src="src/images/logo.jpg" alt=""></a>
+				</div>
+				<div class="my-orders fr">
+					<div class="my-account">
+						<ul>
+							<li>
+								<span class="iconfont icon-sign"></span>
+								<a href="" title="">Sign in or Register</a>
+							</li>
+							<li>
+								<span class="iconfont icon-account"></span>
+								<a href="" title="">My Account</a>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="signin pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a class="in" href="#" title="">SIGN IN</a>
+									<span class="or">or</span>
+									<a class="iconfont icon-google"   href="#"></a>
+									<a class="iconfont icon-facebook" href="#"></a>
+									<span class="costomer">new costomer</span>
+									<p class="myorders">My orders</p>
+									<p class="mycoupans">My Coupans <span>10</span></p>
+									<p class="mypoints">My Points <span>110</span></p>
+									<span class="line">.................................</span>
+								</div>
+								<div class="sign pop  " style="display: none;">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a href="" title="">My orders</a>
+									<a href="" title="">My Coupans <span>10</span></a>
+									<a href="" title="">My Points <span>110</span></a>
+									<a href="" title="">Logout</a>
+								</div>
+							</li>							
+							<li>
+								<a href="" title="">Help Center</a>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="help pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<div class="help-tel clearfix">
+										<span class="iconfont icon-tel"> </span>
+										<div class="sales fr">
+											<h2>Pre-sales</h2>
+											<p>If you have any questions before making purchase, chat with our customer help center to get more information.</p>
+											<a href="#" title="">Ask For Help Online</a>
+										</div>
+									</div>
+									<div class="help-sale clearfix">
+										<span class="iconfont icon-aftersale"> </span>
+										<div class="sales fr">
+											<h2>After Sales</h2>
+											<p>If you have any questions after making purchase, apply your request and get help from our customer help center for your purchase.</p>
+											<a href="#" title="">Submit The Request</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="currency">
+								<a href="" title=""><strong>Currency:</strong></a>
+								<span class="title">$USD</span>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="usd pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="search clearfix">
+						<div class="my-bag fr">
+							<span class="iconfont icon-bag"></span>
+							MY BAG(<span class="pcs">0</span>)
+							<div class="baglist pop">
+								<em class="emtop"></em><em class="embottom"></em>
+								<div class="list clearfix">
+									<a href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+								<div class="list clearfix">
+									<a href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a class="biaoti" href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+								<div class="list clearfix">
+									<a  href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a  class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+							</div>
+						</div>
+						<span class="iconfont icon-search big fr"></span>
+						<div class="search-input fr">
+							<input id="j_search" class="input-text" type="search" placeholder="Search here ..." maxlength="128" value="" name="q">
+							<button title="Search"><i class="iconfont icon-search"></i></button>
+							<ul class="search-select">
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content w1200 clearfix"> 
+			<div class="progress firecheckout">
+				<img src="src/images/progress.jpg" alt="">
+				<ul class="Shopping">
+				    <li class="bag">Shopping bag</li>
+				    <li class="PlaceOrder">Place Order</li>
+				    <li class="pay">pay</li>
+				    <li class="orderComplete">order</li>
+				</ul>
+				<ul class="colored">
+				    <li class="active"><span class="span2"></span><i></i><span class="span1"></span></li>
+				    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
+				    <li ><span class="span2"></span><i></i><span class="span1"></span></li>
+				    <li><span class="span2"></span></li>
+				</ul>
+			</div>
+			
+			<form class="clearfix" action="demo_form.asp" method="POST" id="commentForm">
+				<div class="leftD fl">
+					<div class="shippingAddress clearfix" >
+						<h3>ShippingAddress</h3>
+						<div class="checkInfo checkNew">
+							<div class="shipping-address-form">
+								<div class="Firstname clearfix">
+									<div class="Firstname_left">
+										 <label for="Firstname"><span class="required"></span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
+										<label for="Phonenumber"><span class="required"></span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+									</div>
+									<div class="Firstname_right">
+										<label for="Lastname"><span class="required"></span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+										<label for="E-mail"><span class="required"></span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
+									</div>
+								</div>
+								<div class="AddressLine1 clearfix">
+									<label for="Line1"><span class="required"></span>Address Line1:</label><input type="text" name="" id="Line1" required/>						
+								</div>
+								<div class="AddressLine2">
+									<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+								</div>
+								<div class="selectd ">
+									<ul >
+									    <li class="fl">
+									    	<label for="jungle"><span class="required"></span>Country / Region:</label>
+									    	<select id="jungle" name="jungle" title="Please select something!" required>
+									    		<option></option>
+									    	  	<option value ="volvo">Volvo</option>
+									    	  	<option value ="saab">Saab</option>
+									    	  	<option value="opel">Opel</option>
+									    	  	<option value="audi">Audi</option>
+									    	</select>
+									    </li>
+									    <li class="fr">
+									    	<label for="fruit"><span class="required"></span>States:</label>
+									    	<select id="fruit" name="fruit" title="Please select something!" required>
+										    	<option></option>
+									    	  	<option value ="volvo">Volvo</option>
+									    	  	<option value ="saab">Saab</option>
+									    	  	<option value="opel">Opel</option>
+									    	  	<option value="audi">Audi</option>
+									    	</select>
+									    	<input type="text" name="states" class="states"/>
+									    </li>
+									</ul>
+								</div>
+
+								<div >
+							    	<label for="city"><span class="required"></span>City</label>
+							    	<input type="text" name="city" id="city" class="city" required/>	
+								</div>	  
+
+								<div class=" zip">
+									<label><span class="required"></span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
+								</div>
+								<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>
+							</div>
+						</div>
+						<!-- customer has shipping address-->
+						<div class="address_list" style="display:none;">
+							<div class="contentd">
+								<input type="radio" name="1">
+								<div class="fl">
+									<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+									<p><label>Phone Number:</label><span>123456798</span></p>
+									<p><label>E-mail:</label><span>123456789</span></p>
+									<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+									<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#" class="edit">Edit</a></p>
+								</div>
+							</div>
+							<div class="contentd">
+								<input type="radio" name="1">
+								<div class="fl">
+									<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+									<p><label>Phone Number:</label><span>123456798</span></p>
+									<p><label>E-mail:</label><span>123456789</span></p>
+									<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+									<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#" class="edit">Edit</a></p>
+								</div>
+							</div>
+							<div class="contentd">
+								<input type="radio" name="1">
+								<div class="fl">
+									<p><label>Name:</label><span>lastname</span>&nbsp;&nbsp;<i>firstname</i></p>
+									<p><label>Phone Number:</label><span>123456798</span></p>
+									<p><label>E-mail:</label><span>123456789</span></p>
+									<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
+									<p><label>ZIP/Postal Code:</label><span>20010</span><i class="iconfont icon-xiugai"></i><a href="#" class="edit">Edit</a></p>
+								</div>
+							</div>
+							<a href="#" class="button">Add New Address</a>					
+						</div>
+					</div>
+					
+					<div class="shippingOptions clearfix" >
+						<h3>Shipping method</h3>
+						<ul>
+						    <li>
+						    	<label for="gender_male">
+						    		<input  type="radio" id="gender_male" value="m" name="gender" checked="true"/>
+						    		<span class="title">Super Saver Shipping</span>
+						    		<span class="time">25 - 30 business days</span>
+						    		<span class="price">$0.00</span>
+						    	</label>
+						    	<label class="checkbox">
+						    	    	<input type="checkbox" name="" >
+						    	    	<span class="Trackingnumber">Tracking number</span>
+						    	    	<span class="money">+$1.99</span>
+						    	</label>
+						    </li>
+						    <li>
+						    	<label for="Standard">
+						    		<input  type="radio" id="Standard" value="f" name="gender"/>
+						    		<span class="title">Standard Shipping </span>
+						    		<span class="time">25 - 30 business days</span>
+						    		<span class="price">$0.00</span>
+						    	</label>
+						    </li>
+						    <li>
+						    	<label for="Expedited">
+						    		<input  type="radio" id="Expedited" value="f" name="gender"/>
+						    		<span class="title">Expedited Shipping</span>
+						    		<span class="time">25 - 30 business days</span>
+						    		<span class="price">$0.00</span>
+						    	</label>
+						    </li>
+						    
+						</ul>
+					</div>
+					<div class="PaymentMethod clearfix"  >
+						<h3>Payment Method</h3>
+						<div class="options">												
+							<input type="radio" name="PaymentMethod" id="list1" checked="true">
+							<label for="list1">
+								<img src="src/images/place_order.png">
+							</label>
+						</div>
+						<div class="options">													
+							<input type="radio" name="PaymentMethod" id="list2" ><label for="list2">32131</label>
+						</div>
+						<div class="options">
+							<input type="radio" name="PaymentMethod" id="list3" ><label for="list3">3513</label>					
+						</div>
+					</div>
+					<div class="OrderRequest fl">
+						<h3>Order Request</h3>
+						<p>If you have special instructions for your order such as a dropshipping order,gift order,etc,then please let us know!<br/> 
+						We will try our very best to accommodate you.</p>
+						<textarea name="message" cols="50" rows="6" class="required-entry" placeholder="Enter here..." ></textarea>
+					</div>
+				</div>
+
+				<div class="cart_right fl">
+					<div class="fixbox">
+						<div class="rightHead">	
+							<label for="Coupon">Coupon Code</label>
+							<input type="text" name=""  id="Coupon" />
+							<button type="submit" class="button">APPLY</button>
+							<label for="Enter">Enter a number of point you want to use</label>
+							<input type="text" name="" id="Enter" />
+							<button type="submit" class="button">YES</button>
+							<em>You have 38 H point,Most provinces $0.38</em>
+						</div>
+						<div class="order_summary">
+							<p><span>Subtotal</span><span class="price">$9998.98</span></p>
+							<p><span>Coupon discount</span><span class="price">$9998.98</span></p>
+							<p><span>H point discount</span><span class="price">$9998.98</span></p>
+							<p><span>All save</span><span class="price">$9998.98</span></p>
+							<p><span>Shopping</span><span class="price">$9998.98</span></p>
+							<p class="grand"><span>Grand Total</span><span class="price">$0.01</span></p>
+						</div>
+
+						<div class="payments">
+							<button type="submit" class="button place_you_order">Place Your Order</button>
+							<p>You will enjoy free shipping with another $20</p>
+						</div>
+					</div>
+				</div>
+			</form>
+			
+			<form class="clearfix" action="demo_form.asp" method="POST" id="commentForm2">
+				<div class=" shipping-address-form popup">
+
+							<span class="iconfont icon-close"></span>
+							<div class="Firstname clearfix">
+								<div class="Firstname_left">
+									 <label for="Firstname"><span class="required">*</span>First name:</label><input type="text" name="firstname" id="Firstname" required/>						
+									<label for="Phonenumber"><span class="required">*</span>Phone number:</label><input type="text" name="number" id="Phonenumber" required/>
+								</div>
+								<div class="Firstname_right">
+									<label for="Lastname"><span class="required">*</span>Last name:</label><input type="text" name="lastname" id="Lastname" required/>
+									<label for="E-mail"><span class="required">*</span>E-mail address:</label><input type="text" name="email" id="E-mail" required/>					
+								</div>
+							</div>
+							<div class="AddressLine1 clearfix">
+								<label for="Line1"><span class="required">*</span>Address Line1:</label><input type="text" name="" id="Line1" required/>						
+							</div>
+							<div class="AddressLine2">
+								<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+							</div>
+							<div class="selectd ">
+								<ul >
+								    <li class="fl">
+								    	<label for="jungle"><span class="required">*</span>Country / Region:</label>
+								    	<select id="jungle" name="jungle" title="Please select something!" required>
+								    		<option></option>
+								    	  	<option value ="volvo">Volvo</option>
+								    	  	<option value ="saab">Saab</option>
+								    	  	<option value="opel">Opel</option>
+								    	  	<option value="audi">Audi</option>
+								    	</select>
+								    </li>
+								    <li class="fr">
+								    	<label for="fruit"><span class="required">*</span>States:</label>
+								    	<select id="fruit" name="fruit" title="Please select something!" required>
+									    	<option></option>
+								    	  	<option value ="volvo">Volvo</option>
+								    	  	<option value ="saab">Saab</option>
+								    	  	<option value="opel">Opel</option>
+								    	  	<option value="audi">Audi</option>
+								    	  	<input type="text" name="states" class="states"/>
+								    	</select>
+								    </li>
+								</ul>
+							</div>
+							<div>
+						    	<label for="city"><span class="required">*</span>City</label>
+						    	<input type="text" name="city" id="city" class="city" required/>	
+							</div>
+							<div class="zip">
+								<label><span class="required">*</span>ZIP/Postal Code:</label><input type="text" name="postalCode" required/>	
+							</div>
+							<button type="submit" class="button popup_submit">submit</button>
+							<a href="#" class="privacy privacy_popup">Privacy & Security Policy</a>
+						</div>
+				<div class="mask">	
+				</div>
+			</form>
+		</div>
+		<footer class="w1200">
+			<div class="content clearfix">
+				<div class="cms_list fl">
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+				</div>
+				<div class="newsletter fr">
+					<h2>FIND US ON <strong>:</strong></h2>
+					<ul class="social clearfix">
+						<li><a href=""><i class="iconfont icon-facebook"></i></a></li>
+						<li><a href=""><i class="iconfont icon-twitter"></i></a></li>
+						<li><a href=""><i class="iconfont icon-play"></i></a></li>
+						<li><a href=""><i class="iconfont icon-google"></i></a></li>
+						<li><a href=""><i class="iconfont icon-vk"></i></a></li>
+						<li><a href=""><i class="iconfont icon-blogger"></i></a></li>
+						<li><a href=""><i class="iconfont icon-vk"></i></a></li>
+					</ul>
+					<h2>NEWSLETTER</h2>
+					<form id="newsletter">
+						<div>
+							<input type="email" name="email" class="" id="" maxlength="" placeholder="Enter Your E-mail Address" required />
+							<button>JOIN</button>
+						</div>
+					</form>
+				</div>
+				<div class="qIndex clearfix">
+					Quick Index:    
+					<ul>
+		                <li><a href="/tags-product-A.html">A</a></li>
+		                <li><a href="/tags-product-B.html">B</a></li>
+		                <li><a href="/tags-product-C.html">C</a></li>
+		                <li><a href="/tags-product-D.html">D</a></li>
+		                <li><a href="/tags-product-E.html">E</a></li>
+		                <li><a href="/tags-product-F.html">F</a></li>
+		                <li><a href="/tags-product-G.html">G</a></li>
+		                <li><a href="/tags-product-H.html">H</a></li>
+		                <li><a href="/tags-product-I.html">I</a></li>
+		                <li><a href="/tags-product-J.html">J</a></li>
+		                <li><a href="/tags-product-K.html">K</a></li>
+		                <li><a href="/tags-product-L.html">L</a></li>
+		                <li><a href="/tags-product-M.html">M</a></li>
+		                <li><a href="/tags-product-N.html">N</a></li>
+		                <li><a href="/tags-product-O.html">O</a></li>
+		                <li><a href="/tags-product-P.html">P</a></li>
+		                <li><a href="/tags-product-Q.html">Q</a></li>
+		                <li><a href="/tags-product-R.html">R</a></li>
+		                <li><a href="/tags-product-S.html">S</a></li>
+		                <li><a href="/tags-product-T.html">T</a></li>
+		                <li><a href="/tags-product-U.html">U</a></li>
+		                <li><a href="/tags-product-V.html">V</a></li>
+		                <li><a href="/tags-product-W.html">W</a></li>
+		                <li><a href="/tags-product-X.html">X</a></li>
+		                <li><a href="/tags-product-Y.html">Y</a></li>
+		                <li><a href="/tags-product-Z.html">Z</a></li>
+		                <li><a href="/tags-product-0-9.html">0-9</a></li>
+		                <li><a href="/tags-product-0-9.html">Sitemap</a></li>
+		                <li><a href="/tags-product-0-9.html">Mobile Site</a></li>
+	    			</ul>
+				</div>
+				<div class="friendlyImg">
+					<img src="src/images/paypal.jpg" alt="">
+				</div>
+				<div class="copyright">© 2015 highqualitybuy.com All Rights Reserved</div>
+			</div>
+		</footer>
+	</body>
+</html>

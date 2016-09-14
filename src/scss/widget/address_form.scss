@@ -11,17 +11,22 @@
 }
 .shipping-address-form
 {
-    width: 730px;
     margin-bottom: 45px;
     padding-left: 10px;
-    input[type='text']
+    input
     {
         font-size: 13px;
         height: 35px;
         line-height: 35px;
         text-indent: 5px;
-        border: 1px solid #cfcfcf;
+        border: 1px solid #dfdfdf;
         border-radius: 2px;
+        &:hover{
+            border-color:#828282;
+        }
+        &:focus{
+             border-color:#333;
+        }
     }
     label
     {
@@ -95,7 +100,7 @@
         }
         input
         {
-            width: 729px;
+            width:100%;
         }
     }
     .privacy

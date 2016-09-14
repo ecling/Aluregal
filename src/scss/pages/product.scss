@@ -6,21 +6,21 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 @import "../widget/newin.scss";
-.product-cont{
-	margin-bottom:20px;
-	.home{
+.home{
+	color:#aaa;
+	margin-bottom: 15px;
+	a{
 		color:#aaa;
-		margin-bottom: 15px;
-		a{
-			color:#aaa;
-			text-transform: capitalize;
-			margin: 0 2px;
-			border-bottom: 1px solid transparent;
-			&:hover{
-				border-bottom: 1px solid #aaa;
-			}
+		text-transform: capitalize;
+		margin: 0 2px;
+		border-bottom: 1px solid transparent;
+		&:hover{
+			border-bottom: 1px solid #aaa;
 		}
 	}
+}
+.product-cont{
+	margin-bottom:20px;
 	.thumbnail{
 		margin-right:8px;
 		li{
@@ -366,6 +366,7 @@
 	text-align: center;
 	border-radius: 3px;
 	z-index: 1000;
+	display: none;
 	h2{
 		display: block;
 		font-size: 18px;
@@ -387,8 +388,99 @@
 	.icon-guanbi{
 		position: absolute;
 		top:0;
-		right: 0;
+		right: -1px;
 		font-size: 50px;
+	}
+}
+.review{
+	position: fixed;
+	top:20%;
+	left: 20%;
+	width: 800px;
+	background: white;
+	padding:40px 60px;
+	border-radius: 3px;
+	z-index: 1000;
+	display: none;
+	h2{
+		display: block;
+		font-size: 18px;
+		text-transform: uppercase;
+		font-family: "Cambria";
+		border-bottom: 1px dashed #cfcfcf;
+		padding-bottom: 20px;
+		margin-bottom: 42px;
+		text-align: center;
+	}
+	.name{
+		width: 385px;
+		label{
+			font-size: 15px;
+			display: block;
+			span{
+				vertical-align: middle;
+				color:red;
+			}
+		}
+		input{
+			width: 285px;
+			line-height: 31px;
+		}
+	}
+	.shoucang{
+		width:204px;
+		height: 52px;
+		p{
+			font-size: 14px;
+			font-weight: bold;
+		}
+		i{
+			color:#fe7726;
+			margin-right: 3px;
+			font-size: 18px;
+		}
+	}
+	.ct{
+		margin-top: 28px;
+		label{
+			display: block;
+			font-size: 15px;
+			span{
+				color:red;
+				vertical-align: middle;
+			}
+		}
+		textarea{
+			padding: 10px;
+			resize: none;
+			width: 675px;
+			height: 160px;
+			font-size: 16px;
+			border-radius: 3px;
+			font-family: "Cambria";
+		}
+		p{
+			margin-top: -23px;
+			text-align: right;
+			margin-right: 5px;
+			color:#aaa;
+			span{
+				color:#333;
+			}
+		}
+	}
+	.icon-guanbi{
+		position: absolute;
+		top:0;
+		right: -1px;
+		font-size: 50px;
+	}
+	button{
+		display: block;
+		margin: 50px 0 0 200px;
+		width: 252px;
+		line-height: 40px;
+		border-radius: 40px;
 	}
 }
 
