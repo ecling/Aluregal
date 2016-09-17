@@ -1,0 +1,56 @@
+@import '../components/_form';
+@import '../base/_normalize';
+@import '../widget/color.scss';
+@import '../layout/common.scss';
+@import '../layout/footer.scss';
+@import '../layout/header.scss';
+@import '../widget/progress.scss';
+@import '../widget/cart_right.scss';
+@import '../widget/address_form.scss';
+@import "../layout/_layout.scss";
+@import '../widget/button.scss';
+.content{
+	text-align: center;
+	font-family:"Cambria";
+}	
+.icon-wancheng{
+	font-size: 40px;
+	color: #ff6767;
+}
+h2{
+	margin: 30px  0 20px 0;
+	color:#101010;
+	font-size: 24px;
+}
+p{
+	line-height:30px;
+	font-size: 18px;
+	color:#666;
+}
+.here{
+	color:#333;
+	border-bottom: 1px solid #333;
+}
+.continue{
+	display: inline-block;
+	margin-top: 50px;
+	font-size: 14px;
+	font-weight: bold;
+	color:#101010;
+	&:hover{
+		color: #ff6767;
+	}
+	.icon-fanhui{
+		color: #ff6767;
+		font-size: 18px;
+		margin-right: 5px;
+	}
+
+}
+.checkout{
+	width: 256px;
+	line-height: 30px;
+	display: block;
+	margin: 15px auto 90px;
+	border-radius: 30px;
+}
