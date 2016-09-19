@@ -212,9 +212,11 @@ header{
 		position: relative;
 		z-index: 99;
 		.input-text{
+			vertical-align: 0px;
 			border: none;
 			margin-top: 4px;
 			height: 25px;
+			line-height: 25px;
 			width: 91%;
 			outline: none;
 			border-right: 1px solid #cfcfcf;

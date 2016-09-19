@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Home Page</title>
+	<title>All Order</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
 		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1473404461_0403302.css">
-		<link rel="stylesheet" type="text/css" href="src/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="src/js/function.js"></script>
 		<script type="text/javascript" src="src/js/index.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
 		<![endif]-->
 	</head>
-	<body class="cms-index-index">
+	<body>
 		<header>
 			<div class="tool w1200 clearfix">
 				<div class="logo fl">
@@ -382,82 +381,82 @@
 				</ul>
 			</div>
 		</header>
-		<div class="content w1200">
-			<div class="banners w1200">
-				<ul class="banners-img">
-					<li><a href=""><img src="src/images/banner-01.jpg" alt=""></a>1</li>
-					<li><a href=""><img src="src/images/banner-02.png" alt=""></a>2</li>
-					<li><a href=""><img src="src/images/banner-01.jpg" alt=""></a>3</li>
-					<li><a href=""><img src="src/images/banner-02.png" alt=""></a>4</li>
-					<li><a href=""><img src="src/images/banner-01.jpg" alt=""></a>5</li>
+		<div class="wrap clearfix w1200">
+			<div class="col2-left fl">
+				<ul class="myaccount_list">
+					<li  class="myaccount_list_style"><span></span><a href="http://localhost:3000/myorders.html">My Orders</a></li>
+					<li><span></span><a href="#">H Points</a></li>
+					<li><span></span><a href="http://localhost:3000/mywishlist.html">My Wishlist</a></li>	
+					<li><span></span><a href="http://localhost:3000/OrderReviews.html">Order Reviews</a></li>
+					<li><span></span><a href="#">My Invitation</a></li>
+					<li><span></span><a href="http://localhost:3000/accountsetting.html">Account Setting</a></li>
+					<li><span></span><a href="http://localhost:3000/AddressBook.html#">Address Book</a></li>
+					<li><span></span><a href="http://localhost:3000/saveforlater.html#">Save For Later</a></li>
 				</ul>
-				<div class="banners-tab">
-					<a class="prev" id="j_prev" href="#"><span class="iconfont icon-j-prev"></span></a>
-					<a class="next" id="j_next" href="#"><span class="iconfont icon-j-next"></span></a>
+			</div>	
+			<div class="col2-main fl">
+				<div class="allorders_navbar">
+					<a class="navbar_a_style"  href="#">Shipped(0)</a>				
+					<a  href="#">Paid(0)</a>
+					<a  href="#">All Orders(0)</a>
 				</div>
-				<ul class="banners-index">
-					<li class="active"><span></span></li>
-					<li><span></span></li>
-					<li><span></span></li>
-					<li><span></span></li>
-					<li><span></span></li>
-				</ul>
-			</div>
-			<div class="center clearfix">
-				<div class="center-left fl">
-					
-				</div>
-				<div class="center-right fr">
-					<div class="right-top">
-						
+				<div class="allorders_list">
+					<div class="allorders_list_head">
+						<ul>
+							<li>Order NO.</li>
+							<li>Products</li>
+							<li>Status</li>
+							<li>Date</li>
+							<li>Price</li>
+							<li class="mgr">Action</li>
+						</ul>
 					</div>
-					<div class="right-bottom">
+					<ul class="allorders_list_ul">
+						<li class="status_waitingforpayment">
+							<ul>
+								<li class="orderno">CS164112</li>
+								<li class="products">
+									<div class="products_show">
+										<div class="products_show_img">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+											<img src="" alt="" style="background: red">
+											<img src="" alt="" style="background: black">
+											<img src="" alt="" style="background: green">
+										</div>
+									</div>
+									<a href="#" title="" class="iconfont icon-prev"></a>
+									<a href="#" title="" class="iconfont icon-next"></a>
+								</li>
+								<li class="status">Waiting for Payment </li>
+								<li class="dete">2016-07-26 18:04:12  </li>
+								<li class="status_waitingforpayment_price">$39.88</li>
+								<li class="action">
+									<a href="#" title="" class="button checkout">Checkout</a>
+									<a href="#" title="" class="viewdetails">View Details</a>
+									<a href="#" title="" class="cancelorder">Cancel Order</a>
+								</li>
+							</ul>
+						</li>
 						
-					</div>
-				</div>
-			</div>
-			<div class="home clearfix">
-				<div>
-					
-				</div>
-				<div>
-					
-				</div>
-				<div class="mgr">
-					
-				</div>
-			</div>
-			<div class="new-in">
-				<div class="new-head">
-					<h2>NEW &nbsp;IN</h2>
-					<a href="#" title="">More>></a>
-				</div>
-				<div class="new-list w1200">
-					<ul>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li class="mgr">
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
 					</ul>
-					<div class="new-tab">
-						<a class="new-prev" href="#"><span class="iconfont icon-j-prev"></span></a>
-						<a class="new-next" href="#"><span class="iconfont icon-j-next"></span></a>
+					<div class="pager">
+					    <ul>
+					    	<li><a href=""><span class="iconfont icon-prev"></span></a></li>
+					        <li class="current">1</li>
+	        			    <li><a href="#">2</a></li>
+	        			    <li><a href="#">3</a></li>
+	        			    <li><a href="#">4</a></li>
+	        			    <li><a href="#">5</a></li>
+	        			    <li><a href="#">6</a></li>
+	        			    <li><a href="#">7</a></li>
+	        			    <li><a href="#">8</a></li>
+	        			    <li><a href="#">9</a></li>
+	        			    <li class="more"><a href="#">...</a></li>
+	        			    <li><a href="#">20</a></li>
+	        			    <li class="last"><a href=""><span class="iconfont icon-next"></span></a></li>
+					    </ul>
 					</div>
 				</div>
 			</div>

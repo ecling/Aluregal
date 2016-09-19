@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 	$("#commentForm2").validate({errorElement: "p",});
 	$("#commentForm").validate({errorElement: "p",	});
 	$("#signIn_form").validate({
-	 	errorElement: "em",
+	 	errorElement: "p",
 	 	rules: {
 	 	   email: {
 	 	    required: true,
@@ -18,8 +18,8 @@ jQuery(document).ready(function($) {
 	 		password:"Please enter your password.",
 	 	},
 	});
-	$("#register_form").validate({errorElement: "em",	
-	 	errorElement: "em",
+	$("#register_form").validate({
+	 	errorElement: "p",
 	 	rules: {
 	 	   email: {
 	 	    required: true,
