@@ -247,6 +247,21 @@
 		}
 	}
 }
+.no-reviews{
+	font-size: 16px;
+	padding-left: 190px;
+	.write{
+		margin-bottom:30px;
+		display:inline-block;
+		width:180px;
+		line-height:29px;
+		border-radius:29px;
+		margin-left: 20px;
+		i{
+			font-weight:normal;
+		}
+	}
+}
 .reviews-content{
 	padding-left:30px;
 	border-top:1px dashed #aaa;
