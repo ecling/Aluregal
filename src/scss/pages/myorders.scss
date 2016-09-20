@@ -7,7 +7,7 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 .wrap{
-	margin: 30px auto 30px;
+	margin: 30px auto;
 }
 .col2-main{
 	width: 976px;
@@ -36,6 +36,14 @@
 	font-size:14px;
 }
 /*copy end*/
+.h1-center{
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 22px;
+	color:#101010;
+	font-family: "Cambria";
+}
 .col2-left{
 	font-family: "Cambria";
 	.myaccount_list{
@@ -70,214 +78,61 @@
 		}
 	}
 }
-.col2-right{
-	h2{
-		margin-bottom: 20px;
-		span{
-			font-size: 14px;
-		}
+.head{
+	margin-bottom: 45px;
+	.icon-gerenzhongxin{
+		font-size: 60px;
+		padding:20px;
+		border: 1px solid #aaa;
+		color:#aaa;
+		border-radius: 50%;
+		margin-right: 20px;
 	}
-	.myorders_head{
-		width: 100%;
-		height: 205px;
-		background: #f8f7f5;
-		position: relative;
-	}
-	.myorders_head_profile{
-		box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		-o-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		width: 200px;
-		height: 230px;
-		background: #eaeaea;
-		text-align: center;
-		position: absolute;
-		top:-10px;
-		left:45px;
-		padding-top: 20px;
-		.touxiang{
-			display: block;
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			overflow: hidden;
-			margin:0 auto 10px;
-			background:#eeb053;
-		}
-		p{
-			font-weight: bold;
-			color:#333;
-			height: 15px;
-		}
-		.hello{
-			font-size: 16px;
-			margin-bottom: 7px;
-		}
-		.profile{
-			font-size: 12px;
-			color: #aaa;
-			height: 20px;
-			font-weight:normal;
-			&:hover{
-				color:#eeb053;
-			}
-		}
-		i{
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background: #f8f7f5;
-			display: block;
-			position: absolute;
-			bottom:25px;
-		}
-		.email{
-			width: 60%;
-			margin: 10px  auto 5px;
-			padding-top: 10px;
-			border-top: 1px solid #cfcfcf;
-		}
-		.leftball{
-			left:-25px;
-		}
-		.rightball{
-			right:-25px;
-		}
-	}
-	.myorders_head_myorders{
-		position: absolute;
-		top:0;
-		left:315px;
+	.hello{
+
+		font-family: "Cambria";
 		h2{
-			font-size: 18px;
-			font-weight: bold;
-			margin:30px 0 20px 0;
-		}
-		a{
-			display: block;
-			height: 30px;
-			color:#333;
-			font-size: 14px;
-			&:hover{
-				color:#eeb053;
-			}
-		}
-		.iconfont{
-			font-size: 20px;
-			margin-right: 12px;
-		}
-		.price{
-			color:red;
-		}
-	}
-	.myorders_head_gongge{
-		width: 320px;
-		height: 230px;
-		background: #f0f0f0;
-		padding: 20px;
-		box-sizing:border-box;
-		-webkit-box-sizing:border-box;
-		-o-box-sizing:border-box;
-		-moz-box-sizing:border-box;
-		position: absolute;
-		top:-10px;
-		right: 0;
-		li{
-			width: 50%;
-			height: 50%;
-			text-align: center;
-			font-size: 15px;
-			font-weight: bold;
-			color:#333;
-			float: left;
-			padding-bottom: 20px;
-			.qty{
-				color:red;
-			}
-			.tubiao{
-				img{
-					margin:15px auto;
-				}
-			}
-		}
-		li:nth-child(2),
-		li:nth-child(1){
-			&:hover{
-				img{
-					-webkit-transition:-webkit-transform 1s ease-in-out;
-					-webkit-transform:rotate(720deg);
-					transition:transform 1s ease-in-out;
-					transform:rotate(720deg);
-				}
-			}
-		}
-		li:nth-child(3),
-		li:nth-child(4){
-			&:hover{
-				img{
-					-webkit-transition:-webkit-transform 1s ease-in-out;
-					-webkit-transform:rotateY(720deg);
-					transition:transform 1s ease-in-out;
-					transform:rotateY(720deg);
-				}
-			}
-		}
-		i{
-			background: #eaeaea;
-			position: absolute;
-		}
-		.heng{
-			width: 280px;
-			height: 1px;
-			top:115px;
-			left: 20px;
-		}
-		.shu{
-			height: 190px;
-			width: 1px;
-			top:20px;
-			left:160px;
-		}
-	}
-	.myorders_foot{
-		width: 100%;
-		height: 300px;
-		background: #f8f7f5;
-		margin-top:45px;
-		text-align: center;
-		//background: url(../images/myshare.jpg);
-		.social{
-			padding-left: 35%;
-			li{
-				float: left;
-				margin-right: 15px;
-				.iconfont{
-					font-size: 40px;
-					border-radius: 50%;
-					&:hover{
-						color:red;
-					}
-				}
-			}
+			font-size: 24px;
+			margin-bottom: 10px;
 		}
 		p{
-			margin: 10px 0 ;
+			line-height: 20px;
+			font-size: 14px;
 		}
-		.dizhi{
-			border: 1px solid #cfcfcf;
-			padding:5px;
-			background: white;
+		a:hover{
+			color:#eeb053;
 		}
-		.copy{
-			display: inline-block;
-			width: 40px;
-			line-height: 26px;
-			background: #eeb053;
-			color:white;
+	}
+	.fenlei{
+		margin-top: 15px;
+		li{
+			float: left;
+			text-align: center;
+			color:#272636;
+			margin-left:50px; 
+			&.mgl{
+				margin-left: 0;
+			}
+			.iconfont{
+				font-size: 30px;
+				display: block;
+				margin-bottom: 20px;
+			}
+			a{
+				font-family: "Cambria";
+				font-size: 13px;
+				&:hover{
+					border-bottom: 1px solid #272636;
+				}
+				span{
+					vertical-align: -1px;
+					color:red;
+				}
+			}
 		}
 	}
 }
+
 /* My Orders CSS  --end--*/
 
 /*Account Setting css*/
@@ -317,10 +172,6 @@
 	background: #f8f7f5;
 }
 .account-setting-font{
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	width: 325px;
 	padding-left: 155px;
 	.iconfont{
@@ -469,6 +320,9 @@
 		&:hover{
 			background: #333;
 		}
+		&.mgr{
+			margin-right: 0;
+		}
 	}
 	.navbar_a_style{
 		background:#333;
@@ -526,7 +380,6 @@
 		font-size: 20px;
 		position: absolute;
 		top:40%;
-		z-index: 2000;
 		&:hover{
 			color:#eeb053;
 		}
@@ -683,10 +536,6 @@
 }
 .conter_list_right{
 	width: 248px;
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	padding-top: 25px;
 	padding-left: 20px;
 	border-left: 1px solid #dfdfdf;
@@ -776,10 +625,6 @@
 		.operate_0perator{
 			text-align: right;
 			padding-right: 20px;
-			box-sizing:border-box;
-			-o-box-sizing:border-box;
-			-moz-box-sizing:border-box;
-			-webkit-box-sizing:border-box;
 		}
 	}
 	.conter_operate_content{
@@ -793,10 +638,6 @@
 		.operate_0perator{
 			text-align: right;
 			padding-right: 25px;
-			box-sizing:border-box;
-			-o-box-sizing:border-box;
-			-moz-box-sizing:border-box;
-			-webkit-box-sizing:border-box;
 		}
 	}
 }
@@ -881,10 +722,6 @@
 .new_address{
 	width: 384px;
 	height: 208px;
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	border: 2px dashed #cfcfcf;
 	&:hover{
 		border: 2px solid #eeb053;
@@ -924,10 +761,6 @@
 	background: #f8f7f5;
 	width:100%;
 	padding: 0 20px 70px 20px;
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	color: #aaa;
 	li{
 			float: left;
@@ -1056,10 +889,6 @@
 	background: url(../images/point_03.jpg) no-repeat ;
 	padding:60px 0 0 160px;
 	margin-bottom: 20px;
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	.mypoint_conter{
 		height: 95px;
 	}
@@ -1112,10 +941,6 @@
 	width: 100%;
 	padding: 0 40px 70px 40px;
 	background: #f8f7f5;
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	span{
 		display: inline-block;
 		width: 270px;
@@ -1154,10 +979,6 @@
 	height: 300px;
 	padding-top:230px ;
 	padding-left: 65px; 
-	box-sizing:border-box;
-	-o-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
 	background: url(../images/invitation.jpg) no-repeat;
 	ul{
 		li{
