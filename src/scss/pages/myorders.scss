@@ -137,44 +137,40 @@
 
 /*Account Setting css*/
 .account_setting_tab{
-	background: #f8f7f5;
 	padding-bottom: 60px;
 	ul{
-		 padding-left:155px;
-		 padding-top: 30px;
+		padding-left:245px;
 		li{
-			width: 200px;
+			display: inline-block;
+			width: 128px;
 			line-height: 35px;
-			float: left;
-			text-align: center;
-			background: #ededed;
+			float: left;			
 			margin-right: 10px;
+			background: #cfcfcf;
+			color:white;
+			text-align: center;
 			cursor: pointer;
-			.tab_span{
-				font-size: 14px;
-				font-weight: bold;
-				color:#333;
-			}
-			.iconfont{
-				font-size: 18px;
-				margin-right: 10px
-			}
-		}
-		.tab_style{
-			background: white;
-			span{
-				color:#eeb053;
+			border-radius: 35px;
+			margin-right: 55px;
+			&.active{
+				background: #333;
 			}
 		}
 	}
 }
-.account_setting_conter{
-	background: #f8f7f5;
-}
 .account-setting-font{
-	width: 325px;
 	padding-left: 155px;
-	.iconfont{
+	.icon-gerenzhongxin{
+		display: block;
+		color:#dfdfdf;
+		font-size: 60px;
+		border-radius: 50%;
+		padding: 20px;
+		border:1px solid #dfdfdf;
+		margin-bottom: 10px;
+	}
+	.icon-youxiang,
+	.icon-mima{
 		display: block;
 		color:#dfdfdf;
 		font-size: 100px;
@@ -192,7 +188,8 @@
 	}
 }
 .account-setting-form{
-	width: 575px;
+	margin-left: 80px;
+	width:400px;
 	.labeld{
 		display: block;
 		color:#818181;
@@ -214,7 +211,57 @@
 		font-size: 14px;
 		line-height: 35px;
 		margin-bottom: 60px;
+		border-radius: 35px;
 	}
+	input[type="password"],
+	input[type="text"]{
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+		text-indent: 10px;
+		color:#333;
+		border: 1px solid #dfdfdf;
+	}
+}
+.file {
+    position: relative;
+    display: inline-block;
+    color:#333;
+    margin-left: 10px;
+    border-bottom: 1px solid #333;
+}
+.file input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    color: #eeb053;
+     border-bottom: 1px solid #eeb053;  
+}
+.day,
+.mon{
+	width: 135px;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 10px;
+	border:1px solid #dfdfdf;
+	margin-right: 9px;
+}
+.year{
+	width: 106px;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 10px;
+	border:1px solid #dfdfdf;
+}
+.country{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-indent: 10px;
+	border:1px solid #dfdfdf;
 }
 /*Account Setting css --end--*/
 
@@ -857,28 +904,6 @@
 	}
 }
 /*Order_Reviews css --end--*/
-
-.file {
-    position: relative;
-    display: inline-block;
-    padding: 4px 12px;
-    overflow: hidden;
-    color:#aaa;
-    text-decoration: none;
-    text-indent: 0;
-    line-height: 20px;
-}
-.file input {
-    position: absolute;
-    font-size: 100px;
-    right: 0;
-    top: 0;
-    opacity: 0;
-}
-.file:hover {
-    color: #eeb053;
-    text-decoration: none;
-}
 
 /*==========================*/
 
