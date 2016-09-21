@@ -268,7 +268,7 @@ header{
 					display: block;
 				}
 			}
-			a{
+			>a{
 				font-size: 16px;
 			}
 		}
@@ -284,23 +284,31 @@ header{
 			font-family: "Arial";
 			dl{
 				float: left;
-				width: 150px;
+				width: 160px;
 				margin-bottom: 20px;
 				dt{
 					font-weight: bold;
+					span:hover{
+						color:red;
+					}
 				}
 				dd{
 					margin: 8px 0;
+					span{
+						font-size: 12px;
+					}
 					a:hover{
-						color:red;
+						span{
+							color:red;
+						}
 					}
 				}
 			}
 			.nav-dl{
-				width: 450px;			
+				width: 480px;			
 			}
 			.nav-img{
-				width: 385px;
+				width: 375px;
 				padding-left: 30px;
 				border-left:1px solid #cfcfcf;
 			}
