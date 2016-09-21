@@ -13,6 +13,9 @@ jQuery(document).ready(function($) {
 	$(".write").on('click',show);
 	$(".quickview").on('click',show);
 	$(".icon-guanbi").on('click',hide);
+	$("#NewPassword_form button").on('click',show);
+	$("#ForgottenPassword_submit button").on('click',show);
+	$(".popup .button").on('click',hide);
 	 function show(){
     	$(".popup").show(300);
 		$(".mask").css("height",$(document).height());     
