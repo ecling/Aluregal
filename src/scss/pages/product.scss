@@ -6,6 +6,7 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 @import "../widget/newin.scss";
+@import "../widget/page.scss";
 .home{
 	color:#aaa;
 	margin-bottom: 15px;
@@ -267,6 +268,9 @@
 .reviews-content{
 	padding-left:30px;
 	border-top:1px dashed #aaa;
+	&.pdl0{
+		padding-left:0;
+	}
 	.reviews-head{
 		padding:20px 20px 10px 40px;
 		border-bottom:1px dashed #aaa;
@@ -326,16 +330,24 @@
 			color:#aaa;
 		}
 		ul{
+			max-width: 580px;
 			margin-bottom:15px;
 			li{
 				float:left;
 				margin-right:20px;
 			}
 		}
+		.sc{
+			margin-right: 160px;
+			display: inline-block;
+			vertical-align: -31px;
+			font-family: "Cambria";
+			p{
+				margin-bottom: 10px;
+			}
+		}
 		.xing{
-			position:absolute;
-			right:20px;
-			top:50%;
+			display: inline-block;
 			color:#fe7726;
 			i{
 				font-size:16px;
@@ -350,9 +362,6 @@
 }
 .left-product{
 	width: 980px;
-}
-.product-drr{
-	margin-bottom: 127px;
 }
 .right-relative{
 	padding:20px;
@@ -501,3 +510,23 @@
 	}
 }
 
+.back{
+	display: block;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	&:hover{
+		color:#fe7726;
+	}
+	i{
+		margin-right: 5px;
+	}
+}
+.btpp{
+	display: inline-block;
+	width: 340px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 35px;
+	margin: 20px 0 ;
+}

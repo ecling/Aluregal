@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>product</title>
+	<title>OrderDetails</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1474534735_341696.css">
-		<link rel="stylesheet" type="text/css" href="src/css/product.css" />
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1473404461_0403302.css">
+		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="src/js/function.js"></script>
 		<script type="text/javascript" src="src/js/index.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
-		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
+		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
 		<![endif]-->
 	</head>
-	<body class="cms-index-index">
+	<body>
 		<header>
 			<div class="tool w1200 clearfix">
 				<div class="logo fl">
-					<a href="" title=""><img src="src/images/logo.png" alt=""></a>
+					<a href="" title=""><img src="src/images/logo.png" alt="logo"></a>
 				</div>
 				<div class="my-orders fr">
 					<div class="my-account">
@@ -122,6 +121,9 @@
 									<div class="fl">
 										<span class="price">$ 420</span> x <span class="qty">1</span>
 									</div>									
+								</div>
+								<div class="checkout">
+									<button class="button" type="submit">View Bag & Checkout</button>
 								</div>
 							</div>
 						</div>
@@ -379,480 +381,179 @@
 				</ul>
 			</div>
 		</header>
-		<div class="content w1200 clearfix"> 
-			<div class="home">
-				<a href="#" title="">Home</a> / <a href="#" title="">Women</a> / <a href="#" title="">Tops</a> /<a href="#" title=""> Neck Raglan Short</a>/		
-			</div>
-  			<div class="product-cont">
-				<div class="product clearfix">
-					<ul class="thumbnail fl">
-						<li class="active"><a href="#" title=""><img src="src/images/product-02.jpg" alt=""></a></li>
-						<li><a href="#" title=""><img src="src/images/product-02.jpg" alt=""></a></li>
-						<li><a href="#" title=""><img src="src/images/product-02.jpg" alt=""></a></li>
-						<li><a href="#" title=""><img src="src/images/product-02.jpg" alt=""></a></li>
-						<li><a href="#" title=""><img src="src/images/product-02.jpg" alt=""></a></li>
-					</ul>
-					<div class="fl">
-						<img src="src/images/product-01.jpg" alt="">
-						<ul class="social clearfix">
-							<li><a href="#" title=""><i class="iconfont icon-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="iconfont icon-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="iconfont icon-google"></i></a></li>
-							<li><a href="#" title=""><i class="iconfont icon-vk"></i></a></li>
-							<li><a href="#" title=""><i class="iconfont icon-facebook"></i></a></li>
-						</ul>
+		<div class="wrap clearfix w1200">
+			<div class="col2-left fl">
+				<ul class="myaccount_list">
+					<li  class="myaccount_list_style"><span></span><a href="http://localhost:3000/myorders.html">My Orders</a></li>
+					<li><span></span><a href="#">H Points</a></li>
+					<li><span></span><a href="http://localhost:3000/mywishlist.html">My Wishlist</a></li>	
+					<li><span></span><a href="http://localhost:3000/OrderReviews.html">Order Reviews</a></li>
+					<li><span></span><a href="#">My Invitation</a></li>
+					<li><span></span><a href="http://localhost:3000/accountsetting.html">Account Setting</a></li>
+					<li><span></span><a href="http://localhost:3000/AddressBook.html#">Address Book</a></li>
+					<li><span></span><a href="http://localhost:3000/saveforlater.html#">Save For Later</a></li>
+				</ul>
+			</div>	
+			<div class="col2-main fl">
+				<h1 class="h1-center">order reviews - details</h1>
+				<div class="order_reviews_conter ">
+					<div class="conter_head">
+						<label>Order NO.</label><span class="order_no">CS164112</span>
+						<label>Tracking NO.</label><span class="tracking_no">201608010010</span>
+						<span class="date">2016-07-26 18:04:12  </span>
 					</div>
-					<div class="option fl">
-						<h1><a href="" title="">Black Chiffon Polo</a> </h1>
-						<div class="pingfen">
-							<ul class="clearfix">
-								<li><i class="iconfont icon-shoucang"></i></li>
-								<li><i class="iconfont icon-shoucang"></i></li>
-								<li><i class="iconfont icon-shoucang"></i></li>
-								<li><i class="iconfont icon-shoucang"></i></li>
-								<li><i class="iconfont icon-shoucang"></i></li>
-								<span>(4.1)</span>
+					<div class="conter_list clearfix" >
+						<div class="conter_list_left fl" >
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
 							</ul>
-							<i class="iconfont icon-huoche"></i>
-							<span>Ship within 3-7 bussiness days </span>
-						</div>
-						<div class="jiage">
-							<span class="price">$11.01</span>
-							<span class="orgi">$11.01</span>
-							<span class="off">50% OFF</span>
-							<i class="iconfont icon-daojishi"></i>
-							<span class="time">2day(s) 18:18:18</span>
-						</div>
-						<div class="cs color">
-							<label>Color</label>
-							<ul class="clearfix">
-								<li class="active"><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
-								<li><img src="src/images/product-03.jpg" alt=""></li>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>			
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
+							</ul>
+							<ul class="conter_list_li">
+								<li>
+									<a href="#" title="" class="tupian"><img src="" alt=""></a>
+								</li>
+								<li class="xinxi">
+									<a href="#" title="" class="xinxi_a">Vintage Flower One Shoulder Vintage Flower One Shoulder</a>
+									<p>Size <span class="size">US 10</span></p>
+									<P>Color <span class="color">Champagne</span> </P>
+								</li>
+								<li class="qty">
+									Qty:<span class="qty_val">20</span>
+								</li>
+								<li class="point">
+									Earn 11 H Point
+								</li>
+								<li class="conter_list_price">
+									$98.9
+								</li>
 							</ul>
 						</div>
-						<div class="cs size">
-							<label>Size</label>
-							<ul class="clearfix">
-								<li class="active">S</li>
-								<li>M</li>
-								<li>L</li>
-								<li>XL</li>
-								<li class="active">2XL</li>
-							</ul>
+						<div class="conter_list_right fr  ">	
+							<div class="list_right_price">
+								<p><span>Subtotal</span><span class="prices">$9998.98</span></p>
+								<p><span>Coupon discount</span><span class="prices">$9998.98</span></p>
+								<p><span>H point discount</span><span class="prices">$9998.98</span></p>
+								<p><span>Shipping</span><span class="prices">$9998.98</span></p>
+								<p class="total"><span>Total</span><span class="prices">$0.01</span></p>
+							</div>
+							<div class="list_right_checkout clearfix">
+								<span>Waiting for Payment </span>
+								<button type="submit" class="button right_checkout">Checkout</button>
+								<a href="#" title="">Cancel Order</a>
+							</div>
 						</div>
-						<div class="qty">
-							<label>Qty</label>
-							<a href="#" title=""> - </a>
-							<input type="text" name="" value="1">
-							<a href="#" title=""> + </a>
+					</div>
+					<div class="conter_address clearfix" >
+						<div class="conter_address_left orderreviews_address fl" >
+							<div class="biaoti">
+								<h4>Shipping Information</h4><h5>(Super Saver Shipping)</h5>
+							</div>
+							<div class="neirong">														
+								<p><label>Name:</label><span>lastname  firstname</span></p>
+								<p><label>Phone Number:</label><span>123456798</span></p>
+								<p><label>E-mail:</label><span>123456789</span></p>
+								<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States xinduhui Los Angeles 20010 California United States</span></p>
+								<p><label>ZIP/Postal Code:</label><span>20010</span>
+							</div>
 						</div>
-						<div class="add">
-							<button class="button tobag" type="submit">Add To Bag</button>
-							<a class="towishkist" href="#"><i class="iconfont icon-hert"></i>Add To Wishlist</a>
+						<div class="conter_address_center fl">
+							<div class="biaoti">
+								<h4>Method of payment</h4>
+							</div>
+							<div class="neirong">
+								
+							</div>
 						</div>
+						<div class="conter_address_right fr">
+							<div class="biaoti">
+								<h4>Order Request</h4>
+							</div>
+							<div class="neirong">
+								<p>Please give me a small size clothes Please give me a small size clothes Please give me a small size cloth a small size clothes Please give me a small size clothes</p>
+							</div>							
+						</div>
+					</div>
+					<div class="conter_operate clearfix">
+						<p class="conter_operate_head">
+							<span class="operate_">Operate</span>
+							<span class="operate_date">Date</span>
+							<span class="operate_0perator">Operator</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
+						<p class="conter_operate_content">
+							<span class="operate_">Proced Order</span>
+							<span class="operate_date">2016-07-26 18:04:12</span>
+							<span class="operate_0perator">James</span>
+						</p>
 					</div>
 				</div>
-  			</div>
-  			<div class="product-drr clearfix">
-	  			<div class="left-product fl">
-	  				<div class="description">
-						<h1>description</h1>
-						<div class="description-content">
-	                    	<h2>Specification</h2>
-	    					<div class="std">
-								<p>color: WHITE AND BLACK</p>
-								<P>Size: XL,2XL,3XL,4XL,5XL</P>
-								<P>Category: Women > Plus Size > Tops</P>
-								<p>Material: Polyester</p>
-								<p>Clothing Length: Long</p>
-								<p>Sleeve Length: Short</p>
-								<p>Collar: Stand-Up Collar</p>
-								<p>Pattem Type: Plaid</p>
-								<p>Style: Casual</p>
-								<p>Weight: 0.163KG</p>
-								<p>Package Contents: 1 X Blouse</p>
-								<br/>
-								<strong class="sizechart">Size Chart:</strong>
-								<table border="1" cellpadding="0" cellspacing="0" style="width: 770px;" width="770px">
-									<colgroup>
-										<col span="7" />
-									</colgroup>
-									<tbody>
-										<tr height="21">
-											<td height="42" rowspan="2" style="height: 43px; width: 72px; text-align: center;">
-												Size</td>
-											<td colspan="2" style="width: 144px; text-align: center;">
-												Length</td>
-											<td colspan="2" style="width: 144px; text-align: center;" class="tt">
-												Shoulde 
-												</td>
-											<td colspan="2" style="width: 144px; text-align: center;" class="td">
-											 
-												Bust 
-												</td>
-											<td colspan="2" style="width: 144px; text-align: center;" class="td">
-											
-												Sleeve
-												</td>
-											<td colspan="1" style="width: 104px; text-align: center;" class="td">
-											
-												For Weight</td>
-											<td colspan="2" style="width: 144px; text-align: center;">
-												For Height</td>
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; width: 72px; text-align: center;">
-												inch</td>
-											<td style="width: 72px; text-align: center;">
-												cm</td>
-											<td style="width: 72px; text-align: center;">
-												inch</td>
-											<td style="width: 72px; text-align: center;">
-												cm</td>
-											<td style="width: 72px; text-align: center;">
-												inch</td>
-											<td style="width: 72px; text-align: center;">
-												cm</td>
-											<td style="width: 72px; text-align: center;">
-												inch</td>
-											<td style="width: 72px; text-align: center;">
-												cm</td>
-											<td style="width: 72px; text-align: center;">
-												kg</td>
-											<td style="width: 72px; text-align: center;">
-												cm</td>
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; text-align: center;">
-												M</td>
-											<td style="width: 72px; text-align: center;">
-												25.59</td>
-											<td style="width: 72px; text-align: center;">
-												65</td>
-											<td style="width: 72px; text-align: center;">
-												16.14</td>
-											<td style="width: 72px; text-align: center;">
-												41</td>
-											<td style="width: 72px; text-align: center;">
-												35.43</td>
-											<td style="width: 72px; text-align: center;">
-												90</td>
-											<td style="width: 72px; text-align: center;">
-												8.27</td>
-											<td style="width: 72px; text-align: center;">
-												21</td>
-											<td style="width: 72px; text-align: center;">
-												55-65</td>
-											<td style="width: 72px; text-align: center;">
-												167-172</td>
-											
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; text-align: center;">
-												L</td>
-											<td style="width: 72px; text-align: center;">
-												26.38</td>
-											<td style="width: 72px; text-align: center;">
-												67</td>
-											<td style="width: 72px; text-align: center;">
-												16.54</td>
-											<td style="width: 72px; text-align: center;">
-												42</td>
-											<td style="width: 72px; text-align: center;">
-												37.01</td>
-											<td style="width: 72px; text-align: center;">
-												94</td>
-											<td style="width: 72px; text-align: center;">
-												8.66</td>
-											<td style="width: 72px; text-align: center;">
-												22</td>
-											<td style="width: 72px; text-align: center;">
-												65-70</td>
-											<td style="width: 72px; text-align: center;">
-												173-176</td>
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; text-align: center;">
-												XL</td>
-											<td style="width: 72px; text-align: center;">
-												27.17</td>
-											<td style="width: 72px; text-align: center;">
-												69</td>
-											<td style="width: 72px; text-align: center;">
-												16.93</td>
-											<td style="width: 72px; text-align: center;">
-												43</td>
-											<td style="width: 72px; text-align: center;">
-												38.19</td>
-											<td style="width: 72px; text-align: center;">
-												97</td>
-											<td style="width: 72px; text-align: center;">
-												9.06</td>
-											<td style="width: 72px; text-align: center;">
-												23</td>
-											<td style="width: 72px; text-align: center;">
-												71-78</td>
-											<td style="width: 72px; text-align: center;">
-												177-181</td>
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; text-align: center;">
-												XXL</td>
-											<td style="width: 72px; text-align: center;">
-												28.15</td>
-											<td style="width: 72px; text-align: center;">
-												71.5</td>
-											<td style="width: 72px; text-align: center;">
-												17.32</td>
-											<td style="width: 72px; text-align: center;">
-												44</td>
-											<td style="width: 72px; text-align: center;">
-												40.16</td>
-											<td style="width: 72px; text-align: center;">
-												102</td>
-											<td style="width: 72px; text-align: center;">
-												9.45</td>
-											<td style="width: 72px; text-align: center;">
-												24</td>
-											<td style="width: 72px; text-align: center;">
-												79-82</td>
-											<td style="width: 72px; text-align: center;">
-												182-185</td>
-										</tr>
-										<tr height="21">
-											<td height="21" style="height: 21px; text-align: center;">
-												XXXL</td>
-											<td style="width: 72px; text-align: center;">
-												28.54</td>
-											<td style="width: 72px; text-align: center;">
-												72.5</td>
-											<td style="width: 72px; text-align: center;">
-												17.72</td>
-											<td style="width: 72px; text-align: center;">
-												45</td>
-											<td style="width: 72px; text-align: center;">
-												42.13</td>
-											<td style="width: 72px; text-align: center;">
-												107</td>
-											<td style="width: 72px; text-align: center;">
-												9.84</td>
-											<td style="width: 72px; text-align: center;">
-												25</td>
-											<td style="width: 72px; text-align: center;">
-												83-86</td>
-											<td style="width: 72px; text-align: center;">
-												186-190</td>
-										</tr>
-									</tbody>
-								</table>								
-								<strong>Package Included:</strong><br />
-								1 x shirt<br />
-								<br />
-								<p>Note:<br />
-								1.Please allow a little size error due to manual measurement.<br />
-								2.Please be reminded that due to lighting effects and monitor&#39;s brightness/ contrast settings etc, the color tone of the website&#39;s photo and the actual item could be slightly different.</p><br />
-								&nbsp;  
-							</div>
-	        			</div>
-					</div>
-					<div class="reviews">
-						<h1>reviews ( 20 )</h1>
-						<div class="reviews-content">
-							<div class="reviews-head  clearfix">
-								<div class="head-icon fl">
-									<i class="iconfont icon-shoucang"></i>
-									<i class="iconfont icon-shoucang"></i>
-									<i class="iconfont icon-shoucang"></i>
-									<i class="iconfont icon-shoucang"></i>
-									<i class="iconfont icon-shoucang"></i>
-									<span>4.1</span>
-								</div>
-								<div class="head-based fl">
-									<p>Based all reviews</p>
-									<p>33% of respondents would recommend this to a friend</p>
-								</div>
-								<div class="head-a fr">
-									<a class="write button" href="#" title="">
-										<i class="iconfont icon-pinglun"></i>
-										Write A Reviews
-									</a>
-									<a class="see" href="#" title="">See All Reviews >></a>
-								</div>
-							</div>
-							<div class="reviews-bycarlos">
-								<h2>BY CARLOS</h2><h3>8/7/2015</h3>
-								<div class=" clearfix">
-									<ul class="fl">
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-									</ul>																
-									<div class="xing fr">
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<span> 4.1 </span>
-									</div>
-									<div class="sc fr">
-										<p>Color: Bule</p>
-										<p>Size: S</p>						
-									</div>	
-								</div>
-								<p>ssssssssssssssssssssssssssssssssss.</p>
-							</div>
-							<div class="reviews-bycarlos">
-								<h2>BY CARLOS</h2><h3>8/7/2015</h3>
-								<div class=" clearfix">
-									<ul class="fl">
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-									</ul>																
-									<div class="xing fr">
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<span> 4.1 </span>
-									</div>
-									<div class="sc fr">
-										<p>Color: Bule</p>
-										<p>Size: S</p>						
-									</div>	
-								</div>
-								<p>ssssssssssssssssssssssssssssssssss.</p>
-							</div>
-							<div class="reviews-bycarlos">
-								<h2>BY CARLOS</h2><h3>8/7/2015</h3>
-								<div class=" clearfix">
-									<ul class="fl">
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-										<li><img src="src/images/product-05.jpg" alt=""></li>
-									</ul>																
-									<div class="xing fr">
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<i class="iconfont icon-shoucang"></i>
-										<span> 4.1 </span>
-									</div>
-									<div class="sc fr">
-										<p>Color: Bule</p>
-										<p>Size: S</p>						
-									</div>	
-								</div>
-								<p>ssssssssssssssssssssssssssssssssss.</p>
-							</div>
-						</div>
-						<div class="no-reviews"  style="display: none;">
-							There are no reciews here. 
-							<a class="write button" href="#" title="">
-								<i class="iconfont icon-pinglun"></i>
-								Write A Reviews
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="right-relative fr">
-	  				<h1>SIMILAR</h1>
-	  				<span>_____</span>
-	  				<ul>
-	  					<li><a href="#" title=""><img src="src/images/product-04.jpg" alt=""></a></li>
-	  					<li><a href="#" title=""><img src="src/images/product-04.jpg" alt=""></a></li>
-	  					<li><a href="#" title=""><img src="src/images/product-04.jpg" alt=""></a></li>
-	  					<li><a href="#" title=""><img src="src/images/product-04.jpg" alt=""></a></li>
-	  				</ul>
-	  			</div>
-  			</div>
-  			<div class="new-in fl">
-				<div class="new-head">
-					<h2>NEW &nbsp;IN</h2>
-					<a href="#" title="">More>></a>
-				</div>
-				<div class="new-list w1200">
-					<ul>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li>
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-						<li class="mgr">
-							<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
-							<a class="biaoti" href="#" title="">kashdkaj asoiudasd asodiasod </a>
-							<span class="price"> $30.5</span>
-						</li>
-					</ul>
-					<div class="new-tab">
-						<a class="new-prev" href="#"><span class="iconfont icon-j-prev"></span></a>
-						<a class="new-next" href="#"><span class="iconfont icon-j-next"></span></a>
-					</div>
-				</div>
-			</div>
-			<div class="login popup">
-				<h2>Write A Review</h2>
-				<p>Please log in first!</p>
-				<a class="button" href="#" title="">LOG IN</a>
-				<i class="iconfont icon-guanbi"></i>
-			</div>
-			<div class="review popup clearfix">
-				<h2>Write A Review</h2>
-				<form action="product_submit" method="get" accept-charset="utf-8">
-					<div class="name fl" >
-						<label for="name">Nickname <span>*</span></label>
-						<input type="text" id="name">
-					</div>
-					<div class="shoucang fr">
-						<P>COMMENT RANK</P>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-					</div>
-					<div class="ct fl" >
-						<label for="contents">Content <span>*</span></label>
-						<textarea maxlength="1000" id="contents" width="675px" height="160px">
-						</textarea>
-						<p> <span>1000</span> characters remaining</p>
-					</div>
-					<button class="button fl" type="submit">SUBMIT</button>
-				</form>	
-				<i class="iconfont icon-guanbi"></i>
-			</div>
-			<div class="mask">				
 			</div>
 		</div>
 		<footer class="w1200">

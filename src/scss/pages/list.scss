@@ -116,8 +116,9 @@
 			border: 1px solid #101010;
 			border-top: none;
 			border-radius:0 0 3px 3px;
+			padding-top: 10px;
 			li{
-				line-height: 20px;
+				line-height: 30px;
 				&:hover{
 					background: #101010;
 					a{
@@ -165,12 +166,13 @@
 			color:#aaa;
 			text-decoration: line-through;
 		}
-		.off{
-			margin-left: 100px;
+		.off{	
+			margin-top: 2px;	
 			font-weight: bold;
 			color:black;
 		}
 		.icon-xinshixin{
+			float: right;
 			margin-left: 10px;
 			color:#aaa;
 			cursor: pointer;
