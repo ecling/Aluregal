@@ -6,6 +6,7 @@
 @import "../widget/progress.scss";
 @import '../widget/cart_right.scss';
 @import "../widget/button.scss";
+@import "../widget/popup.scss";
 .colored{
 	li{
 		display: none;
@@ -160,13 +161,16 @@
 				font-size:20px;
 				margin-right:30px;
 				input[type="text"]{
+					line-height: 26px;
 					width:35px;
-					border:none;
-					font-size: 16px;
+					font-size: 14px;
 					text-align: center;
 					border:1px solid transparent;
+					&:hover{
+						border:1px solid #dfdfdf;
+					}
 					&:focus{
-						border:1px solid rgba(82, 168, 236, 1);
+						border:1px solid #101010;
 					}
 				}
 				.minus,.plus{
@@ -178,8 +182,12 @@
 					font-size: 18px;
 					border-radius: 5px;
 					background: #eee;
+					&.disble{
+						pointer-events: none;
+					}
 				}
 				.minus{
+
 				    margin-left:10px;
 				}
 			}

@@ -19,52 +19,45 @@ jQuery(document).ready(function($) {
 			$(this).hide();
 		});
 	})();
-	$(".write").on('click',show);
-	$(".quickview").on('click',show);
-	$(".icon-guanbi").on('click',hide);
-	$("#NewPassword_form button").on('click',show);
-	$("#ForgottenPassword_submit button").on('click',show);
-	$(".popup .button").on('click',hide);
-	 function show(){
-    	$(".popup").show(300);
-		$(".mask").css("height",$(document).height());     
-        $(".mask").css("width",$(document).width());     
-        $(".mask").show(300); 
-    }
-    function hide(){
-    	$(".popup").hide(300);
-		$(".mask").hide(300);
-    }
-
-/*	var  $li_list = $(".banners-index li");
-	var  $img_list = $(".banners-img li");
-	var i = $img_list.length;
-	var index = 0;
-	$img_list.hide('slow').eq(0).show('slow');
-	$li_list.on('click', tab);
-	$(".taob").dropDown();
- 	function tab(event) {
- 		var $index = $(this).index();
-		$img_list.eq($index).show('slow').siblings('li').hide('slow');
-		$(this).addClass('active').siblings('li').removeClass('active');
-	};
-	function next(event){
-		index++;
-		$img_list.eq(index).show('slow').siblings('li').hide('solw');
-		if (index > i-1) {
-			index=0;
-		}
-		$li_list.eq(index).addClass('active').siblings('li').removeClass('active');
-	};
-	function prev(event){
-		index--;
-		$img_list.eq(index).show('slow').siblings('li').hide('solw');
-		if (index<0) {
-			index=i-1;
-		}
-		$li_list.eq(index).addClass('active').siblings('li').removeClass('active');
-	};
-	$("#j_next").on('click',next);
-	$("#j_prev").on('click',prev);
-*/
+	(function(){
+		$(".new_address_a").on('click',show);
+		$(".edit").on('click',show);
+		$(".icon-xiugai").on('click',show);
+		$(".newaddress").on('click',show);
+		$(".write").on('click',show);
+		$(".quickview").on('click',show);
+		$(".icon-guanbi").on('click',hide);
+		$("#NewPassword_form button").on('click',show);
+		$("#ForgottenPassword_submit button").on('click',show);
+		$(".popup .button").on('click',hide);
+		 function show(){
+	    	$(".popup").show(300);
+			$(".mask").css("height",$(document).height());     
+	        $(".mask").css("width",$(document).width());     
+	        $(".mask").show(300); 
+	    }
+	    function hide(){
+	    	$(".popup").hide(300);
+			$(".mask").hide(300);
+	    }
+	})();
+	(function(){
+		
+		var input = $(".listQty input");
+		var value = $(".listQty input").val();
+		$(".j-plus").on('click', function(event) {
+			$(".j-minus").removeClass('disble');
+			value++;
+			input.val(value);
+		});
+		$(".j-minus").on('click', function(event) {
+			if (value <= 1) {				
+				$(this).addClass('disble');
+			}else{
+				value--;
+				input.val(value);
+				$(this).removeClass('disble');
+			}
+		});
+	})();
 });

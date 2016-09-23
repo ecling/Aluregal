@@ -28,17 +28,6 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
-p { font-size: 1.2em; line-height: 1.0em; color: #333; }
-a:hover,i:hover,span:hover,
-input[type="text"]:hover,
-input[type="password"]:hover,
-input[type="submit"]:hover{
-    transition:all .3s ease;
-    -o-transition:all .3s ease;
-    -moz-transition:all .3s ease;
-    -webkit-transition:all .3s ease;
-}
-
 select::-ms-expand { display: none; };
 select{
     appearance:none;
@@ -46,16 +35,20 @@ select{
     -webkit-appearance:none;
     -o-appearance:none;
 }
+input{
+    &:hover{
+        border-color:#828282;
+    }
+    &:focus{
+        border-color:#333;
+    }
+}
 a{
 	text-decoration: none;
 	color: #333;
 }
-
 img{
     border:0;
-}
-li{
-	list-style: none;
 }
 button{
 	cursor: pointer;
@@ -83,6 +76,9 @@ ul:after,.clearfix:after{
     clear: both;
     visibility: hidden;
     overflow: hidden;
+}
+.first{
+    clear: left;
 }
 
 
@@ -198,15 +194,4 @@ input.error, textarea.error ,select.error{
             margin: 0 auto;
         }
     }
-}
-.mask
-{
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    opacity: .8;
-    background-color: #333;
-    filter: alpha(opacity=60);
-    -moz-opacity: .5;
 }

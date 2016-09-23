@@ -6,6 +6,8 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 @import "../widget/newin.scss";
+@import "../widget/page.scss";
+@import "../widget/popup.scss";
 .home{
 	color:#aaa;
 	margin-bottom: 15px;
@@ -21,31 +23,41 @@
 }
 .product-cont{
 	margin-bottom:20px;
+	.product-img ,
+	.showimg{
+		position: relative;
+	}
 	.thumbnail{
 		margin-right:8px;
 		li{
 			border:2px solid transparent;
 			margin-bottom:6px;
 			position:relative;
-			&:after{
-				content:"\e61a";
-				font-family: "iconfont" !important;
-				position:absolute;
-				bottom:-2px;
-				right:-2px;
-				font-size:20px;
-				color:transparent;
-			}
 			&.active{
 				border:2px solid #333;
 				&:after{
-					color:#333;
+					content:"\e61a";
+					font-family: "iconfont" !important;
+					position:absolute;
+					bottom:-2px;
+					right:-2px;
+					font-size:20px;
+					color:#101010;
 				}
 			}
 			&:hover{
 				border:2px solid #333;
+				&:after{
+					content:"\e61a";
+					font-family: "iconfont" !important;
+					position:absolute;
+					bottom:-2px;
+					right:-2px;
+					font-size:20px;
+					color:#101010;
+				}	
 			}
-		}
+		}	
 	}
 	.social{
 		width:230px;
@@ -191,9 +203,18 @@
 			}
 			input{
 				display:inline-block;
-				width:50px;
+				width:70px;
 				border:1px solid transparent;
+				padding: 10px;
 				margin:0 20px;
+				text-align: center;
+				vertical-align: 3px;
+				&:hover{
+	                border-color:#828282;
+	            }
+	            &:focus{
+	                border-color:#333;
+	            }
 			}
 		}
 		.add{
@@ -203,10 +224,47 @@
 				width:275px;
 				line-height:46px;
 				border-radius:46px;	
+				position: relative;
+				margin-right: 25px;
+				&:hover{
+					.tip{
+						display: block;
+					}
+				}
+				.tip{
+					display: none;
+					position: absolute;
+					top:-11px;
+					right: -120px;
+					border-radius: 5px;
+					color:white;
+					background: #101010;
+					border:1px solid #101010;
+					padding: 10px;
+					p{
+						font-size: 12px;
+						text-align: left;
+						line-height: 20px;
+						font-weight: normal;
+					}
+					h2{
+						font-size: 14px;
+						line-height: 20px;
+						font-weight: normal;
+					}
+					span{
+
+						font-size: 20px;
+						position: absolute;
+						bottom: 30%;
+						left:-12px;
+						color:#101010;
+					}
+				}
 			}
 			.icon-hert{
 				font-size:20px;
-				margin:0 5px 0 25px;
+				margin:0 5px 0 0;
 			}
 			.towishkist{
 				color:black;
@@ -267,6 +325,9 @@
 .reviews-content{
 	padding-left:30px;
 	border-top:1px dashed #aaa;
+	&.pdl0{
+		padding-left:0;
+	}
 	.reviews-head{
 		padding:20px 20px 10px 40px;
 		border-bottom:1px dashed #aaa;
@@ -326,16 +387,24 @@
 			color:#aaa;
 		}
 		ul{
+			max-width: 580px;
 			margin-bottom:15px;
 			li{
 				float:left;
 				margin-right:20px;
 			}
 		}
+		.sc{
+			margin-right: 160px;
+			display: inline-block;
+			vertical-align: -31px;
+			font-family: "Cambria";
+			p{
+				margin-bottom: 10px;
+			}
+		}
 		.xing{
-			position:absolute;
-			right:20px;
-			top:50%;
+			display: inline-block;
 			color:#fe7726;
 			i{
 				font-size:16px;
@@ -350,9 +419,6 @@
 }
 .left-product{
 	width: 980px;
-}
-.product-drr{
-	margin-bottom: 127px;
 }
 .right-relative{
 	padding:20px;
@@ -501,3 +567,23 @@
 	}
 }
 
+.back{
+	display: block;
+	text-align: center;
+	font-size: 13px;
+	font-weight: bold;
+	&:hover{
+		color:#fe7726;
+	}
+	i{
+		margin-right: 5px;
+	}
+}
+.btpp{
+	display: inline-block;
+	width: 340px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 35px;
+	margin: 20px 0 ;
+}

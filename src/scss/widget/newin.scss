@@ -2,6 +2,7 @@
 	border-top: 1px dashed #cfcfcf;
 	padding: 60px 0 107px 0;
 	position: relative;
+	margin-top: 127px;
 	.new-head{
 		position: absolute;
 		top:-58px;
@@ -22,10 +23,8 @@
 			}
 		}
 	}
-	.new-list{
-		position: relative;
-	}
 	ul{
+		width: 10000%;
 		li{
 			width: 285px;
 			text-align: center;
@@ -46,29 +45,41 @@
 			}
 		}
 	}
-	.new-tab{
-		a{
-			display: block;
-			width: 50px;
-			height: 100px;
-			line-height: 100px;
-			text-align: center;
-			position: absolute;
-			top:50%;
-			margin-top: -105px;
-			transition:all 300ms ease-in-out;
-			span{
-				color:black;
-				font-size: 36px;
-				opacity: 0.5;
-				filter:aplhe(opacity=50);
+	.new-prev,
+	.new-next{
+		display: block;
+		width: 50px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		position: absolute;
+		top:92px;
+		transition:all 300ms ease-in-out;
+		span{
+			color:black;
+			font-size: 36px;
+			opacity: 0.5;
+			filter:aplhe(opacity=50);
+		}
+	}
+	.new-prev{
+		left:-50px;
+	}
+	.new-next{
+		right:-50px;
+	}
+	.new-list{
+		position: relative;
+		overflow: hidden;
+		min-height: 351px;
+		width: 100%;
+		&:hover{
+			.new-prev{
+				left:0;
 			}
-		}
-		.new-prev{
-			left: -50px;
-		}
-		.new-next{
-			right: -50px;
+			.new-next{
+				right:0;
+			}
 		}
 	}
 }
