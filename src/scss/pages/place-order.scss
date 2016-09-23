@@ -9,6 +9,7 @@
 @import '../layout/header.scss';
 @import "../layout/_layout.scss";
 @import '../widget/button.scss';
+@import "../widget/popup.scss";
 .colored
 {
     li{
@@ -90,15 +91,15 @@ h3{
         margin-top: 20px;
         margin-left: 35px;
     }
-    .contentd
-    {
-        width: 100%;
+    .contentd>input{
+        display: block;
+        float: left;
+       margin-top: 39px;
     }
-    .contentd div
-    {
+    .neirong{
+        width: 96%;
         margin-bottom: 15px;
         font-family: "Cambria";
-        display: inline-block;
         vertical-align: -40px;
         margin-left: 10px;
         padding-bottom: 10px;
@@ -113,17 +114,20 @@ h3{
             }
             .iconfont
             {
-                margin-right: 5px;
-                margin-left: 500px;
-                color: #aaa;
+                float: right;
+                margin-right: 5px;               
+                color: #101010;
+                cursor: pointer;
             }
             a
             {
-                color: #aaa;
-                border-bottom: 1px solid #aaa;
+                float: right;
+                color: #101010;
+                border-bottom: 1px solid #101010;
             }
         }
     }
+
 }
 .shippingOptions
 {

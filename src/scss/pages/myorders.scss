@@ -7,6 +7,7 @@
 @import "../layout/common.scss";
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
+@import "../widget/popup.scss";
 .wrap{
 	margin: 30px auto;
 }
@@ -765,8 +766,9 @@
 	font-family: "Cambria";
 	padding-top:35px;
 	li{
+		width: 380px;
 		float: left;
-		margin-left: 60px;
+		margin-left: 90px;
 		margin-bottom: 40px;
 		padding: 10px;
 		border:2px solid transparent;
@@ -814,7 +816,7 @@
 .postalcode{
 	padding-bottom: 15px;
 }
-/*
+
 .new_address{
 	width: 384px;
 	height: 208px;
@@ -832,8 +834,9 @@
 		color:#dfdfdf;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 125px;
+		line-height: 111px;
 		border: 2px dashed white;
+		transition:all .3s ease-in-out;
 		&:hover{
 			-webkit-transform:rotate(360deg);
 			transform:rotate(360deg);
@@ -844,13 +847,16 @@
 		}
 		&:focus{
 			border: 2px solid #eeb053;
+			span{
+				color:#eeb053;
+			}
 		}
 		span{
 			font-size:80px;
 		}
 	}
 }
-*/
+
 /*Address Book css -end--*/
 
 /*Order_Reviews css*/
@@ -957,20 +963,25 @@
 
 /*point css */
 .mypoint{
-	width: 900px;
-	height: 250px;
-	background: url(../images/point_03.jpg) no-repeat ;
-	padding:60px 0 0 160px;
-	margin-bottom: 20px;
-	.mypoint_conter{
-		height: 95px;
+	font-family: "Cambria";
+	margin-top: 20px;
+	h2{
+		font-size: 16px;
+		color:#101010;
+		margin-bottom: 30px;
 	}
-	.mgt60{
-		margin-top: 60px;
+	.mypoint_conter{
+		margin-left: 40px;
 	}
 	.mgr20{
-		margin-right: 20px;
-		text-align: center;
+		.iconfont{
+			display: inline-block;
+			font-size: 22px;
+			color:#101010;
+		}
+	}
+	.mgt30{
+		margin-top: 30px;
 	}
 	.point_save{
 		margin-bottom: 5px;
@@ -1004,30 +1015,36 @@
 		}
 	}
 	.point_val{
-		font-size:60px ;
+		font-size:48px ;
+		span{
+			vertical-align: -7px;
+		}
 	}
 	.point_point{
-		font-size: 27px;
+		font-size: 16px;
 	}
 }
 .mypoint_details{
-	width: 100%;
-	padding: 0 40px 70px 40px;
-	background: #f8f7f5;
+	font-family: "Cambria";
+	margin-top: 20px;
+
+	h2{
+		font-size: 16px;
+		color:#101010;
+		margin-bottom: 30px;
+	}
 	span{
 		display: inline-block;
-		width: 270px;
+		width: 150px;
 	}
 	.mypoint_details_head{
 		height: 40px;
 		line-height:40px;
 		color:#aaa;
-		border-bottom: 1px solid #aaa;
 	}
 	li{
 		height: 35px;
 		line-height: 35px;
-		border-bottom: 1px dashed #aaa;
 	}
 	.Detial,
 	.detial_li{
@@ -1037,7 +1054,8 @@
 		text-align: right;
 	}
 	.Date{
-		text-indent:205px;
+		text-align:right;
+		padding-right: 50px;
 	}
 }
 .mypoint_pager{
@@ -1048,54 +1066,56 @@
 
 /*My Invitation css*/
 .Invitation{
-	width: 900px;
-	height: 300px;
-	padding-top:230px ;
-	padding-left: 65px; 
-	background: url(../images/invitation.jpg) no-repeat;
-	ul{
-		li{
-			float: left;
-			margin-right: 15px;
-			i{
-				font-size: 30px;
-			}
-			.icon-facebook{
-				color:#238fe2;
-			}
-			.icon-twitter{
-				color:#8eb91c;
-			}
-			.icon-inboxpinterest{
-				color:#c7393a;
-			}
-			.icon-tumblr1{
-				color:#47adc0;
-			}
-			.icon-google{
-				color:#e9bb21;
-			}
-			.icon-vkcircle{
-				color:#b74df4;
-			}
+	margin-top: 60px;
+	text-align: center;
+	.share{
+		font-size: 16px;
+		color:#666;
+	}
+	.sns{
+		margin: 12px 0;
+		a{
+			color:#101010;
+			text-transform: uppercase;
+			font-size: 16px;
+			margin: 0 5px;
+		}
+		span{
+			color:#101010;
+			font-size: 16px;
 		}
 	}
-	p{
-		margin-top: -40px;
-		margin-left: 310px;
+	.socre{
+		width: 200px;
+		margin:35px auto 10px;
+		li{
+			float: left;
+			margin-right: 10px;
+			i{
+				color:#666;
+				font-size: 30px;
+				&:hover{
+					color: red;
+				}
+			}
+
+		}
 	}
 	.dizhi{
-		display:block;
-		margin-top: 10px;
-		margin-left:310px;
-		width: auto;
+		display: inline-block;
+		padding: 5px 30px;
+		background: #eee;
+		border:1px solid #cfcfcf;
 	}
 	.copy{
-		float: right;
 		display: block;
-		color:white;
-		margin-right: 31px;
-		margin-top: -14px;
+		width: 100px;
+		line-height: 35px;
+		border-radius: 35px;
+		margin: 12px auto 8px;
+	}
+	.blog{
+		color:#aaa;
 	}
 }
 /*My Invitation css --end--*/

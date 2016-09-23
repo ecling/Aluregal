@@ -28,13 +28,20 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
-p { font-size: 1.2em; line-height: 1.0em; color: #333; }
 select::-ms-expand { display: none; };
 select{
     appearance:none;
     -moz-appearance:none;
     -webkit-appearance:none;
     -o-appearance:none;
+}
+input{
+    &:hover{
+        border-color:#828282;
+    }
+    &:focus{
+        border-color:#333;
+    }
 }
 a{
 	text-decoration: none;
@@ -187,15 +194,4 @@ input.error, textarea.error ,select.error{
             margin: 0 auto;
         }
     }
-}
-.mask
-{
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    opacity: .8;
-    background-color: #333;
-    filter: alpha(opacity=60);
-    -moz-opacity: .5;
 }
