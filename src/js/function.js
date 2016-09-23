@@ -318,15 +318,14 @@
         }
     };
 	var Slider = function(element){		
-		var ul = element.children(".carousel_main");
+		var ul = element.children(".J_imgs");
+		var extra_ul = element.children('.J_num');
 		var list  = ul.children("li");
 		var list_num = list.length;
 		var index = 0;
 		var init = function(){
-			element.append('<i class="prev iconfont icon-arrows-left"></i><i class="next iconfont icon-arrows-right"></i><div class="carousel_extra"><ul></ul></div>');
-			extra_ul = $(".carousel_extra ul");
 			list.each(function(i){
-				extra_ul.append("<li></li>");
+				extra_ul.append("<li><span></span></li>");
 				if(i>0){
 					$(this).hide();
 				}
@@ -342,7 +341,7 @@
 			nav();
 		};
 		var nav = function(){
-			extra_li = $(".carousel_extra ul").children();
+			extra_li = extra_ul.children();
 			extra_li.each(function(i){
 				if(i==index){
 					$(this).addClass("active");
@@ -374,31 +373,32 @@
 			nav();
 		};
 		init();
-		slider_t = setInterval(next,5000);
-		element.children(".next").on("click",function(){
+		var t = setInterval(next,5000);
+		element.find(".J_next").on("click",function(){
 			next();
+			return false;
 		});
-		element.children(".prev").on("click",function(){
+		element.find(".J_prev").on("click",function(){
 			prev();
+			return false;
 		});
 		element.on("mouseleave",function(){
-            slider_t = setInterval(next,5000);     
+            t = setInterval(next,5000);     
 		});
         element.on("mouseenter",function(){
-            console.log(t);
-            clearTimeout(slider_t);
+            clearTimeout(t);
         });
         
 	};
     var ScrollBox = function(element,num,width){
-		var ul = element.children("ul");
+		var ul = element.find("ul");
 		var lists = ul.children("li");
 		var list_width = 0;
 		var totalWidth = 0;
 		var left = 0;
 		var init = function(){
-			ul.wrap('<div class="temwap"></div>');
-			var wap = element.children(".temwap");
+			//ul.wrap('<div class="temwap"></div>');
+			var wap = element.children(".J_scroll-wrap");
 			wap.css({"width":width,"overflow":"hidden","position":"relative"});
 		};
 		var ListWidth = function(){
@@ -408,6 +408,7 @@
 				}
 				totalWidth = totalWidth+$(this).outerWidth(true);
 			});
+
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
 		};
 		var next = function(){
@@ -431,11 +432,13 @@
 		};
 		init();
 		ListWidth();
-		element.children(".prev").on("click",function(){
+		element.find(".J_prev").on("click",function(){
 			prev();
+			return false;
 		});
-		element.children(".next").on("click",function(){
+		element.find(".J_next").on("click",function(){
 			next();
+			return false;
 		});
 	};
 	var Tab = function(){
@@ -664,11 +667,11 @@
 	    init();
 	};
     var SwitchImg = function(select){
-        containt = select;
-        lis = containt.find('li');
-        targetCon = containt.find('div');
-        targetImg = targetCon.find('img');
-        dimmer = '';
+        containt = select,
+        lis = containt.find('li'),
+        targetCon = containt.find('div'),
+        targetImg = targetCon.find('img'),
+        dimmer = '',
         url = '';
         var init = function(){
             imgW = targetImg.attr('width');
@@ -698,8 +701,8 @@
             });
         };
         var updateStyle = function(index){
-            lis.removeClass('selected');
-            lis.eq(index).addClass('selected').addClass('loaded');
+            lis.removeClass('active');
+            lis.eq(index).addClass('active').addClass('loaded');
         };
         var updateImg = function(img){
             img.attr({
@@ -732,7 +735,7 @@
         var bind = function(){
             lis.click(function(event) {
                 var index = $(this).index(),
-                    url = $(this).attr('data-url'),
+                    url = $(this).attr('data-src'),
                     loaded = $(this).hasClass('loaded');
                 loadImg(url, index, loaded);
             });
