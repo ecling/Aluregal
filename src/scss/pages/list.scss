@@ -146,6 +146,9 @@
 		&:hover{
 			border: 1px solid #aaa;
 			box-shadow: 0 1px 5px #cfcfcf;
+			.quickview{
+				display: block;
+			}
 		}
 		&.mgr{
 			margin-right: 0;
@@ -192,6 +195,7 @@
 			font-weight: bold; 
 			cursor: pointer;
 			opacity: 0.9;
+			display: none;
 		}
 	}
 }
