@@ -158,17 +158,20 @@
             }
         }
     };
-    var PopUp = function(setting){
-        options = {
+    var PopUp = function(element,setting){
+        var options = {
             handler: null,
             dimmer: null,
             width: null,
             height: null,
             preHeight: null,
             isPopUp:false,
+            contain: element,
             afterShow: function() {},
             afterClose: function() {}
-        }
+        };
+        var actual,
+        	close;
         var init = function(){
             if (options.width) {
                 options.inner.css('width', options.width);
@@ -177,10 +180,10 @@
                 options.inner.css('height', options.height);
             }
             
-            this.actual = getActualRect(options.inner.get(0));
+            actual = getActualRect(options.inner.get(0));
             sizePop();
             if (window.Modernizr.cssanimations) {
-                this.options.contain.css({
+                options.contain.css({
                     opacity: 0,
                     display: 'inline-block'
                 });
@@ -189,8 +192,7 @@
             bind();
         };
         var setActualRect = function(){
-            var actual = getActualRect(options.inner.get(0));
-            this.actual = actual;
+            actual = getActualRect(options.inner.get(0));
             options.contain.css({
                 height: actual.height,
                 width: actual.width
@@ -213,7 +215,7 @@
                     hideDown();
                 }
             });
-            jQuery(window).resize(function(event) {
+            $(window).resize(function(event) {
                 if(options.isPopUp) {
                     clearTimeout(resizeHandler);
                     resizeHandler = setTimeout(function(){
@@ -267,54 +269,52 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-            this.close = jQuery("<i class='fa fa-times-circle'></i>");
-            this.close.appendTo(this.options.contain);  
+           	close = $("<i class='fa fa-times-circle'></i>");
+            close.appendTo(options.contain);  
         };
         var sizePop = function(){
-            var winW = jQuery(window).width(),
-                winH = jQuery(window).height(),
+            var winW = $(window).width(),
+                winH = $(window).height(),
                 newW, newH;
-            if (this.actual.width > winW && this.actual.heigth < winH) {
+            if (actual.width > winW && actual.heigth < winH) {
                 newW = winW - 80;
-                newH = this.actual.height * newW / this.actual.width;
+                newH = actual.height * newW / actual.width;
             }
-            if (this.actual.height > winH && this.actual.width < winW) {
+            if (actual.height > winH && actual.width < winW) {
                 newH = winH - 80;
-                newW = this.actual.width * newH / this.actual.height;
+                newW = actual.width * newH / actual.height;
             }
             if (newW) {
-                this.options.contain.css({
+                options.contain.css({
                     'height': newH,
                     'width': newW
                 });
-                this.options.inner.css({
+                options.inner.css({
                     'height': newH,
                     'width': newW,
                     'overflow': 'auto'
                 });
             } else {
-                this.options.contain.css({
+                options.contain.css({
                     'height': this.actual.height,
                     'width': this.actual.width
                 });
-                this.options.inner.removeAttr('style');
+                options.inner.removeAttr('style');
             }  
         };
         var extend = function(){
             for (var i in setting) {
-                this.options[i] = setting[i];
+                options[i] = setting[i];
             }
-            this.options.dimmer = jQuery(this.options.dimmer);
-            this.options.handler = jQuery(this.options.handler);  
+            options.inner = $(options.contain).children(options.inner);
+            options.dimmer = $(options.dimmer);
+            options.handler = $(options.handler);  
         };
         extend(setting);
-        options['contain'] = this.options.dimmer.find('.popUp');
-        options['inner'] = this.options.dimmer.find('.popInner');
         init();
         return{
             showUp:showUp,
-            hideDown:hideDown,
-            setActualRect:setActualRect
+            hideDown:hideDown
         }
     };
 	var Slider = function(element){		
@@ -1098,7 +1098,7 @@
 		return new Dimmer(options);
 	};
     $.fn.popUp = function(setting){
-        return popUp = PopUp(setting);
+        return popUp = PopUp(this,setting);
     };
 	$.fn.slider = function(){
 		var slider = new Slider(this);

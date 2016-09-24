@@ -57,6 +57,7 @@
     		zoomIn = $("<div><img src=''/></div>");
 	        zoomIn.css({
 	            position: 'absolute',
+	            overflow: 'hidden',
 	            top: '0px',
 	            marginLeft: '10px',
 	            display: 'none',
