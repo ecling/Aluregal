@@ -195,35 +195,7 @@
 		}
 	}
 }
-.popup{
-	background: white;
-	padding: 50px;
-	border-radius: 5px;
-	display: none;
-	position: fixed;
-	top:15%;
-	left:15%;
-	z-index: 1000;
-	.icon-j-next,
-	.icon-j-prev{
-		display: block;
-		position: absolute;
-		top:45%;
-		font-size: 50px;
-	}
-	.icon-j-prev{
-		left: 0;
-	}
-	.icon-j-next{
-		right: 0;
-	}
-	.icon-guanbi{
-		position: absolute;
-		font-size: 50px;
-		top:0;
-		right: 0;
-	}
-}
+
 .product-cont{
 	.listimg{
 		width: 400px;

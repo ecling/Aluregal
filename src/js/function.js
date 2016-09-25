@@ -161,12 +161,12 @@
     var PopUp = function(element,setting){
         var options = {
             handler: null,
-            dimmer: null,
+            dimmer: element,
             width: null,
             height: null,
             preHeight: null,
             isPopUp:false,
-            contain: element,
+            contain: null,
             afterShow: function() {},
             afterClose: function() {}
         };
@@ -179,7 +179,6 @@
             if (options.height) {
                 options.inner.css('height', options.height);
             }
-            
             actual = getActualRect(options.inner.get(0));
             sizePop();
             if (window.Modernizr.cssanimations) {
@@ -211,7 +210,7 @@
                 hideDown();
             });
             options.dimmer.click(function(event) {
-                if (event.target == that.options.dimmer.get(0)) {
+                if (event.target == options.dimmer.get(0)) {
                     hideDown();
                 }
             });
@@ -296,8 +295,8 @@
                 });
             } else {
                 options.contain.css({
-                    'height': this.actual.height,
-                    'width': this.actual.width
+                    'height': actual.height,
+                    'width': actual.width
                 });
                 options.inner.removeAttr('style');
             }  
@@ -306,8 +305,8 @@
             for (var i in setting) {
                 options[i] = setting[i];
             }
-            options.inner = $(options.contain).children(options.inner);
-            options.dimmer = $(options.dimmer);
+            options.inner = element.find('.J_inner');
+            options.contain = element.children('.J_popup');
             options.handler = $(options.handler);  
         };
         extend(setting);

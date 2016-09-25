@@ -28,8 +28,7 @@ $(function(){
 
 			proItems.children('.quickview').on('click',function(){
 				//dimmer.showUp();
-				alert(222);
-				//popUp.showUp();
+				popUp.showUp();
 				//view();
 			});
 			$('.popup content .J_prev').delegate('click',function(){
