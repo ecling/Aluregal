@@ -42,15 +42,17 @@ jQuery(document).ready(function($) {
 	    }
 	})();
 	(function(){
-		
-		var input = $(".listQty input");
-		var value = $(".listQty input").val();
-		$(".j-plus").on('click', function(event) {
-			$(".j-minus").removeClass('disble');
+		var minus = $(".listQty .j-minus");
+		var plus = $(".listQty .j-plus");
+		var input =$(".listQty input");
+		var value = input.val();
+		plus.on('click', function(event) {
+			minus.removeClass('disble');
 			value++;
 			input.val(value);
 		});
-		$(".j-minus").on('click', function(event) {
+		minus.on('click', function(event) {
+			value = $(this).parent().find('input').val();
 			if (value <= 1) {				
 				$(this).addClass('disble');
 			}else{
@@ -58,6 +60,6 @@ jQuery(document).ready(function($) {
 				input.val(value);
 				$(this).removeClass('disble');
 			}
-		});
+		});	
 	})();
 });
