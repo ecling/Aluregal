@@ -158,17 +158,20 @@
             }
         }
     };
-    var PopUp = function(setting){
-        options = {
+    var PopUp = function(element,setting){
+        var options = {
             handler: null,
-            dimmer: null,
+            dimmer: element,
             width: null,
             height: null,
             preHeight: null,
             isPopUp:false,
+            contain: null,
             afterShow: function() {},
             afterClose: function() {}
-        }
+        };
+        var actual,
+        	close;
         var init = function(){
             if (options.width) {
                 options.inner.css('width', options.width);
@@ -176,11 +179,10 @@
             if (options.height) {
                 options.inner.css('height', options.height);
             }
-            
-            this.actual = getActualRect(options.inner.get(0));
+            actual = getActualRect(options.inner.get(0));
             sizePop();
             if (window.Modernizr.cssanimations) {
-                this.options.contain.css({
+                options.contain.css({
                     opacity: 0,
                     display: 'inline-block'
                 });
@@ -189,8 +191,7 @@
             bind();
         };
         var setActualRect = function(){
-            var actual = getActualRect(options.inner.get(0));
-            this.actual = actual;
+            actual = getActualRect(options.inner.get(0));
             options.contain.css({
                 height: actual.height,
                 width: actual.width
@@ -209,11 +210,11 @@
                 hideDown();
             });
             options.dimmer.click(function(event) {
-                if (event.target == that.options.dimmer.get(0)) {
+                if (event.target == options.dimmer.get(0)) {
                     hideDown();
                 }
             });
-            jQuery(window).resize(function(event) {
+            $(window).resize(function(event) {
                 if(options.isPopUp) {
                     clearTimeout(resizeHandler);
                     resizeHandler = setTimeout(function(){
@@ -267,66 +268,63 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-            this.close = jQuery("<i class='fa fa-times-circle'></i>");
-            this.close.appendTo(this.options.contain);  
+           	close = $(".close");
+            close.appendTo(options.contain);  
         };
         var sizePop = function(){
-            var winW = jQuery(window).width(),
-                winH = jQuery(window).height(),
+            var winW = $(window).width(),
+                winH = $(window).height(),
                 newW, newH;
-            if (this.actual.width > winW && this.actual.heigth < winH) {
+            if (actual.width > winW && actual.heigth < winH) {
                 newW = winW - 80;
-                newH = this.actual.height * newW / this.actual.width;
+                newH = actual.height * newW / actual.width;
             }
-            if (this.actual.height > winH && this.actual.width < winW) {
+            if (actual.height > winH && actual.width < winW) {
                 newH = winH - 80;
-                newW = this.actual.width * newH / this.actual.height;
+                newW = actual.width * newH / actual.height;
             }
             if (newW) {
-                this.options.contain.css({
+                options.contain.css({
                     'height': newH,
                     'width': newW
                 });
-                this.options.inner.css({
+                options.inner.css({
                     'height': newH,
                     'width': newW,
                     'overflow': 'auto'
                 });
             } else {
-                this.options.contain.css({
-                    'height': this.actual.height,
-                    'width': this.actual.width
+                options.contain.css({
+                    'height': actual.height,
+                    'width': actual.width
                 });
-                this.options.inner.removeAttr('style');
+                options.inner.removeAttr('style');
             }  
         };
         var extend = function(){
             for (var i in setting) {
-                this.options[i] = setting[i];
+                options[i] = setting[i];
             }
-            this.options.dimmer = jQuery(this.options.dimmer);
-            this.options.handler = jQuery(this.options.handler);  
+            options.inner = element.find('.J_inner');
+            options.contain = element.children('.J_popup');
+            options.handler = $(options.handler);  
         };
         extend(setting);
-        options['contain'] = this.options.dimmer.find('.popUp');
-        options['inner'] = this.options.dimmer.find('.popInner');
         init();
         return{
             showUp:showUp,
-            hideDown:hideDown,
-            setActualRect:setActualRect
+            hideDown:hideDown
         }
     };
-	var Slider = function(element){		
-		var ul = element.children(".carousel_main");
+	var Slider = function(element){
+		var ul = element.children(".J_imgs");
+		var extra_ul = element.children('.J_num');
 		var list  = ul.children("li");
 		var list_num = list.length;
 		var index = 0;
 		var init = function(){
-			element.append('<i class="prev iconfont icon-arrows-left"></i><i class="next iconfont icon-arrows-right"></i><div class="carousel_extra"><ul></ul></div>');
-			extra_ul = $(".carousel_extra ul");
 			list.each(function(i){
-				extra_ul.append("<li></li>");
+				extra_ul.append("<li><span></span></li>");
 				if(i>0){
 					$(this).hide();
 				}
@@ -342,7 +340,7 @@
 			nav();
 		};
 		var nav = function(){
-			extra_li = $(".carousel_extra ul").children();
+			extra_li = extra_ul.children();
 			extra_li.each(function(i){
 				if(i==index){
 					$(this).addClass("active");
@@ -374,31 +372,32 @@
 			nav();
 		};
 		init();
-		slider_t = setInterval(next,5000);
-		element.children(".next").on("click",function(){
+		var t = setInterval(next,5000);
+		element.find(".J_next").on("click",function(){
 			next();
+			return false;
 		});
-		element.children(".prev").on("click",function(){
+		element.find(".J_prev").on("click",function(){
 			prev();
+			return false;
 		});
 		element.on("mouseleave",function(){
-            slider_t = setInterval(next,5000);     
+            t = setInterval(next,5000);     
 		});
         element.on("mouseenter",function(){
-            console.log(t);
-            clearTimeout(slider_t);
+            clearTimeout(t);
         });
         
 	};
     var ScrollBox = function(element,num,width){
-		var ul = element.children("ul");
+		var ul = element.find("ul");
 		var lists = ul.children("li");
 		var list_width = 0;
 		var totalWidth = 0;
 		var left = 0;
 		var init = function(){
-			ul.wrap('<div class="temwap"></div>');
-			var wap = element.children(".temwap");
+			//ul.wrap('<div class="temwap"></div>');
+			var wap = element.children(".J_scroll-wrap");
 			wap.css({"width":width,"overflow":"hidden","position":"relative"});
 		};
 		var ListWidth = function(){
@@ -408,6 +407,7 @@
 				}
 				totalWidth = totalWidth+$(this).outerWidth(true);
 			});
+
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
 		};
 		var next = function(){
@@ -431,11 +431,13 @@
 		};
 		init();
 		ListWidth();
-		element.children(".prev").on("click",function(){
+		element.find(".J_prev").on("click",function(){
 			prev();
+			return false;
 		});
-		element.children(".next").on("click",function(){
+		element.find(".J_next").on("click",function(){
 			next();
+			return false;
 		});
 	};
 	var Tab = function(){
@@ -664,11 +666,11 @@
 	    init();
 	};
     var SwitchImg = function(select){
-        containt = select;
-        lis = containt.find('li');
-        targetCon = containt.find('div');
-        targetImg = targetCon.find('img');
-        dimmer = '';
+        containt = select,
+        lis = containt.find('li'),
+        targetCon = containt.find('div'),
+        targetImg = targetCon.find('img'),
+        dimmer = '',
         url = '';
         var init = function(){
             imgW = targetImg.attr('width');
@@ -698,8 +700,8 @@
             });
         };
         var updateStyle = function(index){
-            lis.removeClass('selected');
-            lis.eq(index).addClass('selected').addClass('loaded');
+            lis.removeClass('active');
+            lis.eq(index).addClass('active').addClass('loaded');
         };
         var updateImg = function(img){
             img.attr({
@@ -732,7 +734,7 @@
         var bind = function(){
             lis.click(function(event) {
                 var index = $(this).index(),
-                    url = $(this).attr('data-url'),
+                    url = $(this).attr('data-src'),
                     loaded = $(this).hasClass('loaded');
                 loadImg(url, index, loaded);
             });
@@ -1095,7 +1097,7 @@
 		return new Dimmer(options);
 	};
     $.fn.popUp = function(setting){
-        return popUp = PopUp(setting);
+        return popUp = PopUp(this,setting);
     };
 	$.fn.slider = function(){
 		var slider = new Slider(this);

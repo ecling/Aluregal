@@ -1,3 +1,12 @@
+(function($){
+
+})(jQuery);
+
+$(function(){
+	$('.J_scroll-box').scrollBox(4,1200);
+	$('.J_slider').slider();
+});
+
 jQuery(document).ready(function($) {
 	(function(){
 		$(".search-input").css({transform:'translatex(-78%)',opacity:0,}, 500);
@@ -16,7 +25,7 @@ jQuery(document).ready(function($) {
 		$(".icon-xiugai").on('click',show);
 		$(".newaddress").on('click',show);
 		$(".write").on('click',show);
-		$(".quickview").on('click',show);
+		
 		$(".icon-guanbi").on('click',hide);
 		$("#NewPassword_form button").on('click',show);
 		$("#ForgottenPassword_submit button").on('click',show);
@@ -33,17 +42,18 @@ jQuery(document).ready(function($) {
 	    }
 	})();
 	(function(){
-		var minus = $(".listQty .j-minus");
-		var plus = $(".listQty .j-plus");
-		var input =$(".listQty input");
-		var value = input.val();
+		var minus = $(".j-minus");
+		var plus = $(".j-plus");
 		plus.on('click', function(event) {
+			var value = $(this).siblings('input').val();
+			var input = $(this).siblings('input');
 			minus.removeClass('disble');
 			value++;
 			input.val(value);
 		});
 		minus.on('click', function(event) {
-			value = $(this).parent().find('input').val();
+			var value = $(this).siblings('input').val();
+			var input = $(this).siblings('input');
 			if (value <= 1) {				
 				$(this).addClass('disble');
 			}else{

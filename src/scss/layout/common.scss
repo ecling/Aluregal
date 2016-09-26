@@ -27,7 +27,7 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
+img { border: 0; display:block; }
 select::-ms-expand { display: none; };
 select{
     appearance:none;

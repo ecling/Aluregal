@@ -143,6 +143,10 @@
 		border: 1px solid transparent;
 		border-radius: 3px;
 		position: relative;
+		img{
+			width: 273px;
+			height: 273px;
+		}
 		&:hover{
 			border: 1px solid #aaa;
 			box-shadow: 0 1px 5px #cfcfcf;
@@ -197,35 +201,6 @@
 			opacity: 0.9;
 			display: none;
 		}
-	}
-}
-.popup{
-	background: white;
-	padding: 50px;
-	border-radius: 5px;
-	display: none;
-	position: fixed;
-	top:15%;
-	left:15%;
-	z-index: 1000;
-	.icon-j-next,
-	.icon-j-prev{
-		display: block;
-		position: absolute;
-		top:45%;
-		font-size: 50px;
-	}
-	.icon-j-prev{
-		left: 0;
-	}
-	.icon-j-next{
-		right: 0;
-	}
-	.icon-guanbi{
-		position: absolute;
-		font-size: 50px;
-		top:0;
-		right: 0;
 	}
 }
 .product-cont{
