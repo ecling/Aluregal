@@ -7,28 +7,35 @@ $(function(){
 	});
 
 	//change country on shipping address 
-	$().on('change',function(){
-
+	$('.J_country').on('change',function(){
+		updateOrder();
 	});
 
 	//country and States
-	$();
+	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
 	//selected shipping method
-	$().on('change',function(){
-
+	$("input[name='shipping_method']").on('change',function(){
+		updateOrder();
 	})
 
 	//place to order 
-	$().on('click',function(){
-
+	$('.J_place-order').on('click',function(e){
+		e.preventDefault();
+		if(validatePlaceForm()){
+			placeOrder();
+		}
 	});
+
+	var validatePlaceForm = function(){
+		return true;
+	}
 	
 	var updateOrder = function(){
-
+		alert('update');
 	};
 	var placeOrder = function(){
-
+		alert('place');
 	};
 })();
 
