@@ -28,18 +28,15 @@ $(function(){
 				index = li.index(),
 				popUp.showUp();
 				view(quickData[index],index);
-				console.log(quickData[index],index);
 			});
 			$('.J_popup .J_prev').on('click',function(){							
 				index--;
 				view(quickData[index],index);
-				console.log(quickData[index],index);
 				return false;														
 			});
 			$('.J_popup .J_next').on('click',function(){					
 				index++;
 				view(quickData[index],index);	
-				console.log(quickData[index],index);
 				return false;
 			});
 		};
