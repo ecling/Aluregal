@@ -187,46 +187,6 @@
       }
     }
 } 
-.apopup{
-  background: white;
-  padding: 50px;
-  border-radius: 5px;
-  display: none;
-  position: fixed;
-  top:15%;
-  left:15%;
-  z-index: 1000;
-  .icon-j-next,
-  .icon-j-prev{
-    display: block;
-    position: absolute;
-    top:45%;
-    font-size: 50px;
-  }
-  .icon-j-prev{
-    left: 0;
-  }
-  .icon-j-next{
-    right: 0;
-  }
-  .icon-guanbi{
-    position: absolute;
-    font-size: 50px;
-    top:0;
-    right: 0;
-  }
-} 
-.mask{
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  opacity: .8;
-  background-color: #333;
-  filter: alpha(opacity=60);
-  -moz-opacity: .5;
-}
-
 .pop-dimmer{
     position: fixed;
     width: 100%;
@@ -237,15 +197,35 @@
     background: rgba(0,0,0,0.5);
     display: none;
     .popup{
+      padding: 20px 50px;
       position: absolute;
       margin: auto;
-      width: 980px;
+      width: 980px;    
       background-color: #fff;
       display: none;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
+      .close{
+        position: absolute;
+        top:0;
+        right: -1px;
+        font-size: 40px;
+      }
+      .icon-j-next,
+      .icon-j-prev{
+          display: block;
+          position: absolute;
+          top:45%;
+          font-size: 50px;
+      }
+      .icon-j-prev{
+          left: 0;
+      }
+      .icon-j-next{
+          right: 0;
+      }
     }
 }
 

@@ -143,6 +143,10 @@
 		border: 1px solid transparent;
 		border-radius: 3px;
 		position: relative;
+		img{
+			width: 273px;
+			height: 273px;
+		}
 		&:hover{
 			border: 1px solid #aaa;
 			box-shadow: 0 1px 5px #cfcfcf;
@@ -199,7 +203,6 @@
 		}
 	}
 }
-
 .product-cont{
 	.listimg{
 		width: 400px;
@@ -401,7 +404,7 @@
 				color:black;
 				font-size:14px;
 				&:hover{
-					border-bottom:1px solid #333;
+					color:#eeb053;
 				}
 			}
 		}

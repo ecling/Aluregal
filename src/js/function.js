@@ -268,7 +268,7 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-           	close = $("<i class='fa fa-times-circle'></i>");
+           	close = $(".close");
             close.appendTo(options.contain);  
         };
         var sizePop = function(){
@@ -316,7 +316,7 @@
             hideDown:hideDown
         }
     };
-	var Slider = function(element){		
+	var Slider = function(element){
 		var ul = element.children(".J_imgs");
 		var extra_ul = element.children('.J_num');
 		var list  = ul.children("li");
