@@ -8,35 +8,35 @@
     background: rgba(0,0,0,0.5);
     display: none;
     .popup{
-      padding: 20px 50px;
-      position: absolute;
-      margin: auto;
-      width: 980px;    
-      background-color: #fff;
-      display: none;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      .close{
+        padding: 20px 50px;
         position: absolute;
-        top:0;
-        right: -1px;
-        font-size: 40px;
-      }
-      .icon-j-next,
-      .icon-j-prev{
-          display: block;
+        margin: auto;
+        width: 980px;    
+        background-color: #fff;
+        display: none;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .close{
           position: absolute;
-          top:45%;
-          font-size: 50px;
-      }
-      .icon-j-prev{
-          left: 0;
-      }
-      .icon-j-next{
-          right: 0;
-      }
+          top:0;
+          right: -1px;
+          font-size: 40px;
+        }
+        .icon-j-next,
+        .icon-j-prev{
+            display: block;
+            position: absolute;
+            top:45%;
+            font-size: 50px;
+        }
+        .icon-j-prev{
+            left: 0;
+        }
+        .icon-j-next{
+            right: 0;
+        }
     }
 }
 
@@ -127,46 +127,6 @@
         }
     }
 }
-/*
-.pop-Dimmer {
-    position: fixed;
-    display: none;
-    width: 100% !important;
-    height: 100% !important;
-    top: 0px;
-    left: 0px;
-    z-index: 12;
-    background: url(../images/alpha.png) repeat;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.popUp {
-    background: white;
-    display: none;
-    font-size: pxToRem(14px);
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 3px;
-    border: 1px solid #ededed;
-    box-sizing: content-box !important;
-    transition:width 0.1s ease,height 0.1s ease;
-    .fa-times-circle {
-        position: absolute;
-        right: -20px;
-        top: -20px;
-        cursor: pointer;
-        color: black;
-        font-size: pxToRem(30px);
-        line-height: 1;
-        opacity: 1;
-    }
-}
-*/
 .popInner {
     display: inline-block;
     transition:width 0.1s ease,height 0.1s ease;
