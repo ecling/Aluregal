@@ -153,6 +153,9 @@ header{
 		.baglist{
 			width: 258px;
 			padding: 5px;
+			&.active{
+				display: block;
+			}
 			.srco{
 				width: 258px;
 				max-height: 400px;

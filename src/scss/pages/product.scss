@@ -219,6 +219,13 @@
 		}
 		.add{
 			margin-top:40px;
+			.processing{
+				&:hover{
+					.tip{
+						display: block;
+					}
+				}
+			}
 			.tobag{
 				display:inline-block;
 				width:275px;
@@ -226,11 +233,6 @@
 				border-radius:46px;	
 				position: relative;
 				margin-right: 25px;
-				&:hover{
-					.tip{
-						display: block;
-					}
-				}
 				.tip{
 					display: none;
 					position: absolute;

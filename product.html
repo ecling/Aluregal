@@ -385,7 +385,7 @@
 				<a href="#" title="">Home</a> / <a href="#" title="">Women</a> / <a href="#" title="">Tops</a> /<a href="#" title=""> Neck Raglan Short</a>/		
 			</div>
   			<div class="product-cont">
-  				<form>
+  				<form id="product_addtocart_form" method="POST" action="">
 					<div class="product clearfix">
 						<div class="fl">
 							<div class="showimg J_pro-images">
@@ -413,6 +413,7 @@
 						
 						<div class="option fl">
 							<h1><a href="" title="">Black Chiffon Polo</a> </h1>
+							<input type="hidden" name="id" value=10 />
 							<div class="pingfen">
 								<ul class="clearfix">
 									<li><i class="iconfont icon-shoucang"></i></li>
@@ -445,7 +446,7 @@
 									<li data-id="17"><img src="src/images/product-03.jpg" alt=""></li>
 									<li data-id="18"><img src="src/images/product-03.jpg" alt=""></li>
 								</ul>
-								<input type="hidden" name="" value="" />
+								<input type="hidden" name="a" value="" />
 							</div>
 							<div class="cs size J_option">
 								<label>Size</label>
@@ -456,7 +457,7 @@
 									<li data-id="23">XL</li>
 									<li data-id="24">2XL</li>
 								</ul>
-								<input type="hidden" name="" value="" />
+								<input type="hidden" name="b" value="" />
 							</div>
 							<div class="qty">
 								<label>Qty</label>
@@ -841,33 +842,40 @@
 				<a class="button" href="#" title="">LOG IN</a>
 				<i class="iconfont icon-guanbi"></i>
 			</div>
-			<div class="review popup clearfix">
-				<h2>Write A Review</h2>
-				<form action="product_submit" method="get" accept-charset="utf-8">
-					<div class="name fl" >
-						<label for="name">Nickname <span>*</span></label>
-						<input type="text" id="name">
+
+			<div class="pop-dimmer J_pop-dimmer">
+				<div class="review popup J_popup">
+					<div class="pop-inner J_inner">
+						<h2>Write A Review</h2>
+						<form action="product_submit" method="get" accept-charset="utf-8">
+							<div class="name fl" >
+								<label for="name">Nickname <span>*</span></label>
+								<input type="text" id="name">
+							</div>
+							<div class="shoucang fr">
+								<P>COMMENT RANK</P>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+							</div>
+							<div class="ct fl" >
+								<label for="contents">Content <span>*</span></label>
+								<textarea maxlength="1000" id="contents" width="675px" height="160px">
+								</textarea>
+								<p> <span>1000</span> characters remaining</p>
+							</div>
+							<button class="button fl" type="submit">SUBMIT</button>
+						</form>	
 					</div>
-					<div class="shoucang fr">
-						<P>COMMENT RANK</P>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
+					<div class="loading">
+					  <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
 					</div>
-					<div class="ct fl" >
-						<label for="contents">Content <span>*</span></label>
-						<textarea maxlength="1000" id="contents" width="675px" height="160px">
-						</textarea>
-						<p> <span>1000</span> characters remaining</p>
-					</div>
-					<button class="button fl" type="submit">SUBMIT</button>
-				</form>	
-				<i class="iconfont icon-guanbi"></i>
+					<i class="iconfont icon-guanbi J_close"></i>
+				</div>
 			</div>
-			<div class="mask">				
-			</div>
+	
 		</div>
 		<footer class="w1200">
 			<div class="content clearfix">
