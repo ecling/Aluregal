@@ -25,18 +25,20 @@ $(function(){
 
 		};
 		var bind = function(){
-
 			proItems.children('.quickview').on('click',function(){
 				//dimmer.showUp();
 				popUp.showUp();
 				//view();
 			});
-			$('.popup content .J_prev').delegate('click',function(){
-				dimmer.showUp();
-				view();
+
+			$('.J_popup').delegate('.J_prev','click',function(){
+				alert(1);
+				//dimmer.showUp();
+				//view();
 			});
-			$('.popup content .J_next').delegate('click',function(){
-				dimmer.showUp();
+			$('.J_popup').delegate('.J_next','click',function(){
+				alert(2);
+				//dimmer.showUp();
 				view();
 			});
 		};

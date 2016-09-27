@@ -210,8 +210,15 @@
 $(function(){
 	proSummary();
 	$('.J_pro-images').gallaryZoom();
+
 	//product reivew
+	var productPop = $('.J_pop-dimmer').popUp({width: '800px',height: '500px'});
+	$('.reviews').find('.button').on('click',function(e){
+		productPop.showUp();
+		return false;
+	});
+
 
 	//new scroll
-	//$('.new').scrollBox(4,1200);
+	$('.new-in').scrollBox(4,1200);
 });

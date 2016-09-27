@@ -32,7 +32,21 @@ $(function(){
 	}
 	
 	var updateOrder = function(){
-		alert('update');
+		$.ajax({
+			type: "GET",
+			url: "/data-quickview.html",
+			data: "",
+			dataType: "html",
+			success: function(data){
+				console.log(data);
+			},
+			error: function(){
+				console.log('error');
+			},
+			fail: function(){
+				console.log('fail');
+			}
+		});
 	};
 	var placeOrder = function(){
 		alert('place');

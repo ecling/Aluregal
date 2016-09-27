@@ -52,7 +52,8 @@
 			});
 		}
 	};
-    var Dimmer = function(options){
+    var Dimmer = function(element){
+    	var contain = $(element);
 		var option = {
 	        color: "#f39c11",
 	        bg: "rgba(255,255,255,0.5)"
@@ -93,14 +94,13 @@
                 option[i] = option[i];
 	        }
 	   	};
-	    extend(options);
-        contain = $(options.contain);
+	    //extend(options);
+        //contain = $(options.contain);
 	   	init();
         return {
             showUp:showUp,
             hideDown:hideDown,
-            dimmer: dimmer,
-            contain: contain
+            dimmer: dimmer
         };
 	};
     var getFinalStyle = function getFinalStyle(dom, property) {
@@ -624,9 +624,7 @@
 	        loadBind();
 	    };
 	    var placeHolder = function(dom){
-	    	var dimmer = new Dimmer({
-            	contain: dom.parent()
-	        });
+	    	var dimmer = new Dimmer(dom.parent());
 	        dom.data("dimmer", dimmer);
 	        dimmer.showUp();
 	    }
@@ -1093,8 +1091,8 @@
     $.fn.scrollToTop = function(options){
         var scrollToTop = new ScrollToTop(this,options);
     };
-	$.fn.dimmer = function(options){
-		return new Dimmer(options);
+	$.fn.dimmer = function(){
+		return new Dimmer(this);
 	};
     $.fn.popUp = function(setting){
         return popUp = PopUp(this,setting);
