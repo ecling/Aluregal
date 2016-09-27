@@ -718,14 +718,7 @@
                 updateStyle(index);
             } else {
                 showDimmer();
-                img.onload = function() {
-                    hideDimmer();
-                    updateImg($(img));
-                    updateStyle(index);
-                }
-                img.onerror = function() {
-                    hideDimmer();
-                }
+                
             }
             img.src = url;
         };
