@@ -9,56 +9,58 @@ $(function(){
 			popUp = $('.J_pop-dimmer').popUp({
 				width: '1058px',
 				height: '573px',
-			});
-			//dimmer = $('.popup').dimmer();
-			quickIndex = 0,
-			quickIndex = 0,
-			quickData = [];
+			}),
+			dimmer = $('.popup').dimmer(),	
+			index = 0,
+			quickData = [];	
 		var init = function(){
 			proItems.each(function(i,e){
-				quickData.push($(e).attr('data-id'));
+				quickData.push($(e).attr('data-id'));			
 			});
-
 			bind();
 		};
-		var view = function(id){
+		var bind = function(){
+			proItems.children('.quickview').on('click',function(){	
+				li = $(this).parent("li"),
+				index = li.index(),
+				popUp.showUp();
+				view(quickData[index],index);
+				console.log(quickData[index],index);
+			});
+			$('.J_popup .J_prev').on('click',function(){							
+				index--;
+				view(quickData[index],index);
+				console.log(quickData[index],index);
+				return false;														
+			});
+			$('.J_popup .J_next').on('click',function(){					
+				index++;
+				view(quickData[index],index);	
+				console.log(quickData[index],index);
+				return false;
+			});
+		};
+		var view = function(id,index){
+			dimmer.showUp();
 			$.ajax({
 				type:'GET',
 				url:'data-quickview.html',
 				datetype:'html',
+				beforeSend:function(){
+					$('.J_prev,.J_next').hide();
+				},
 				success:function(date){
 					$(".J_inner").html(date);
+					$('.J_prev,.J_next').show();
+					dimmer.hideDown()
 				},
 				error:function(){
 					alert("error");
 				},			
 			});
 		};
-		var bind = function(){
-			proItems.children('.quickview').on('click',function(){
-				//dimmer.showUp();
-				
-				popUp.showUp();
-				//view();
-			});
-
-			$('.J_popup').delegate('.J_prev','click',function(){
-				alert(1);
-				//dimmer.showUp();
-				//view();
-			});
-			$('.J_popup').delegate('.J_next','click',function(){
-				alert(2);
-				//dimmer.showUp();
-				view();
-			});
-		};
 		init();
 	})();
-	// close
-	$('.J_close').click(function(event) {
-		$(this).parents(".J_pop-dimmer").fadeOut();
-	});
 	//lazyload Images
 	$('.imgs').lazyLoadImg();
 });

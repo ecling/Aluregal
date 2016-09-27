@@ -338,7 +338,10 @@ header{
 			.nav-img{			
 				padding-left:15px;
 				border-left:1px solid #cfcfcf;
-
+				a{
+					float: left;
+					margin-left: 5px;
+				}
 			}
 		}
 	}
