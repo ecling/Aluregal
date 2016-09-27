@@ -53,11 +53,11 @@
 		}
 	};
     var Dimmer = function(element){
-    	var contain = $(element);
 		var option = {
 	        color: "#f39c11",
 	        bg: "rgba(255,255,255,0.5)"
 	    };
+	    var contain = $(element);
         var dimmer = '';
 	   	var init = function(){
 	   		dimmer = $("<div></div>");
@@ -95,7 +95,6 @@
 	        }
 	   	};
 	    //extend(options);
-        //contain = $(options.contain);
 	   	init();
         return {
             showUp:showUp,
@@ -204,6 +203,7 @@
                 event.stopPropagation();
                 showUp();
             });
+
             close.click(function(event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -229,12 +229,12 @@
                     options.contain.addClass('active');
                     var animatEvent = whichAnimationEvent();
                     options.contain.bind(animatEvent, function(event) {
-                       /* options.contain.css({
+                        options.contain.css({
                             opacity: 1,
                             display: 'block'
-                        });*/
+                        });
                         options.afterShow();
-                        //options.contain.off();
+                        options.contain.off();
                     });
                 } else {
                     options.contain.fadeIn('fast', function() {
@@ -249,14 +249,14 @@
                 var animatEvent = whichAnimationEvent();
                 options.contain.removeClass('active').addClass('noactive');
                 options.contain.bind(animatEvent, function(event) {
-                   /* options.contain.css({
+                    options.contain.css({
                         opacity: 0,
                         display: 'block'
-                    });*/
+                    });
                     options.contain.removeClass('noactive');
                     options.dimmer.fadeOut('fast');
                     options.afterClose();
-                    //options.contain.off();
+                    options.contain.off();
                 });
             } else {
                 options.contain.fadeOut('fast', function() {
@@ -624,7 +624,9 @@
 	        loadBind();
 	    };
 	    var placeHolder = function(dom){
-	    	var dimmer = new Dimmer(dom.parent());
+	    	var dimmer = new Dimmer({
+            	contain: dom.parent()
+	        });
 	        dom.data("dimmer", dimmer);
 	        dimmer.showUp();
 	    }
