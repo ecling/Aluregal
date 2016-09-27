@@ -3,6 +3,9 @@
 })(jQuery);
 
 $(function(){
+	//lazyLoadImg
+	$('.pro-list li .pro-img').lazyLoadImg();
+
 	//product quick view
 	(function(){
 		var proItems = $('.pro-list li'),

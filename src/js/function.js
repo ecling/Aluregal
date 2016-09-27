@@ -53,11 +53,11 @@
 		}
 	};
     var Dimmer = function(element){
+    	var contain = $(element);
 		var option = {
 	        color: "#f39c11",
 	        bg: "rgba(255,255,255,0.5)"
 	    };
-	    var contain = $(element);
         var dimmer = '';
 	   	var init = function(){
 	   		dimmer = $("<div></div>");
@@ -95,6 +95,7 @@
 	        }
 	   	};
 	    //extend(options);
+        //contain = $(options.contain);
 	   	init();
         return {
             showUp:showUp,
@@ -203,7 +204,6 @@
                 event.stopPropagation();
                 showUp();
             });
-
             close.click(function(event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -268,8 +268,8 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-           	close = options.dimmer.find('.J_close');
-            //close.appendTo(options.contain);  
+           	close = $(".close");
+            close.appendTo(options.contain);  
         };
         var sizePop = function(){
             var winW = $(window).width(),
@@ -624,9 +624,7 @@
 	        loadBind();
 	    };
 	    var placeHolder = function(dom){
-	    	var dimmer = new Dimmer({
-            	contain: dom.parent()
-	        });
+	    	var dimmer = new Dimmer(dom.parent());
 	        dom.data("dimmer", dimmer);
 	        dimmer.showUp();
 	    }
@@ -720,7 +718,14 @@
                 updateStyle(index);
             } else {
                 showDimmer();
-                
+                img.onload = function() {
+                    hideDimmer();
+                    updateImg($(img));
+                    updateStyle(index);
+                }
+                img.onerror = function() {
+                    hideDimmer();
+                }
             }
             img.src = url;
         };
