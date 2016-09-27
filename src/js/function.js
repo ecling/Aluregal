@@ -229,12 +229,12 @@
                     options.contain.addClass('active');
                     var animatEvent = whichAnimationEvent();
                     options.contain.bind(animatEvent, function(event) {
-                        options.contain.css({
+                       /* options.contain.css({
                             opacity: 1,
                             display: 'block'
-                        });
+                        });*/
                         options.afterShow();
-                        options.contain.off();
+                        //options.contain.off();
                     });
                 } else {
                     options.contain.fadeIn('fast', function() {
@@ -249,14 +249,14 @@
                 var animatEvent = whichAnimationEvent();
                 options.contain.removeClass('active').addClass('noactive');
                 options.contain.bind(animatEvent, function(event) {
-                    options.contain.css({
+                   /* options.contain.css({
                         opacity: 0,
                         display: 'block'
-                    });
+                    });*/
                     options.contain.removeClass('noactive');
                     options.dimmer.fadeOut('fast');
                     options.afterClose();
-                    options.contain.off();
+                    //options.contain.off();
                 });
             } else {
                 options.contain.fadeOut('fast', function() {
@@ -268,8 +268,8 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-           	close = $(".close");
-            close.appendTo(options.contain);  
+           	close = options.dimmer.find('.J_close');
+            //close.appendTo(options.contain);  
         };
         var sizePop = function(){
             var winW = $(window).width(),

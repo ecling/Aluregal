@@ -207,6 +207,14 @@
       right: 0;
       top: 0;
       bottom: 0;
+      &.noactive{
+        display: none;
+        opacity: 0;
+      }
+      &.active{
+        display: block;
+        opacity: 1;
+      }
       .close{
         position: absolute;
         top:0;
