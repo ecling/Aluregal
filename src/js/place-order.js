@@ -53,4 +53,32 @@ $(function(){
 	};
 })();
 
+//right fix
+(function(){
+	var width = $(document).width();
+		position = 'fixed';
+		fixOff= $('.cart_right').offset();
+	$(window).scroll(function(e){
+		BoxPostion();
+	});
+	$(window).resize(function(){
+		width = $(window).width();
+		if(width<1200){
+			position = 'absolute';
+		}
+		BoxPostion();
+	});
+	var BoxPostion = function(){
+		var scrollTop = $(document).scrollTop();
+		if(fixOff.top<=scrollTop){
+			var left = (width-1200)/2+745+55;
+			left = parseInt(left)+'px';
+			$('.cart_right').css({"position": "fixed","top":"4px","left":left});
+		}else{
+			$('.cart_right').css({"position": "static","top":"4px","left":left});
+		}
+		
+	};
+})();
+
 });

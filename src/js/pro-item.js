@@ -27,7 +27,8 @@ var proSummary = function(){
 		});
 		$('.J_add-to-cart button').on('click',function(e){
 			e.preventDefault();
-			if(!error.length){	
+			if(!error.length){
+				$(this).text('Adding...');	
 				addCart();
 			}
 		});
@@ -60,6 +61,7 @@ var proSummary = function(){
 				$('.my-bag').find('.pcs').text(data.qty);
 				$('.my-bag').find('.baglist').html(data.html);
 				$('.my-bag').find('.baglist').addClass('active');
+				$('.J_add-to-cart button').text('Add To Bag');
 			},
 			error: function(){
 
