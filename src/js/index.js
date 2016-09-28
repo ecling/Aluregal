@@ -41,26 +41,4 @@ jQuery(document).ready(function($) {
 			$(".mask").hide(300);
 	    }
 	})();
-	(function(){
-		var minus = $(".j-minus");
-		var plus = $(".j-plus");
-		plus.on('click', function(event) {
-			var value = $(this).siblings('input').val();
-			var input = $(this).siblings('input');
-			minus.removeClass('disble');
-			value++;
-			input.val(value);
-		});
-		minus.on('click', function(event) {
-			var value = $(this).siblings('input').val();
-			var input = $(this).siblings('input');
-			if (value <= 1) {				
-				$(this).addClass('disble');
-			}else{
-				value--;
-				input.val(value);
-				$(this).removeClass('disble');
-			}
-		});	
-	})();
 });
