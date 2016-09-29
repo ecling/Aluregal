@@ -176,23 +176,21 @@
 /*Account Setting css*/
 .account_setting_tab{
 	padding-bottom: 60px;
-	ul{
-		padding-left:245px;
-		li{
-			display: inline-block;
-			width: 128px;
-			line-height: 35px;
-			float: left;			
-			margin-right: 10px;
-			background: #cfcfcf;
-			color:white;
-			text-align: center;
-			cursor: pointer;
-			border-radius: 35px;
-			margin-right: 55px;
-			&.active{
-				background: #333;
-			}
+	padding-left:245px;
+	li{
+		display: inline-block;
+		width: 128px;
+		line-height: 35px;
+		float: left;			
+		margin-right: 10px;
+		background: #cfcfcf;
+		color:white;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 35px;
+		margin-right: 55px;
+		&.active{
+			background: #333;
 		}
 	}
 }

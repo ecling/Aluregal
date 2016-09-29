@@ -106,7 +106,7 @@
     var getFinalStyle = function getFinalStyle(dom, property) {
         return (dom.currentStyle ? dom.currentStyle : window.getComputedStyle(dom, null))[property];
     }
-    var getActualRect = function(dom){
+  	var getActualRect = function(dom){
         var nodes = [dom],
             backUp = [],
             actual;

@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	$("#commentForm2").validate({errorElement: "p",});
+	//sign 
 	$("#signIn_form ").validate({
 	 	errorElement: "p",
 	 	rules: {
@@ -39,6 +39,8 @@ jQuery(document).ready(function($) {
 	 		confirm_password: "Enter your password again.",
 	 	},
 	});
+
+	//setting 
 	$("#account_setting_form").validate({errorElement: "p",
 		rules: {
 	 	   email: {
@@ -95,6 +97,7 @@ jQuery(document).ready(function($) {
 	 		confirm_password: "Enter your password again.",
 	 	},
 	});
+	//NewPassword
 	$("#NewPassword_form").validate({
 		errorElement:"p",
 		rules: {

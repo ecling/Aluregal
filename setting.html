@@ -9,7 +9,10 @@
 		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="src/js/index.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
+		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/setting.js"></script>
+		<script type="text/javascript" src="src/js/validate.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
@@ -396,14 +399,12 @@
 			</div>	
 			<div class="col2-main fl">
 				<h1 class="h1-center">account setting</h1>
-				<div class="account_setting_tab">
-			 		<ul>
-			 			<li class="active">Account Setting</li>
-			 			<li >Change Email</li>
-			 			<li >Change Password</li>
-			 		</ul>
-			 	</div>
-			 	<div class="account_setting_conter">
+		 		<ul class="account_setting_tab J_li">
+		 			<li class="active">Account Setting</li>
+		 			<li >Change Email</li>
+		 			<li >Change Password</li>
+		 		</ul>
+			 	<div class="account_setting_conter J_div">
 					<div class="account-setting clearfix">
 						<div class="account-setting-font fl">
 			 				<div id="result"> 
@@ -416,15 +417,15 @@
 						<div class="account-setting-form fl">
 							<form id="account_setting_form" method="post" action="">
 								<label for="username" class="labeld">Nickname</label>
-								<input type="text" name="username" id="username" required />
-								<p>
+								<input type="text" name="username" id="username" class="required" />
+								<div>
 									<input type="radio" name="radio" id="ms" checked="checked">
 									<label for="ms" class="ms">Ms.</label>
 									<input type="radio" name="radio" id="mr">
 									<label for="mr" class="ms">Mr.</label>
-								</p>
+								</div>
 								<label for="email" class="labeld">Email</label>
-								<input type="text" name="email" id="email">
+								<input type="text" name="email" id="email" class=" required email">
 								<label for="birthday" class="labeld">Birthday</label>
 								<select name=""	id="day" class="day">
 									<option value="">Day</option>
@@ -447,26 +448,26 @@
 									<option	>2</option>
 								</select>
 								<label for="phone" class="labeld">Phone</label>
-								<input type="text" name="number" id="phone" required>
+								<input type="text" name="number" id="phone" class="required">
 								<button type="submit" class="button Setting_submit">Submit</button>
 							</form>
 						</div>
 					</div>
-					<div class="change-email clearfix ">
+					<div class="change-email clearfix " style="display: none;">
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-youxiang"></span>
 						</div>
 						<div class="account-setting-form fl">
 							<form id="change_email_form" method="post" action="">
 								<label for="Email" class="labeld">Email</label>
-								<input type="text" name="email" id="Email" required>
+								<input type="text" name="email" id="Email" class="required email">
 								<label for="Confirm" class="labeld">Confirm Email</label>
-								<input type="text" name="confirm_emails" id="Confirm" class="{required:true,minlength:5,equalTo:'#Email'}">
+								<input type="text" name="confirm_emails" id="Confirm" class="{equalTo:'#Email'} required email">
 								<button type="submit" class="button Setting_submit">Submit</button>
 							</form>
 						</div>
 					</div>
-					<div class="change-password clearfix">
+					<div class="change-password clearfix" style="display: none;">
 						<div class="account-setting-font fl">
 							<span class="iconfont icon-mima"></span>
 						</div>
