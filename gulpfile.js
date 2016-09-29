@@ -2,14 +2,34 @@ var gulp = require('gulp');
 var sass = require("gulp-ruby-sass");
 var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync').create();
+var browser = require('browser-sync');
+var browserSync = browser.create();
 var reload      = browserSync.reload;
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('serve',['minify-css'],function(){
+    browser({
+        server: {
+            baseDir: "./",
+            index: "index.html"
+        },
+        middleware: [
+            {
+                route: "/api",
+                handle: function (req, res, next) {
+                    res.setHeader("Content-Type", "application/json");
+                    res.end();
+                    next();
+                    // handle any requests at /api
+                }
+            }
+        ]
+    });
+    /*
 	browserSync.init({
         server: "./"
     });
+    */
 	gulp.watch("./src/scss/**/*.scss", ['minify-css']);
 	gulp.watch("./*.html").on('change', reload);
     gulp.watch("./dist/js/*.js").on('change',reload);

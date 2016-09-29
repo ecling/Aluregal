@@ -65,7 +65,7 @@ $(function(){
 	
 	var updateOrder = function(){
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: $('#firecheckout-form').attr('update-url'),
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
@@ -92,7 +92,7 @@ $(function(){
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
 			success: function(){
-				
+
 			},
 			error: function(){
 
@@ -129,7 +129,6 @@ $(function(){
 	});
 	var BoxPostion = function(){
 		var scrollTop = $(document).scrollTop();
-		console.log(fixOff.top);
 		if(fixOff.top<=scrollTop){
 			if(position=='fixed'){
 				var left = (width-1200)/2+745+55;

@@ -15,8 +15,8 @@ $(function(){
 		});
 		var getCart = function(){
 			$.ajax({
-				type: "GET",
-				url: "data-topcart.json",
+				type: "POST",
+				url: "/api/data-topcart.json",
 				//url: "checkout/cart/",
 				data: "",
 				dataType: "json",
