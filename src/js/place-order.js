@@ -66,8 +66,7 @@ $(function(){
 	var updateOrder = function(){
 		$.ajax({
 			type: "GET",
-			url: "/data-updateCheckout.json",
-			//url: "/firecheckout/index/updateCheckout/",
+			url: $('#firecheckout-form').attr('update-url'),
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
 			success: function(data){
@@ -87,7 +86,21 @@ $(function(){
 		});
 	};
 	var placeOrder = function(){
-		alert('place');
+		$.ajax({
+			type: "GET",
+			url: $('#firecheckout-form').attr('save-url'),
+			data: $('#firecheckout-form').serialize(),
+			dataType: "json",
+			success: function(){
+				
+			},
+			error: function(){
+
+			},
+			fail: function(){
+
+			}
+		});
 	};
 })();
 

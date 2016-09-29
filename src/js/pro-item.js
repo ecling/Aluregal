@@ -57,8 +57,7 @@ var proSummary = function(){
 	var addCart = function(){
 		$.ajax({
 			type: "GET",
-			url: "data-topcart.json",
-			//url: "/checkout/cart/addajax/",
+			url: $("#product_addtocart_form").attr('data-url'),
 			data: $("#product_addtocart_form").serialize(),
 			dataType: "json",
 			success: function(data){
