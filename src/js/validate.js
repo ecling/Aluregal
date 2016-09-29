@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 	$("#commentForm2").validate({errorElement: "p",});
-	//$("#commentForm").validate({errorElement: "p",	});
-	$("#signIn_form").validate({
+	$("#signIn_form ").validate({
 	 	errorElement: "p",
 	 	rules: {
 	 	   email: {

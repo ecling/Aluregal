@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="src/css/place-order.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="src/js/validate.js"></script>
+	
 		<script type="text/javascript" src="src/js/function.js"></script>
 		<script type="text/javascript" src="src/js/place-order.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
@@ -154,16 +154,16 @@
 							<div class="shipping-address-form">
 								<div class="Firstname clearfix">
 									<div class="Firstname_left">
-										 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" required/>						
-										<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" required/>
+										 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" class="required">						
+										<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" class="required">
 									</div>
 									<div class="Firstname_right">
-										<label for="Lastname"></span>Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" required/>
-										<label for="E-mail"></span>E-mail address<span class="required"></span></label><input type="text" name="email" id="E-mail" required/>					
+										<label for="Lastname">Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" class="required">
+										<label for="E-mail">E-mail address<span class="required "></span></label><input type="text" name="email" id="E-mail" class="required email">					
 									</div>
 								</div>
 								<div class="AddressLine1 clearfix">
-									<label for="Line1"></span>Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" required/>						
+									<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required">		
 								</div>
 								<div class="AddressLine2">
 									<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
@@ -172,7 +172,7 @@
 									<ul >
 									    <li class="fl">
 									    	<label for="jungle">Country / Region<span class="required"></span></label>
-									    	<select class="J_country" id="jungle" name="jungle" title="Please select something!" required>
+									    	<select class="J_country" id="jungle" name="jungle" title="Please select something!" class="required">
 									    		<option></option>
 									    	  	<option value ="volvo">Volvo</option>
 									    	  	<option value ="saab">Saab</option>
@@ -182,25 +182,25 @@
 									    </li>
 									    <li class="fr">
 									    	<label for="fruit">States<span class="required"></span></label>
-									    	<select id="fruit" class="J_state-select" name="fruit" title="Please select something!" required>
+									    	<select id="fruit" class="J_state-select" name="fruit" title="Please select something!" class="required">
 										    	<option></option>
 									    	  	<option value ="volvo">Volvo</option>
 									    	  	<option value ="saab">Saab</option>
 									    	  	<option value="opel">Opel</option>
 									    	  	<option value="audi">Audi</option>
 									    	</select>
-									    	<input class="J_state-input" type="text" name="states" class="states"/>
+									    	<input class="J_state-input states" type="text" name="states"  />
 									    </li>
 									</ul>
 								</div>
 
 								<div >
 							    	<label for="city">City<span class="required"></span></label>
-							    	<input type="text" name="city" id="city" class="city" required/>	
+							    	<input type="text" name="city" id="city" class="city required">	
 								</div>	  
 
 								<div class=" zip">
-									<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" required/>	
+									<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" class="required">	
 								</div>
 								<a href="#" class="privacy ">Privacy & Security Policy</a>
 							</div>
@@ -273,17 +273,24 @@
 					<div class="PaymentMethod clearfix">
 						<h3>Payment Method</h3>
 						<div class="payment">
-							<div class="options">
-							<input type="radio" name="PaymentMethod" id="list1" checked="true">
-							<label for="list1">
-								<img src="src/images/place_order.png">
-							</label>
+							<div class="options clearfix">
+								<input type="radio" name="PaymentMethod" id="list1" checked="true">
+								<label for="p_method_paypal_express">
+									<img class="paypal-logo" src="src/images/place_order.png">
+									<p>If you don't have a paypal account,you can also pay via paypal with your credit card or bank debit card. Payment can be submitted in any currency!</p>                          
+								</label>
 							</div>
-							<div class="options">													
-								<input type="radio" name="PaymentMethod" id="list2" ><label for="list2">32131</label>
+							<div class="options clearfix">												
+								<input type="radio" name="PaymentMethod" id="list2" >
+								<label for="list2">
+									<span>asdasdasd</span>
+								</label>								
 							</div>
-							<div class="options">
-								<input type="radio" name="PaymentMethod" id="list3" ><label for="list3">3513</label>					
+							<div class="options clearfix">
+								<input type="radio" name="PaymentMethod" id="list3" >
+								<label for="list3">
+									<span>asdasdasd</span>
+								</label>					
 							</div>
 						</div>
 					</div>

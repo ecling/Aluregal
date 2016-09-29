@@ -32,8 +32,34 @@ $(function(){
 			placeOrder();
 		}
 	});
+	//email  */
+	
+	$("#commentForm :input").blur(function(event) {
+		if($(this).is('.required')){
+			$(this).next('p').empty();
+			if (this.value=="") {
+				var error = 'This field is required.';
+				$(this).after('<p class="error">'+error+'</p>');
+			}else{
+				$(this).next('p').empty();
+			}
+		}
+		if ($(this).is('.email')) {
+			$(this).next('p').empty();
+			if (this.value == ''|| (this.value!="" && !/^\w+(\.\w+)*@\w+(\.\w+)+$/.test(this.value))) {
+				var error = 'Please enter a valid email address.';
+				$(this).after('<p class="error">'+error+'</p>');
+			}else{
+				$(this).next('p').empty();
+			}
+		}
+	}).keyup(function(event) {
+		$(this).triggerHandler('blur');
+	}).focus(function(event) {
+		$(this).triggerHandler('blur');
+	});
 
-	var validatePlaceForm = function(){
+	var validatePlaceForm = function(){ 
 		return true;
 	}
 	

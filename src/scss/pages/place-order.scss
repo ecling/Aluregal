@@ -213,14 +213,22 @@ h3{
     margin-top: 50px;
     .options{
         margin-left: 10px;
-        label{
-            line-height: 50px;
-        }
-        img{
-            vertical-align: middle;
-        }
         input{
-            margin-right: 20px;
+            float: left;
+            height:70px;
+            display: inline-block; 
+        }
+        label{
+            line-height: 70px;
+            margin-left:25px;  
+            width: 90%;
+            display: inline-block;
+            p{
+                line-height: 20px;
+            }
+           span{
+                line-height: 20px;
+           }
         }
     }
 }

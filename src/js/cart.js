@@ -13,8 +13,7 @@ $(function(){
 					newNum = parseInt(num)+1;
 				}else{
 					newNum = parseInt(num);
-				}
-				
+				}				
 				if(isNaN(newNum)||newNum<min){
 					input.val(min);
 				}else if(newNum>max){
