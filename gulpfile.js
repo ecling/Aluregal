@@ -4,10 +4,12 @@ var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var browser = require('browser-sync');
 var browserSync = browser.create();
-var reload      = browserSync.reload;
+var reload      = browser.reload;
+var server      = require('gulp-express');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('serve',['minify-css'],function(){
+    /*
     browser({
         server: {
             baseDir: "./",
@@ -25,11 +27,18 @@ gulp.task('serve',['minify-css'],function(){
             }
         ]
     });
+    */
     /*
 	browserSync.init({
         server: "./"
     });
     */
+    server.run(['app.js']);
+    
+    browser({
+        proxy: "localhost:9000"
+    });
+
 	gulp.watch("./src/scss/**/*.scss", ['minify-css']);
 	gulp.watch("./*.html").on('change', reload);
     gulp.watch("./dist/js/*.js").on('change',reload);
