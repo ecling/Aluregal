@@ -2,7 +2,7 @@ $(function(){
 	//shopping cart
 	if($('.shopping_cart ').length>0){
 		(function(){
-			var t;
+			var t;	
 			var setNumInput = function(input,action){
 				var min = input.attr('min'),
 					max = input.attr('max');
@@ -26,45 +26,49 @@ $(function(){
 			};
 
 			var updateCart = function(){
-				console.log("221");
-				/*
 				$.ajax({
-					type: "",
-					url: "",
-					data: "",
-					dataType: "",
-					success: function(){
-
+					type: "GET",
+					url: "data-cart.json",
+					//url: "/checkout/cart/updateajax",
+					data: $('#shopping-cart-update').serialize(),
+					dataType: "json",
+					success: function(data){
+						$('.progress').remove();
+						$('.shopping_cart').replaceWith(data.html);
+						$('.my-bag .pcs').text(data.qty);
 					},
 					error: function(){
 
 					}
 				});
-				*/
 			};
 			var bind = function(){
-				$('.items').find('li').each(function(i){
-					var li = $(this),
-						numInput = li.find('.qty');
-					li.find('.j-minus').on('click',function(e){
-						setNumInput(numInput,'minus');
-						return false;
-					});
-					li.find('.j-plus').on('click',function(){
-						setNumInput(numInput,'plus');
-						return false;
-					});
-					numInput.blur(function(e){
-						setNumInput($(this));
-						return;
-					});
-					numInput.keyup(function(e){
-						setNumInput($(this));
-						return;
-					});
+				$('.checkout-cart-index').delegate('.j-minus','click',function(e){
+					var numInput = $(this).siblings('.qty');
+					setNumInput(numInput,'minus');
+					return false;
+				});
+				$('.checkout-cart-index').delegate('.j-plus','click',function(){
+					var numInput = $(this).siblings('.qty');
+					setNumInput(numInput,'plus');
+					return false;
+				});
+				$('.checkout-cart-index').delegate('.qty','blur',function(e){
+					setNumInput($(this));
+					return;
+				});
+				$('.checkout-cart-index').delegate('.qty','keyup',function(e){
+					setNumInput($(this));
+					return;
 				});
 			};
+
+			//first loaddding
 			bind();
+
+			if($('.shopping_cart .items .loading').length){
+				updateCart();
+			}
 		})();
 	}
 });

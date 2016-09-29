@@ -6,17 +6,28 @@ $(function(){
 		miniCart.mouseenter(function(e){
 			if($(this).attr('data-loaded')==0){
 				loading.showUp();
+				miniCart.attr('data-loaded',1);
 				getCart();
 			}
 		});
 		miniCart.mouseleave(function(){
-			console.log(2);
+			
 		});
 		var getCart = function(){
-			console.log(1);
-			loading.hideDown();
-			miniCart.attr('data-loaded',1);
+			$.ajax({
+				type: "GET",
+				url: "data-topcart.json",
+				//url: "checkout/cart/",
+				data: "",
+				dataType: "json",
+				success: function(data){
+					loading.hideDown();
+					miniCart.find('.pop').html(data.html);
+				},
+				error: function(){
+					miniCart.attr('data-loaded',0);
+				}
+			});
 		};
-
 	})();
 });
