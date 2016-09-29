@@ -30,11 +30,12 @@ $(function(){
 				$.ajax({
 					type: "GET",
 					url: "data-cart.json",
-					data: "",
+					//url: "/checkout/cart/updateajax",
+					data: $('#shopping-cart-update').serialize(),
 					dataType: "json",
 					success: function(data){
-						$('.shopping_cart .items').replaceWith(data.items);
-						$('.shopping_cart .fixbox').replaceWith(data.summary);
+						$('.progress').remove();
+						$('.shopping_cart').replaceWith(data.html);
 						$('.my-bag .pcs').text(data.qty);
 					},
 					error: function(){
@@ -43,21 +44,21 @@ $(function(){
 				});
 			};
 			var bind = function(){
-				$('.shopping_cart').delegate('.j-minus','click',function(e){
+				$('.checkout-cart-index').delegate('.j-minus','click',function(e){
 					var numInput = $(this).siblings('.qty');
 					setNumInput(numInput,'minus');
 					return false;
 				});
-				$('.shopping_cart').delegate('.j-plus','click',function(){
+				$('.checkout-cart-index').delegate('.j-plus','click',function(){
 					var numInput = $(this).siblings('.qty');
 					setNumInput(numInput,'plus');
 					return false;
 				});
-				$('.shopping_cart').delegate('.qty','blur',function(e){
+				$('.checkout-cart-index').delegate('.qty','blur',function(e){
 					setNumInput($(this));
 					return;
 				});
-				$('.shopping_cart').delegate('.qty','keyup',function(e){
+				$('.checkout-cart-index').delegate('.qty','keyup',function(e){
 					setNumInput($(this));
 					return;
 				});
