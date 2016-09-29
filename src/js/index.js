@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 		$(".icon-xiugai").on('click',show);
 		$(".newaddress").on('click',show);
 		$(".write").on('click',show);
-		$(".quickview").on('click',show);
+		
 		$(".icon-guanbi").on('click',hide);
 		$("#NewPassword_form button").on('click',show);
 		$("#ForgottenPassword_submit button").on('click',show);
@@ -40,24 +40,5 @@ jQuery(document).ready(function($) {
 	    	$(".popup").hide(300);
 			$(".mask").hide(300);
 	    }
-	})();
-	(function(){
-		
-		var input = $(".listQty input");
-		var value = $(".listQty input").val();
-		$(".j-plus").on('click', function(event) {
-			$(".j-minus").removeClass('disble');
-			value++;
-			input.val(value);
-		});
-		$(".j-minus").on('click', function(event) {
-			if (value <= 1) {				
-				$(this).addClass('disble');
-			}else{
-				value--;
-				input.val(value);
-				$(this).removeClass('disble');
-			}
-		});
 	})();
 });

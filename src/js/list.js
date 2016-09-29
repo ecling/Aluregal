@@ -3,46 +3,63 @@
 })(jQuery);
 
 $(function(){
+	//lazyLoadImg
+	$('.pro-list li .pro-img').lazyLoadImg();
+
 	//product quick view
 	(function(){
 		var proItems = $('.pro-list li'),
 			popUp = $('.J_pop-dimmer').popUp({
-				width: '958px',
-				height: '533px'
-			});
-			//dimmer = $('.popup').dimmer();
-			quickIndex = 0,
-			quickId = 0,
-			quickData = [];
+				width: '1058px',
+				height: '573px',
+			}),
+			dimmer = $('.popup').dimmer(),	
+			index = 0,
+			quickData = [];	
 		var init = function(){
 			proItems.each(function(i,e){
-				quickData.push($(e).attr('data-id'));
+				quickData.push($(e).attr('data-id'));			
 			});
-
 			bind();
 		};
-		var view = function(id){
-
-		};
 		var bind = function(){
-
-			proItems.children('.quickview').on('click',function(){
-				//dimmer.showUp();
+			proItems.children('.quickview').on('click',function(){	
+				li = $(this).parent("li"),
+				index = li.index(),
 				popUp.showUp();
-				//view();
+				view(quickData[index],index);
 			});
-			$('.popup content .J_prev').delegate('click',function(){
-				dimmer.showUp();
-				view();
+			$('.J_popup .J_prev').on('click',function(){							
+				index--;
+				view(quickData[index],index);
+				return false;														
 			});
-			$('.popup content .J_next').delegate('click',function(){
-				dimmer.showUp();
-				view();
+			$('.J_popup .J_next').on('click',function(){					
+				index++;
+				view(quickData[index],index);	
+				return false;
+			});
+		};
+		var view = function(id,index){
+			dimmer.showUp();
+			$.ajax({
+				type:'GET',
+				url: $('.pro-list').attr('data-url'),
+				data: {"id":id},
+				datetype:'html',
+				beforeSend:function(){
+					$('.J_prev,.J_next').hide();
+				},
+				success:function(date){
+					$(".J_inner").html(date);
+					$('.J_prev,.J_next').show();
+					dimmer.hideDown()
+				},
+				error:function(){
+					alert("error");
+				},			
 			});
 		};
 		init();
 	})();
-
-	//lazyload Images
-	$('.imgs').lazyLoadImg();
 });

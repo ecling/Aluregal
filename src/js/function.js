@@ -52,7 +52,8 @@
 			});
 		}
 	};
-    var Dimmer = function(options){
+    var Dimmer = function(element){
+    	var contain = $(element);
 		var option = {
 	        color: "#f39c11",
 	        bg: "rgba(255,255,255,0.5)"
@@ -93,14 +94,13 @@
                 option[i] = option[i];
 	        }
 	   	};
-	    extend(options);
-        contain = $(options.contain);
+	    //extend(options);
+        //contain = $(options.contain);
 	   	init();
         return {
             showUp:showUp,
             hideDown:hideDown,
-            dimmer: dimmer,
-            contain: contain
+            dimmer: dimmer
         };
 	};
     var getFinalStyle = function getFinalStyle(dom, property) {
@@ -143,15 +143,13 @@
     };
     var whichAnimationEvent = function(){
         var t,
-            el = document.createElement("fakeelement");
-    
+            el = document.createElement("fakeelement");   
         var animations = {
             "animation": "animationend",
             "OAnimation": "oAnimationEnd",
             "MozAnimation": "animationend",
             "WebkitAnimation": "webkitAnimationEnd"
-        }
-    
+        }  
         for (t in animations) {
             if (el.style[t] !== undefined) {
                 return animations[t];
@@ -268,7 +266,7 @@
             options.isPopUp = false;  
         };
         var closeBtn = function(){
-           	close = $("<i class='fa fa-times-circle'></i>");
+           	close = $(".close");
             close.appendTo(options.contain);  
         };
         var sizePop = function(){
@@ -316,7 +314,7 @@
             hideDown:hideDown
         }
     };
-	var Slider = function(element){		
+	var Slider = function(element){
 		var ul = element.children(".J_imgs");
 		var extra_ul = element.children('.J_num');
 		var list  = ul.children("li");
@@ -624,9 +622,7 @@
 	        loadBind();
 	    };
 	    var placeHolder = function(dom){
-	    	var dimmer = new Dimmer({
-            	contain: dom.parent()
-	        });
+	    	var dimmer = new Dimmer(dom.parent());
 	        dom.data("dimmer", dimmer);
 	        dimmer.showUp();
 	    }
@@ -1093,8 +1089,8 @@
     $.fn.scrollToTop = function(options){
         var scrollToTop = new ScrollToTop(this,options);
     };
-	$.fn.dimmer = function(options){
-		return new Dimmer(options);
+	$.fn.dimmer = function(){
+		return new Dimmer(this);
 	};
     $.fn.popUp = function(setting){
         return popUp = PopUp(this,setting);

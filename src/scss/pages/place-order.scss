@@ -136,7 +136,7 @@ h3{
     margin-top:50px;
     position: relative;
     color:#333;
-    ul{
+    .shipping{
         margin-left: 10px;
     }
     p{
@@ -145,7 +145,7 @@ h3{
         left: 0;
         font-size: 20px;
     }
-    li{
+    .options{
         padding-bottom:15px;
         margin-bottom: 15px;
         border-bottom: 1px dashed #aaa;
@@ -213,14 +213,22 @@ h3{
     margin-top: 50px;
     .options{
         margin-left: 10px;
-        label{
-            line-height: 50px;
-        }
-        img{
-            vertical-align: middle;
-        }
         input{
-            margin-right: 20px;
+            float: left;
+            height:70px;
+            display: inline-block; 
+        }
+        label{
+            line-height: 70px;
+            margin-left:25px;  
+            width: 90%;
+            display: inline-block;
+            p{
+                line-height: 20px;
+            }
+           span{
+                line-height: 20px;
+           }
         }
     }
 }

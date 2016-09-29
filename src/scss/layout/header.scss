@@ -151,10 +151,13 @@ header{
 			color:red;
 		}
 		.baglist{
-			width: 258px;
+			font-family: "Cambria";
 			padding: 5px;
+			&.active{
+				display: block;
+			}
 			.srco{
-				width: 258px;
+				width:300px;
 				max-height: 400px;
 				overflow: scroll;
 				overflow-x:hidden;
@@ -167,20 +170,36 @@ header{
 					border: 1px solid #333;
 				}
 				img{
-					display: block;
-					float: left;
-					margin-right: 8px;
+					width: 80px;
+					height: 80px;
 				}
 				.biaoti{
+					width: 175px;
 					display: block;
 					overflow: hidden;
-					max-height: 27px;
+					line-height: 15px;
 					margin-bottom: 10px;
 					word-wrap: break-word;
+					&:hover{
+						color:red;
+					}
+				}
+				.size,.color{
+					font-size: 12px;
+					span{
+						font-weight: bold;
+						margin-right: 5px;
+					}
+				}
+				.jiage{
+					margin-top: 5px;
 				}
 				.price{
 					font-size: 20px;
 					color:red;
+				}
+				p{
+					line-height: 15px;
 				}
 			}
 		}
@@ -335,7 +354,10 @@ header{
 			.nav-img{			
 				padding-left:15px;
 				border-left:1px solid #cfcfcf;
-
+				a{
+					float: left;
+					margin-left: 5px;
+				}
 			}
 		}
 	}
