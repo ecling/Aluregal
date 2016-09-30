@@ -34,7 +34,7 @@ $(function(){
 	});
 	//email  */
 	
-	$("#commentForm :input").blur(function(event) {
+	$("#firecheckout-form :input").blur(function(event) {
 		if($(this).is('.required')){
 			$(this).next('p').empty();
 			if (this.value=="") {
@@ -107,7 +107,7 @@ $(function(){
 	});
 	$(window).resize(function(){
 		width = $(window).width();
-		if(width<1200){
+		if(width<1000){
 			position = 'absolute';
 		}else{
 			position = 'fixed';
@@ -116,7 +116,6 @@ $(function(){
 	});
 	var BoxPostion = function(){
 		var scrollTop = $(document).scrollTop();
-		console.log(fixOff.top);
 		if(fixOff.top<=scrollTop){
 			if(position=='fixed'){
 				var left = (width-1200)/2+745+55;
