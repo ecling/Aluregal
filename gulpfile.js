@@ -36,7 +36,7 @@ gulp.task('serve',['minify-css'],function(){
     server.run(['app.js']);
     
     browser({
-        proxy: "localhost:9000"
+        proxy: "localhost:8000"
     });
 
 	gulp.watch("./src/scss/**/*.scss", ['minify-css']);
