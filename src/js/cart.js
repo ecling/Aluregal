@@ -27,9 +27,8 @@ $(function(){
 
 			var updateCart = function(){
 				$.ajax({
-					type: "GET",
-					url: "data-cart.json",
-					//url: "/checkout/cart/updateajax",
+					type: "POST",
+					url: $('#shopping-cart-update').attr('data-url'),
 					data: $('#shopping-cart-update').serialize(),
 					dataType: "json",
 					success: function(data){

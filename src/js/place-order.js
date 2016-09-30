@@ -20,10 +20,10 @@ $(function(){
 	});
 
 	//selected shipping method
-	$("input[name='shipping_method']").on('change',function(){
+	$('#firecheckout-form').delegate("input[name='shipping_method']",'change',function(){
 		orderSummaryLoad.showUp();
 		updateOrder();
-	})
+	});
 
 	//place to order 
 	$('.J_place-order').on('click',function(e){
@@ -65,9 +65,8 @@ $(function(){
 	
 	var updateOrder = function(){
 		$.ajax({
-			type: "GET",
-			url: "/data-updateCheckout.json",
-			//url: "/firecheckout/index/updateCheckout/",
+			type: "POST",
+			url: $('#firecheckout-form').attr('update-url'),
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
 			success: function(data){
@@ -87,7 +86,25 @@ $(function(){
 		});
 	};
 	var placeOrder = function(){
-		alert('place');
+		$.ajax({
+			type: "POST",
+			url: $('#firecheckout-form').attr('save-url'),
+			data: $('#firecheckout-form').serialize(),
+			dataType: "json",
+			success: function(data){
+				if(data.error.length){
+
+				}else{
+					location.href(data.url);
+				}
+			},
+			error: function(){
+
+			},
+			fail: function(){
+
+			}
+		});
 	};
 })();
 

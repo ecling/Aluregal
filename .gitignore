@@ -1,6 +1,7 @@
 
 .sass-cache
 node_modules
+package.json
 dist/
 src/css/
 

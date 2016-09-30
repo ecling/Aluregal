@@ -44,7 +44,8 @@ $(function(){
 			dimmer.showUp();
 			$.ajax({
 				type:'GET',
-				url:'data-quickview.html',
+				url: $('.pro-list').attr('data-url'),
+				data: {"id":id},
 				datetype:'html',
 				beforeSend:function(){
 					$('.J_prev,.J_next').hide();
@@ -61,6 +62,4 @@ $(function(){
 		};
 		init();
 	})();
-	//lazyload Images
-	$('.imgs').lazyLoadImg();
 });

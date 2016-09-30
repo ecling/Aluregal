@@ -17,8 +17,7 @@ $(function(){
 		var getCart = function(){
 			$.ajax({
 				type: "GET",
-				url: "data-topcart.json",
-				//url: "checkout/cart/",
+				url: miniCart.attr('data-url'),
 				data: "",
 				dataType: "json",
 				success: function(data){
