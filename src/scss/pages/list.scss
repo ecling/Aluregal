@@ -184,6 +184,9 @@
 			margin-left: 10px;
 			color:#aaa;
 			cursor: pointer;
+			&.active{
+				color:red;
+			}
 		}
 		.quickview{
 			text-align: center;
