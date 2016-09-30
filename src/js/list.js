@@ -70,42 +70,25 @@ $(function(){
 		};
 		init();
 	})();
+
+	//product list wishlist
 	(function(){
 		var shoucang = $('.icon-xinshixin'),
 			li = $('.list-center li');
 			shoucang.on('click',function(){
-				var id = $(this).parents("li").attr("data-id"),
-					index = $(this).parents("li").index();	
-				view(id,index);
-		});		
-		var view = function(id,index){
+				view(this);
+			});		
+		var view = function(element){
 			$.ajax({
 				type:'GET',
-				date:{"id":id},
-				datetype:'html',
-				async:true,
-				success:function(date){
-					init(index);
+				ulr: $(element).attr('data-url'),
+				datetype:'json',
+				success:function(data){
+					if(data.num){
+						$(element).addClass('active');
+					}
 				},
 			});
-		};
-		var init = function(index){	
-			var xinxin = li.eq(index).find('.icon-xinshixin'),
-				id = li.eq(index).attr('data-id');
-			if (xinxin.hasClass('active')) {
-				var rulse = confirm("Cancel the collection?");
-				if (rulse) {
-					xinxin.removeClass('active');
-					console.log(id);
-					view(id);
-				}else{
-					return
-				}
-			}else{
-				xinxin.addClass('active');
-				console.log(id);
-				view(id);			
-			}
 		};		
 	})();
 });

@@ -393,6 +393,8 @@
 		var list_width = 0;
 		var totalWidth = 0;
 		var left = 0;
+		var pageNum = 1;
+		var curPage = 1;
 		var init = function(){
 			//ul.wrap('<div class="temwap"></div>');
 			var wap = element.children(".J_scroll-wrap");
@@ -405,16 +407,26 @@
 				}
 				totalWidth = totalWidth+$(this).outerWidth(true);
 			});
-
+			pageNum = Math.ceil(lists.length/num);
+			
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
 		};
 		var next = function(){
 			//var left = ul.css("left");
-			if(parseInt(left)==(-totalWidth+list_width*num)){
+			if(curPage==pageNum-1){
+				var starNum = curPage*num-(num-lists.length%num);
+				left = starNum*list_width;
+				curPage = curPage+1;
+			}else if(curPage==pageNum){
 				left = 0;
+				curPage = 1;
 			}else{
-				left = parseInt(left)-list_width*num;
+				left = curPage*num*list_width;
+				curPage = curPage+1;
 			}
+			console.log(left);
+			
+			
 			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
 		};
 		var prev = function(){

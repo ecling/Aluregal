@@ -71,7 +71,7 @@ $(function(){
 			dataType: "json",
 			success: function(data){
 				if(data.update_section['shipping-method']){
-					$('.shippingOptions').children('div').replaceWith(data.update_section['shipping-method']);
+					$('.shippingOptions').children('div').html(data.update_section['shipping-method']);
 				}
 				if(data.update_section.review){
 					$('.order_summary').html(data.update_section.review);
