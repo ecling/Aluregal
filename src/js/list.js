@@ -30,13 +30,21 @@ $(function(){
 				view(quickData[index],index);
 			});
 			$('.J_popup .J_prev').on('click',function(){							
-				index--;
-				view(quickData[index],index);
+				if (index <1) {
+					$(this).hide();
+				}else{
+					index--;
+					view(quickData[index],index);
+				}									
 				return false;														
 			});
-			$('.J_popup .J_next').on('click',function(){					
-				index++;
-				view(quickData[index],index);	
+			$('.J_popup .J_next').on('click',function(){
+				if (index <  proItems.length-1) {
+					index++;
+					view(quickData[index],index);	
+				}else{
+					$(this).hide();
+				}										
 				return false;
 			});
 		};
@@ -61,5 +69,43 @@ $(function(){
 			});
 		};
 		init();
+	})();
+	(function(){
+		var shoucang = $('.icon-xinshixin'),
+			li = $('.list-center li');
+			shoucang.on('click',function(){
+				var id = $(this).parents("li").attr("data-id"),
+					index = $(this).parents("li").index();	
+				view(id,index);
+		});		
+		var view = function(id,index){
+			$.ajax({
+				type:'GET',
+				date:{"id":id},
+				datetype:'html',
+				async:true,
+				success:function(date){
+					init(index);
+				},
+			});
+		};
+		var init = function(index){	
+			var xinxin = li.eq(index).find('.icon-xinshixin'),
+				id = li.eq(index).attr('data-id');
+			if (xinxin.hasClass('active')) {
+				var rulse = confirm("Cancel the collection?");
+				if (rulse) {
+					xinxin.removeClass('active');
+					console.log(id);
+					view(id);
+				}else{
+					return
+				}
+			}else{
+				xinxin.addClass('active');
+				console.log(id);
+				view(id);			
+			}
+		};		
 	})();
 });

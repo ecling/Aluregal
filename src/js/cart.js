@@ -37,7 +37,6 @@ $(function(){
 						$('.my-bag .pcs').text(data.qty);
 					},
 					error: function(){
-
 					}
 				});
 			};

@@ -22,10 +22,10 @@ $(function(){
 				dataType: "json",
 				success: function(data){
 					loading.hideDown();
-					$(this).find('.pop').html(data.html);
+					miniCart.find('.pop').html(data.html);
 				},
 				error: function(){
-					$(this).attr('data-loaded',0);
+					miniCart.attr('data-loaded',0);
 				}
 			});
 		};
