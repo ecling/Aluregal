@@ -398,7 +398,11 @@
 		var init = function(){
 			//ul.wrap('<div class="temwap"></div>');
 			var wap = element.children(".J_scroll-wrap");
-			wap.css({"width":width,"overflow":"hidden","position":"relative"});
+			wap.css({
+				"width":width,
+				"overflow":"hidden",
+				"position":"relative"
+			});
 		};
 		var ListWidth = function(){
 			lists.each(function(i){
@@ -409,35 +413,53 @@
 			});
 			pageNum = Math.ceil(lists.length/num);
 			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"left":"0"
+			});
 		};
 		var next = function(){
 			//var left = ul.css("left");
-			if(curPage==pageNum-1){
-				var starNum = curPage*num-(num-lists.length%num);
+			curPage = curPage+1;
+			if(curPage==pageNum){
+				var starNum = (curPage-1)*num-(num-lists.length%num);
 				left = starNum*list_width;
-				curPage = curPage+1;
-			}else if(curPage==pageNum){
+			}else if(curPage>pageNum){
 				left = 0;
 				curPage = 1;
 			}else{
-				left = curPage*num*list_width;
-				curPage = curPage+1;
+				left = (curPage-1)*num*list_width;
 			}
-			console.log(left);
 			
-			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"transition":"all 800ms ease",
+				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+			});
 		};
 		var prev = function(){
-			//var left = ul.css("left");
-			if(parseInt(left)==0){
-				left = -totalWidth+list_width*num;
+			curPage = curPage-1;
+			if(curPage==1){
+				left = 0;
+			}else if(curPage==0){
+				var starNum = (pageNum-1)*num-(num-lists.length%num);
+				left = starNum*list_width;
+				curPage = pageNum;			
 			}else{
-				left = parseInt(left)+list_width*num;
+				left = left-width;
 			}
 			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"transition":"all 800ms ease",
+				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+			});
 		};
 		init();
 		ListWidth();
