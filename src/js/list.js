@@ -26,7 +26,7 @@ $(function(){
 			proItems.children('.quickview').on('click',function(){	
 				li = $(this).parent("li"),
 				index = li.index(),
-				popUp.showUp();
+				popUp.showUp(); 
 				view(quickData[index],index);
 			});
 			$('.J_popup .J_prev').on('click',function(){							
