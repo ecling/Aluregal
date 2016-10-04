@@ -9,13 +9,15 @@
 		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="src/js/index.js"></script>
+		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
+		<script type="text/javascript" src="src/js/myorders.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
 		<![endif]-->
 	</head>
-	<body>
+	<body class="cms-index-index" >
 		<header>
 			<div class="tool w1200 clearfix">
 				<div class="logo fl">
@@ -90,37 +92,77 @@
 						</ul>
 					</div>
 					<div class="search clearfix">
-						<div class="my-bag fr">
+						<div class="my-bag fr J_mini-cart" data-loaded='0' data-url="/data-topcart.json">
 							<span class="iconfont icon-bag"></span>
 							MY BAG(<span class="pcs">0</span>)
 							<div class="baglist pop">
 								<em class="emtop"></em><em class="embottom"></em>
-								<div class="list clearfix">
-									<a href="" title="">
-										<img src="src/images/product-02.jpg" alt="">
-									</a>
-									<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
-									<div class="fl">
-										<span class="price">$ 420</span> x <span class="qty">1</span>
-									</div>									
-								</div>
-								<div class="list clearfix">
-									<a href="" title="">
-										<img src="src/images/product-02.jpg" alt="">
-									</a>
-									<a class="biaoti" href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
-									<div class="fl">
-										<span class="price">$ 420</span> x <span class="qty">1</span>
-									</div>									
-								</div>
-								<div class="list clearfix">
-									<a  href="" title="">
-										<img src="src/images/product-02.jpg" alt="">
-									</a>
-									<a  class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
-									<div class="fl">
-										<span class="price">$ 420</span> x <span class="qty">1</span>
-									</div>									
+								<div class="srco">
+									<div class="list clearfix">
+										<div class="list-left fl">
+											<a href="" title="">
+												<img src="src/images/product-02.jpg" alt="">
+											</a>
+										</div>
+										<div class="list-right fr">
+											<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaa</a>
+											<p class="size"><span>Size:</span>xxL</p>	
+											<p class="color"><span>Color:</span>red</p>	
+											<p class="jiage"><span class="price">$420</span> x <span>1</span></p>	
+										</div>
+									</div>
+									<div class="list clearfix">
+										<div class="list-left fl">
+											<a href="" title="">
+												<img src="src/images/product-02.jpg" alt="">
+											</a>
+										</div>
+										<div class="list-right fr">
+											<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaa</a>
+											<p class="size"><span>Size:</span>xxL</p>	
+											<p class="color"><span>Color:</span>red</p>	
+											<p class="jiage"><span class="price">$420</span> x <span>1</span></p>	
+										</div>
+									</div>								
+									<div class="list clearfix">
+										<div class="list-left fl">
+											<a href="" title="">
+												<img src="src/images/product-02.jpg" alt="">
+											</a>
+										</div>
+										<div class="list-right fr">
+											<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaa</a>
+											<p class="size"><span>Size:</span>xxL</p>	
+											<p class="color"><span>Color:</span>red</p>	
+											<p class="jiage"><span class="price">$420</span> x <span>1</span></p>	
+										</div>
+									</div>
+									<div class="list clearfix">
+										<div class="list-left fl">
+											<a href="" title="">
+												<img src="src/images/product-02.jpg" alt="">
+											</a>
+										</div>
+										<div class="list-right fr">
+											<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaa</a>
+											<p class="size"><span>Size:</span>xxL</p>	
+											<p class="color"><span>Color:</span>red</p>	
+											<p class="jiage"><span class="price">$420</span> x <span>1</span></p>	
+										</div>
+									</div>
+									<div class="list clearfix">
+										<div class="list-left fl">
+											<a href="" title="">
+												<img src="src/images/product-02.jpg" alt="">
+											</a>
+										</div>
+										<div class="list-right fr">
+											<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaa</a>
+											<p class="size"><span>Size:</span>xxL</p>	
+											<p class="color"><span>Color:</span>red</p>	
+											<p class="jiage"><span class="price">$420</span> x <span>1</span></p>	
+										</div>
+									</div>
 								</div>
 								<div class="checkout">
 									<button class="button" type="submit">View Bag & Checkout</button>
@@ -145,236 +187,283 @@
 			<div class="top-nav clearfix">
 				<ul>
 					<li>
-						<a href="#" title="">WOMEN</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h4" href="http://www.alluregal.com/dresses-4.html">Dresses</a>
+						<div class="nav-bar nav-dresses clearfix">
+							<div class="nav-dl fl">								
+								<dl>
+									<dt><a href="http://www.alluregal.com/maxi-dresses-5.html"><span >Maxi Dresses</span></a>
+									</dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/bodycon-dress-6.html"><span >Bodycon Dress</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sexy-dresses-7.html"><span >Sexy Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/club-dresses-8.html"><span >Club Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/little-black-dresses-9.html"><span >Little Black Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/vintage-dresses-10.html"><span >Vintage Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/short-dresses-11.html"><span >Short Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/two-piece-dresses-12.html"><span >Two Piece Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/chiffon-dresses-13.html"><span >Chiffon Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/summer-dresses-14.html"><span >Summer Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/boho-dresses-15.html"><span >Boho Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/midi-dress-16.html"><span >Midi Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/long-sleeve-dresses-17.html"><span >Long Sleeve Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/plus-size-dresses-18.html"><span >Plus Size Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/floral-dresses-19.html"><span >Floral Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/off-the-shoulder-dress-20.html"><span >Off The Shoulder Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/casual-dresses-21.html"><span >Casual Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/tshirt-dresses-22.html"><span >Tshirt Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/party-dresses-91.html"><span >Party Dresses</span></a></dt>
+								</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a href="#" title="">MEN</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h23" href="http://www.alluregal.com/tops-23.html">Tops</a>
+						<div class="nav-bar tops clearfix "  style="z-index: 1000;">
+							<div class="nav-dl top fl">													
+								<dl>
+									<dt><a href="http://www.alluregal.com/t-shirts-24.html"><span >T-Shirts</span></a></dt>
+											<dd><a href="http://www.alluregal.com/long-sleeve-t-shirts-25.html"><span >Long Sleeve T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/vintage-t-shirts-26.html"><span >Vintage T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/black-t-shirts-27.html"><span >Black T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/sleeveless-t-shirts-28.html"><span >Sleeveless T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/plain-t-shirts-29.html"><span >Plain T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/round-neck-t-shirt-30.html"><span >Round Neck T-Shirt</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/swimwear-31.html"><span >Swimwear</span></a></dt>
+											<dd><a href="http://www.alluregal.com/bikinis-32.html"><span >Bikinis</span></a></dd>
+											<dd><a href="http://www.alluregal.com/one-pieces-33.html"><span >One-Pieces</span></a></dd>
+											<dd><a href="http://www.alluregal.com/tankinis-34.html"><span >Tankinis</span></a></dd>
+											<dd><a href="http://www.alluregal.com/cover-ups-35.html"><span >Cover Ups</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/blouses-36.html"><span >Blouses</span></a></dt>
+											<dd><a href="http://www.alluregal.com/casual-blouse-37.html"><span >Casual Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/white-blouse-38.html"><span >White Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/floral-blouse-39.html"><span >Floral Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/chiffon-blouse-40.html"><span >Chiffon Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/lace-blouse-94.html"><span >Lace Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/sleeveless-blouse-41.html"><span >Sleeveless Blouse</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sweatshirt-42.html"><span >Sweatshirt</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sweater-43.html"><span >Sweater</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/tank-tops-44.html"><span >Tank Tops</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/kimono-45.html"><span >Kimono</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/jacket-46.html"><span >Jacket</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/bodysuit-47.html"><span >Bodysuit</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/outerwear-48.html"><span >Outerwear</span></a></dt>
+									<dd><a href="http://www.alluregal.com/casual-outerwear-49.html"><span >Casual Outerwear</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/two-piece-outfits-50.html"><span >Two Piece Outfits</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/lingerie-sleepwear-51.html"><span >Lingerie & Sleepwear</span></a></dt>
+									<dd><a href="http://www.alluregal.com/bras-52.html"><span >Bras</span></a></dd>
+									<dd><a href="http://www.alluregal.com/panties-53.html"><span >Panties</span></a></dd>
+									<dd><a href="http://www.alluregal.com/sleepwear-54.html"><span >Sleepwear</span></a></dd>
+									<dd><a href="http://www.alluregal.com/teddies-55.html"><span >Teddies</span></a></dd>
+								</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a href="#" title="">WEDDING</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h56" href="http://www.alluregal.com/bottoms-56.html">Bottoms</a>
+						<div class="nav-bar Bottoms">
+							<div class="nav-dl fl">
+								<dl>
+								<dt><a href="http://www.alluregal.com/skirts-57.html"><span >Skirts</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/pants-58.html"><span >Pants</span></a></dt>
+											<dd><a href="http://www.alluregal.com/casual-pants-92.html"><span >Casual Pants</span></a></dd>
+											<dd><a href="http://www.alluregal.com/jeans-93.html"><span >Jeans</span></a></dd>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/jumpsuits-59.html"><span >Jumpsuits</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/leggings-60.html"><span >Leggings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/shorts-61.html"><span >Short Pants</span></a></dt>
+										</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a href="#" title="">PARTY & OCCASIONS</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h62" href="http://www.alluregal.com/jewelry-62.html">Jewelry</a>
+						<div class="nav-bar Jewelry clearfix">
+							<div class="nav-dl fl">							
+								<dl>
+								<dt><a href="http://www.alluregal.com/necklaces-63.html"><span >Necklaces</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/earrings-64.html"><span >Earrings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/rings-65.html"><span >Rings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/body-jewelry-66.html"><span >Body Jewelry</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/bracelets-67.html"><span >Bracelets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/brooches-68.html"><span >Brooches</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/hair-jewelry-69.html"><span >Hair Jewelry</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/anklets-70.html"><span >Anklets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sweater-chains-71.html"><span >Sweater Chains</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/watches-72.html"><span >Watches</span></a></dt>
+										</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li >
+						<a class="h73" href="http://www.alluregal.com/shoes-73.html">Shoes</a>
+						<div class="nav-bar Shoes clearfix">
+							<div class="nav-dl fl">
+								<dl>
+								<dt><a href="http://www.alluregal.com/boots-74.html"><span >Boots</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sneakers-75.html"><span >Sneakers</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/flats-76.html"><span >Flats</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sandals-77.html"><span >Sandals</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/heels-wedges-78.html"><span >Heels + Wedges</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a href="#" title="">SHOES</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h79" href="http://www.alluregal.com/bags-79.html">Bags</a>
+						<div class="nav-bar Bags clearfix">
+							<div class="nav-dl fl">
+								
+							
+								<dl>
+								<dt><a href="http://www.alluregal.com/wallets-80.html"><span >Wallets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/tote-bags-81.html"><span >Tote Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/crossbody-bags-82.html"><span >Crossbody Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/clutches-bags-83.html"><span >Clutches Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/backpacks-bags-84.html"><span >Backpacks Bags</span></a></dt>
+										</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a href="#" title="">COSTUMES</a>
-						<div class="nav-bar">
-							<dl>
-								<dt>VIEW ALL</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
-							<dl>
-								<dt>TRENDING</dt>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-								<dd><a href="#">Women's Dresses</a></dd>
-							</dl>
+						<a class="h85" href="http://www.alluregal.com/accessories-85.html">Accessories</a>
+						<div class="nav-bar Accessories clearfix">
+							<div class="nav-dl fl">								
+								<dl>
+								<dt><a href="http://www.alluregal.com/sunglasses-86.html"><span >Sunglasses</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/hats-87.html"><span >Hats</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/scarves-88.html"><span >Scarves</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/belts-89.html"><span >Belts</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/socks-tights-90.html"><span >Socks&Tights</span></a></dt>
+										</dl>
+							</div>
 							<div class="nav-img fr">
-								<img src="src/images/xx.jpg" alt="">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
 							</div>
 						</div>
 					</li>
@@ -401,17 +490,17 @@
 						<h2>Hello !</h2>
 						<p>Wang BaoQiang</p>
 						<p>897456332@ho.com</p>
-						<a href="" title="">
+						<a href="http://localhost:3000/setting.html" target="_blank" title="">
 							<i class="iconfont icon-pinglun"></i>
 							Profile
 						</a>
 					</div>
 					<ul class="fenlei fr">
-						<li class="mgl"><a href="#"><i class="iconfont icon-jifen"></i><span>3000</span> Point</a></li>
+						<li class="mgl"><a href="http://localhost:3000/point.html"><i class="iconfont icon-jifen"></i><span>3000</span> Point</a></li>
 						<li><a href="#"><i class="iconfont icon-shoucang"></i>Favourite(<span>000</span>)</a></li>
-						<li><a href="#"><i class="iconfont icon-dingwei2"></i>Address Book</a></li>
-						<li><a href="#"><i class="iconfont icon-gouwuche"></i>Save For Later(<span>0000</span>)</a></li>
-						<li><a href="#"><i class="iconfont icon-dingdan"></i>All Orders(<span>0000</span>)</a></li>
+						<li><a href="http://localhost:3000/AddressBook.html"><i class="iconfont icon-dingwei2"></i>Address Book</a></li>
+						<li><a href="http://localhost:3000/saveforlater.html"><i class="iconfont icon-gouwuche"></i>Save For Later(<span>0000</span>)</a></li>
+						<li><a href="http://localhost:3000/all-order.html"><i class="iconfont icon-dingdan"></i>All Orders(<span>0000</span>)</a></li>
 					</ul>
 				</div>
 				<div class="conten">
@@ -432,7 +521,7 @@
 								<li class="orderno">CS164112</li>
 								<li class="products">
 									<div class="products_show">
-										<div class="products_show_img">
+										<div class="products_show_img J_img">
 											<img src="" alt="" style="background: red">
 											<img src="" alt="" style="background: black">
 											<img src="" alt="" style="background: green">
@@ -441,8 +530,8 @@
 											<img src="" alt="" style="background: green">
 										</div>
 									</div>
-									<a href="#" title="" class="iconfont icon-prev"></a>
-									<a href="#" title="" class="iconfont icon-next"></a>
+									<a href="#" title="" class="iconfont icon-prev J_products_prev"></a>
+									<a href="#" title="" class="iconfont icon-next J_products_next"></a>
 								</li>
 								<li class="status">Waiting for Payment </li>
 								<li class="dete">2016-07-26 18:04:12  </li>
@@ -459,7 +548,7 @@
 								<li class="orderno">CS164112</li>
 								<li class="products">
 									<div class="products_show">
-										<div class="products_show_img">
+										<div class="products_show_img J_img">
 											<img src="" alt="" style="background: red">
 											<img src="" alt="" style="background: black">
 											<img src="" alt="" style="background: green">
@@ -468,8 +557,8 @@
 											<img src="" alt="" style="background: green">
 										</div>
 									</div>
-									<a href="#" title="" class="iconfont icon-prev"></a>
-									<a href="#" title="" class="iconfont icon-next"></a>
+									<a href="#" title="" class="iconfont icon-prev J_products_prev"></a>
+									<a href="#" title="" class="iconfont icon-next J_products_next"></a>
 								</li>
 								<li class="status">Waiting for Payment </li>
 								<li class="dete">2016-07-26 18:04:12  </li>

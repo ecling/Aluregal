@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="src/js/function.js"></script>
-		<script type="text/javascript" src="src/js/index.js"></script>
+		<script type="text/javascript" src="src/js/myorders.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
@@ -521,39 +521,35 @@
 	    			    <li class="mgr"><a href="#" class="iconfont icon-next"></a></li>
 				    </ul>
 				</div>		
-  			</div>  			
-			<div class="login popup">
-				<h2>Write A Review</h2>
-				<p>Please log in first!</p>
-				<a class="button" href="#" title="">LOG IN</a>
-				<i class="iconfont icon-guanbi"></i>
-			</div>
-			<div class="review popup clearfix">
-				<h2>Write A Review</h2>
-				<form action="product_submit" method="get" accept-charset="utf-8">
-					<div class="name fl" >
-						<label for="name">Nickname <span>*</span></label>
-						<input type="text" id="name">
+  			</div> 
+			<div class="J_pop-dimmer pop-dimmer" >
+	  			<div class="J_popup popup">	
+					<div class="review J_inner">
+						<form action="product_submit" method="get" accept-charset="utf-8">
+							<h2>Write A Review</h2>
+							<div class="name fl" >
+								<label for="name">Nickname <span>*</span></label>
+								<input type="text" id="name">
+							</div>
+							<div class="shoucang fr">
+								<P>COMMENT RANK</P>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+								<i class="iconfont icon-shoucang"></i>
+							</div>
+							<div class="ct fl" >
+								<label for="contents">Content <span>*</span></label>
+								<textarea maxlength="1000" id="contents" width="675px" height="160px">
+								</textarea>
+								<p> <span>1000</span> characters remaining</p>
+							</div>
+							<button class="button fl" type="submit">SUBMIT</button>
+						</form>	
 					</div>
-					<div class="shoucang fr">
-						<P>COMMENT RANK</P>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-						<i class="iconfont icon-shoucang"></i>
-					</div>
-					<div class="ct fl" >
-						<label for="contents">Content <span>*</span></label>
-						<textarea maxlength="1000" id="contents" width="675px" height="160px">
-						</textarea>
-						<p> <span>1000</span> characters remaining</p>
-					</div>
-					<button class="button fl" type="submit">SUBMIT</button>
-				</form>	
-				<i class="iconfont icon-guanbi"></i>
-			</div>
-			<div class="mask">				
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
+				</div>
 			</div>
 		</div>
 		<footer class="w1200">

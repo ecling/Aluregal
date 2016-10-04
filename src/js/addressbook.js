@@ -1,54 +1,108 @@
 jQuery(document).ready(function($) {
-	//valitade
 	(function(){
-		$("#commentForm2 :input").blur(function(event) {
-			if($(this).is('.required')){
-				$(this).next('p').empty();
-				if (this.value=="") {
-					var error = 'This field is required.';
-					$(this).after('<p class="error">'+error+'</p>');
-				}else{
-					$(this).next('p').empty();
-				}
-			}
-			if ($(this).is('.email')) {
-				$(this).next('p').empty();
-				if (this.value == ''|| (this.value!="" && !/^\w+(\.\w+)*@\w+(\.\w+)+$/.test(this.value))) {
-					var error = 'Please enter a valid email address.';
-					$(this).after('<p class="error">'+error+'</p>');
-				}else{
-					$(this).next('p').empty();
-				}
-			}
-		}).keyup(function(event) {
-			$(this).triggerHandler('blur');
-		}).focus(function(event) {
-			$(this).triggerHandler('blur');
-		});
-	})();
-	//delete
-	(function(){
-		$(".delete,.icon-shanchu").on('click',  function(event) {
-			event.preventDefault();
-			var result = confirm("delte this address ?");
-			if (result) {
-				$(this).parents("li").remove();
-			}
-		});
-	})();
-	//change address
-	(function(){
-		var popUp = $('.J_pop-dimmer').popUp(),
-			dimmer = $('.popup').dimmer(),
-			change = $('.icon-xiugai');
-		var init = function(){
-			change.on('click',  function(event) {
+		var popUp = $('.J_pop-dimmer').popUp({width: '858px',}),
+			dimmer = $('.popup').dimmer();	 
+		var deleted = function (element){
+			element.on('click',  function(event) {
 				event.preventDefault();
-				alert("ss");
-				popUp.showUp();
-				dimmer.showUp();
-			});		
+					var result = confirm("dele$te this address ?"),
+					id = $(this).parents("li").attr("data-id");
+				if (result) {
+					$(this).parents("li").remove();
+					view(id);
+				}
+			});
+			var view = function(id){
+				alert(id);
+				$.ajax({
+					url: 'data-url',
+					type: 'GET',
+					dataType: 'json',
+					data: {id: 'id'},
+				});	
+			}
 		};
-		init();
-	})();	
+		var xiugai = function (element){
+			element.on('click',  function(event) {
+				event.preventDefault();
+				var id = $(this).parents("li").attr("data-id");
+				view(id);
+				dimmer.showUp();
+			});
+			var view = function(id){
+				$.ajax({
+					url: '/path/to/file',
+					type: 'POST',
+					dataType: 'json',
+					data: {id: 'id'},
+					success: function(){
+						popUp.showUp();
+						dimmer.hideDown();
+					},
+					error: function(){
+						popUp.showUp(); 
+						dimmer.hideDown();
+					},
+				});
+			};
+		};
+		var NewAddress = function (element){
+			element.on('click',  function(event) {
+				event.preventDefault();
+				popUp.showUp();
+				dimmer.hideDown();
+			});
+		};
+		var MakeDefault = function (element){
+			element.on('click', function(event) {
+				event.preventDefault();
+				if ($(this).hasClass('defaultStyle')) {
+					$(this).off('click',foo);
+				}
+				$(this).html("Default").addClass('defaultStyle').parents("li").siblings()
+				.find('.default').html("Make default").removeClass('defaultStyle');
+				var id = $(this).parents("li").attr("data-id");
+				view(id);
+			});
+			var view = function (id){
+				alert(id);
+				$.ajax({
+					url: '/path/to/file',
+					type: 'G',
+					dataType: 'json',
+					data: {id: 'id'},
+					success: function(){
+						
+					},
+					error: function(){
+					
+					},
+				});	
+			};
+		};
+		var validation = function (element){
+			element.validate({
+				errorElement: "p",
+			 	rules: {
+			 	   email: {
+			 	    required: true,
+			 	    email: true
+			 	   },
+			 	   password: {
+			 	    required: true,
+			 	    minlength: 8
+			 	   },
+			 	},
+			 	messages: {
+			 		email: "Please enter a valid email address.",
+			 		password:"Please enter your password.",
+			 	},
+			});
+		};
+		deleted( $(".delete,.icon-shanchu"));
+		xiugai( $('.icon-xiugai'));
+		NewAddress( $('.J_newaddress'));
+		MakeDefault( $('.default'));
+		validation($('#commentForm2'));
+	})();
 });

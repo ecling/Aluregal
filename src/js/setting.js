@@ -1,4 +1,4 @@
-$(function(){
+(function(){
 	var li = $(".J_li li"),
 		div = $(".J_div>div");
 	li.on('click',function(){

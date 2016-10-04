@@ -26,7 +26,7 @@ $(function(){
 			proItems.children('.quickview').on('click',function(){	
 				li = $(this).parent("li"),
 				index = li.index(),
-				popUp.showUp();
+				popUp.showUp(); 
 				view(quickData[index],index);
 			});
 			$('.J_popup .J_prev').on('click',function(){							
@@ -73,22 +73,19 @@ $(function(){
 
 	//product list wishlist
 	(function(){
-		var shoucang = $('.icon-xinshixin'),
-			li = $('.list-center li');
+		var shoucang = $('.icon-xinshixin');
 			shoucang.on('click',function(){
-				view(this);
-			});		
+			view($(this));
+		});		
 		var view = function(element){
 			$.ajax({
 				type:'GET',
-				ulr: $(element).attr('data-url'),
+				url:element.attr("date-url"),
 				datetype:'json',
 				success:function(data){
-					if(data.num){
-						$(element).addClass('active');
-					}
+					element.css("color","red");
 				},
 			});
-		};		
+		};
 	})();
 });

@@ -9,23 +9,11 @@ $(function(){
 
 jQuery(document).ready(function($) {
 	(function(){
-		$(".search-input").css({transform:'translatex(-78%)',opacity:0,}, 500);
-		$(".big ").on('click',  function(event) {
-			$(".search-input").css({
-				"opacity":'1',
-				"transition":"all 500ms ease",
-				"transform":"translatex(0%)",
-			});
-			$(this).hide();
-		});
-	})();
-	(function(){
 		$(".new_address_a").on('click',show);
 		$(".edit").on('click',show);
 		$(".icon-xiugai").on('click',show);
 		$(".newaddress").on('click',show);
-		$(".write").on('click',show);
-		
+		$(".write").on('click',show);	
 		$(".icon-guanbi").on('click',hide);
 		$("#NewPassword_form button").on('click',show);
 		$("#ForgottenPassword_submit button").on('click',show);
