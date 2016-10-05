@@ -1,12 +1,14 @@
 jQuery(document).ready(function($) {
 	(function(){
-		var popUp = $('.J_pop-dimmer').popUp({width: '858px',}),
-			dimmer = $('.popup').dimmer();	 
+		if($('.J_pop-dimmer').length>0){
+			var popUp = $('.J_pop-dimmer').popUp({width: '858px'}),
+			dimmer = $('.popup').dimmer();
+		}	 
 		var deleted = function (element){
 			element.on('click',  function(event) {
 				event.preventDefault();
-					var result = confirm("dele$te this address ?"),
-					id = $(this).parents("li").attr("data-id");
+					var result = confirm("delete this address ?"),
+						id = $(this).parents("li").attr("data-id");
 				if (result) {
 					$(this).parents("li").remove();
 					view(id);
@@ -56,13 +58,18 @@ jQuery(document).ready(function($) {
 		var MakeDefault = function (element){
 			element.on('click', function(event) {
 				event.preventDefault();
-				if ($(this).hasClass('defaultStyle')) {
-					$(this).off('click',foo);
+				if ($(this).is('.defaultStyle')) {
+					$(this).off('click',function(){
+						return false;
+					});
+				}else{
+					$(this).html("Default").addClass('defaultStyle')
+					.parents("li").siblings()
+					.find('.default').html("Make default")
+					.removeClass('defaultStyle');
+					var id = $(this).parents("li").attr("data-id");
+					view(id);
 				}
-				$(this).html("Default").addClass('defaultStyle').parents("li").siblings()
-				.find('.default').html("Make default").removeClass('defaultStyle');
-				var id = $(this).parents("li").attr("data-id");
-				view(id);
 			});
 			var view = function (id){
 				alert(id);
@@ -105,4 +112,4 @@ jQuery(document).ready(function($) {
 		MakeDefault( $('.default'));
 		validation($('#commentForm2'));
 	})();
-});
+});                                  

@@ -5,10 +5,9 @@ header{
 		padding: 10px 0;
 	}
 	.my-account{
-		padding-left: 58px;
 		margin-bottom: 20px;
 		li{
-			float: left;
+			float: right;
 			padding:1px 10px;
 			border-right:1px solid #cfcfcf;
 			position: relative;
@@ -148,6 +147,7 @@ header{
 		.baglist{
 			font-family: "Cambria";
 			padding: 5px;
+			width: 312px;
 			&.active{
 				display: block;
 			}
