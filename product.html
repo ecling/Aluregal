@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
 		<script type="text/javascript" src="src/js/pro-item.js"></script>
 		<script type="text/javascript" src="src/js/product.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
@@ -540,9 +541,9 @@
 							</div>
 							<div class="qty">
 								<label>Qty</label>
-								<a href="#" title=""> - </a>
+								<a class="minus j-minus" href="#" title=""> - </a>
 								<input type="text" name="" value="1">
-								<a href="#" title=""> + </a>
+								<a class="plus j-plus" href="#" title=""> + </a>
 							</div>
 							<div class="add J_add-to-cart">
 								<button class="button tobag" type="submit">Add To Bag
@@ -915,13 +916,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="login popup">
-				<h2>Write A Review</h2>
-				<p>Please log in first!</p>
-				<a class="button" href="#" title="">LOG IN</a>
-				<i class="iconfont icon-guanbi"></i>
+			<div class="pop-dimmer J_pop-dimmer">
+				<div class="login popup J_popup">
+					<div class="pop-inner J_inner">
+						<h2>Write A Review</h2>
+						<p>Please log in first!</p>
+						<a class="button" href="#" title="">LOG IN</a>
+					</div>
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
+				</div>
 			</div>
-
 			<div class="pop-dimmer J_pop-dimmer">
 				<div class="review popup J_popup">
 					<div class="pop-inner J_inner">
@@ -948,13 +952,9 @@
 							<button class="button fl" type="submit">SUBMIT</button>
 						</form>	
 					</div>
-					<div class="loading">
-					  <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
-					</div>
-					<i class="iconfont icon-guanbi J_close"></i>
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
 				</div>
 			</div>
-	
 		</div>
 		<footer class="w1200">
 			<div class="content clearfix">

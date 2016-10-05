@@ -28,7 +28,7 @@
             font-size: 14px;
             color: #666;
             margin-bottom:10px;
-            margin-top: 23px;
+            margin-top:10px;
             span
             {
                 color:red;
@@ -106,15 +106,6 @@
         
     }
 .popup{
-    display: none;
-    width:825px;
-    position: fixed;
-    top:0;
-    left:20%;  
-    box-shadow:1px 1px  10px #333;
-    padding:0 50px 20px 50px;
-    z-index: 1003;
-    background: white;
     h2{
         font-size: 18px;
         color:#101010;
@@ -131,12 +122,7 @@
         border-radius: 35px;
     }
     .privacy_address{
-        margin-left:300px;
-    }
-    .icon-guanbi{
-        position: absolute;
-        top:0;
-        right: -1px;
-        font-size: 40px;
+       float: right;
+       margin-bottom: 20px;
     }
 }

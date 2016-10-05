@@ -1,26 +1,29 @@
 jQuery(document).ready(function($) {
 	(function(){
 		if($('.J_pop-dimmer').length>0){
-			var popUp = $('.J_pop-dimmer').popUp({width: '858px'}),
+			var popUp = $('.J_pop-dimmer').popUp({width: '800px'}),
 			dimmer = $('.popup').dimmer();
 		}	 
 		var deleted = function (element){
 			element.on('click',  function(event) {
 				event.preventDefault();
-					var result = confirm("delete this address ?"),
-						id = $(this).parents("li").attr("data-id");
-				if (result) {
-					$(this).parents("li").remove();
-					view(id);
-				}
+				var result = confirm("delete?"),
+					id = $(this).parents("li").attr("data-id");
+				view(id);		
 			});
 			var view = function(id){
-				alert(id);
 				$.ajax({
-					url: 'data-url',
 					type: 'GET',
 					dataType: 'json',
 					data: {id: 'id'},
+					success:function (data){
+						if (result) {
+							$(this).parents("li").remove();
+						}
+					},
+					error: function(data){
+						alert("delete error!!")
+					},
 				});	
 			}
 		};

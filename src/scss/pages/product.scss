@@ -492,6 +492,15 @@
 		input{
 			width: 285px;
 			line-height: 31px;
+			border: 1px solid #dfdfdf;
+			border-radius: 3px;
+			text-indent: 10px;
+			&:hover{
+				border-color: #aaa;
+			}
+			&:focus{
+				border-color: #101010;
+			}
 		}
 	}
 	.shoucang{
