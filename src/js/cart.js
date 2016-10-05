@@ -1,8 +1,9 @@
 $(function(){
 	//shopping cart
-	if($('.shopping_cart ').length>0){
+	if($('.shopping_cart').length>0){
 		(function(){
 			var t;	
+			var carLoad = $('.checkout-cart-index').dimmer();
 			var setNumInput = function(input,action){
 				var min = input.attr('min'),
 					max = input.attr('max');
@@ -22,16 +23,18 @@ $(function(){
 					input.val(newNum);
 				}
 				clearTimeout(t);
-				t = setTimeout(updateCart,1000);
+				t = setTimeout(updateCart,500);
 			};
 
 			var updateCart = function(){
+				carLoad.showUp();
 				$.ajax({
 					type: "POST",
 					url: $('#shopping-cart-update').attr('data-url'),
 					data: $('#shopping-cart-update').serialize(),
 					dataType: "json",
 					success: function(data){
+						carLoad.hideDown();
 						$('.progress').remove();
 						$('.shopping_cart').replaceWith(data.html);
 						$('.my-bag .pcs').text(data.qty);

@@ -70,10 +70,12 @@ $(function(){
 		};
 		init();
 	})();
+
+	//product list wishlist
 	(function(){
 		var shoucang = $('.icon-xinshixin');
 			shoucang.on('click',function(){
-				view($(this));
+			view($(this));
 		});		
 		var view = function(element){
 			$.ajax({

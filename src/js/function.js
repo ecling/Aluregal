@@ -393,10 +393,16 @@
 		var list_width = 0;
 		var totalWidth = 0;
 		var left = 0;
+		var pageNum = 1;
+		var curPage = 1;
 		var init = function(){
 			//ul.wrap('<div class="temwap"></div>');
 			var wap = element.children(".J_scroll-wrap");
-			wap.css({"width":width,"overflow":"hidden","position":"relative"});
+			wap.css({
+				"width":width,
+				"overflow":"hidden",
+				"position":"relative"
+			});
 		};
 		var ListWidth = function(){
 			lists.each(function(i){
@@ -405,27 +411,55 @@
 				}
 				totalWidth = totalWidth+$(this).outerWidth(true);
 			});
-
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","left":"0"});
+			pageNum = Math.ceil(lists.length/num);
+			
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"left":"0"
+			});
 		};
 		var next = function(){
 			//var left = ul.css("left");
-			if(parseInt(left)==(-totalWidth+list_width*num)){
+			curPage = curPage+1;
+			if(curPage==pageNum){
+				var starNum = (curPage-1)*num-(num-lists.length%num);
+				left = starNum*list_width;
+			}else if(curPage>pageNum){
 				left = 0;
+				curPage = 1;
 			}else{
-				left = parseInt(left)-list_width*num;
-			}
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
-		};
-		var prev = function(){
-			//var left = ul.css("left");
-			if(parseInt(left)==0){
-				left = -totalWidth+list_width*num;
-			}else{
-				left = parseInt(left)+list_width*num;
+				left = (curPage-1)*num*list_width;
 			}
 			
-			ul.css({"width":totalWidth,"overflow":"hidden","position":"relative","transition":"all 800ms ease","transform":"translate3d("+left+"px, 0px, 0px)"});
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"transition":"all 800ms ease",
+				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+			});
+		};
+		var prev = function(){
+			curPage = curPage-1;
+			if(curPage==1){
+				left = 0;
+			}else if(curPage==0){
+				var starNum = (pageNum-1)*num-(num-lists.length%num);
+				left = starNum*list_width;
+				curPage = pageNum;			
+			}else{
+				left = left-width;
+			}
+			
+			ul.css({
+				"width":totalWidth,
+				"overflow":"hidden",
+				"position":"relative",
+				"transition":"all 800ms ease",
+				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+			});
 		};
 		init();
 		ListWidth();
