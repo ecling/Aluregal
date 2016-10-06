@@ -6,12 +6,12 @@
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
     display: none;
     .popup{
-        padding: 20px 50px;
+        padding: 20px 50px 50px;
         position: absolute;
-        margin: auto;
-        width: 980px;    
+        margin: auto;   
         background-color: #fff;
         display: none;
         left: 0;
