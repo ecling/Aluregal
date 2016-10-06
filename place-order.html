@@ -149,7 +149,7 @@
 				<div class="leftD fl">
 					<div class="shippingAddress clearfix" >
 						<h3 class="add">ShippingAddress</h3>
-						<div class="checkInfo checkNew">
+						<div class="checkInfo checkNew" style="display:none;">
 							<div class="shipping-address-form">
 								<div class="Firstname clearfix">
 									<div class="Firstname_left">
@@ -205,7 +205,7 @@
 							</div>
 						</div>
 						<!-- customer has shipping address-->
-						<div class="address_list" style="display:none;">
+						<div class="address_list">
 							<div class="contentd clearfix">
 								<input type="radio" name="1">
 								<div class="neirong fl">
@@ -227,7 +227,7 @@
 									<p><label>ZIP/Postal Code:</label><span>20010</span><a href="#" class="edit">Edit</a><i class="iconfont icon-xiugai"></i></p>
 								</div>
 							</div>
-							<a href="#" class="button newaddress">Add New Address</a>		
+							<a href="#" class="button newaddress J_newaddress">Add New Address</a>		
 						</div>
 					</div>
 					
@@ -318,67 +318,69 @@
 					</div>
 				</div>
 			</form>
-			
-			<form class="clearfix " action="demo_form.asp" method="POST" id="commentForm2" >
-				<div class="shipping-address-form popup">
-					<h2>ADD NEW ADDRESS</h2>
-					<div class="Firstname clearfix">
-						<div class="Firstname_left">
-							 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" required/>						
-							<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" required/>
-						</div>
-						<div class="Firstname_right">
-							<label for="Lastname"></span>Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" required/>
-							<label for="E-mail"></span>E-mail address<span class="required"></span></label><input type="text" name="email" id="E-mail" required/>					
-						</div>
-					</div>
-					<div class="AddressLine1 clearfix">
-						<label for="Line1"></span>Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" required/>						
-					</div>
-					<div class="AddressLine2">
-						<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
-					</div>
-					<div class="selectd ">
-						<ul class="clearfix">
-						    <li class="fl">
-						    	<label for="jungle">Country / Region<span class="required"></span></label>
-						    	<select id="jungle" name="jungle" title="Please select something!" required>
-						    		<option></option>
-						    	  	<option value ="volvo">Volvo</option>
-						    	  	<option value ="saab">Saab</option>
-						    	  	<option value="opel">Opel</option>
-						    	  	<option value="audi">Audi</option>
-						    	</select>
-						    </li>
-						    <li class="fr">
-						    	<label for="fruit">States<span class="required"></span></label>
-						    	<select id="fruit" name="fruit" title="Please select something!" required>
-							    	<option></option>
-						    	  	<option value ="volvo">Volvo</option>
-						    	  	<option value ="saab">Saab</option>
-						    	  	<option value="opel">Opel</option>
-						    	  	<option value="audi">Audi</option>
-						    	</select>
-						    	<input type="text" name="states" class="states"/>
-						    </li>
-						</ul>
-					</div>
 
-					<div >
-				    	<label for="city">City<span class="required"></span></label>
-				    	<input type="text" name="city" id="city" class="city" required/>	
-					</div>	  
+			<div class="pop-dimmer J_pop-dimmer">
+				<div class="popup J_popup">
+					<div class="shipping-address-form pop-inner J_inner">
+						<form class="clearfix " action="demo_form.asp" method="POST" id="commentForm2" >
+								<h2>ADD NEW ADDRESS</h2>
+								<div class="Firstname clearfix">
+									<div class="Firstname_left">
+										 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" required/>						
+										<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" required/>
+									</div>
+									<div class="Firstname_right">
+										<label for="Lastname"></span>Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" required/>
+										<label for="E-mail"></span>E-mail address<span class="required"></span></label><input type="text" name="email" id="E-mail" required/>					
+									</div>
+								</div>
+								<div class="AddressLine1 clearfix">
+									<label for="Line1"></span>Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" required/>						
+								</div>
+								<div class="AddressLine2">
+									<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+								</div>
+								<div class="selectd ">
+									<ul class="clearfix">
+									    <li class="fl">
+									    	<label for="jungle">Country / Region<span class="required"></span></label>
+									    	<select id="jungle" name="jungle" title="Please select something!" required>
+									    		<option></option>
+									    	  	<option value ="volvo">Volvo</option>
+									    	  	<option value ="saab">Saab</option>
+									    	  	<option value="opel">Opel</option>
+									    	  	<option value="audi">Audi</option>
+									    	</select>
+									    </li>
+									    <li class="fr">
+									    	<label for="fruit">States<span class="required"></span></label>
+									    	<select id="fruit" name="fruit" title="Please select something!" required>
+										    	<option></option>
+									    	  	<option value ="volvo">Volvo</option>
+									    	  	<option value ="saab">Saab</option>
+									    	  	<option value="opel">Opel</option>
+									    	  	<option value="audi">Audi</option>
+									    	</select>
+									    	<input type="text" name="states" class="states"/>
+									    </li>
+									</ul>
+								</div>
 
-					<div class=" zip">
-						<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" required/>	
+								<div >
+							    	<label for="city">City<span class="required"></span></label>
+							    	<input type="text" name="city" id="city" class="city" required/>	
+								</div>	  
+
+								<div class=" zip">
+									<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" required/>	
+								</div>
+								<button class="button" type="submit">Submit</button>
+								<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>						
+						</form>
 					</div>
-					<button class="button" type="submit">Submit</button>
-					<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>
-					<i class="iconfont icon-guanbi"></i>
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
 				</div>
-				<div class="mask">	
-				</div>
-			</form>
+			</div>
 		</div>
 		<footer class="w1200">
 			<div class="content clearfix">

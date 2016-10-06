@@ -2,8 +2,14 @@ $(function(){
 
 (function(){
 	var shippingMethodLoad = $('.shippingOptions').children('div').dimmer(),
-		orderSummaryLoad = $('.order_summary').dimmer();
-
+		orderSummaryLoad = $('.order_summary').dimmer(),
+		popup = $('.J_pop-dimmer').popUp({width:'800px'}),
+		dimmer = $('.popup').dimmer();
+	// new address
+	$('.J_newaddress').on('click',function(event) {
+		event.preventDefault();
+		popup.showUp();
+	});
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
