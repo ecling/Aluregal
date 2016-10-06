@@ -113,6 +113,7 @@
 			width: 105px;
 			top:20px;
 			right: 0;
+			z-index: 99;
 			background: white;
 			border: 1px solid #101010;
 			border-top: none;
@@ -143,6 +144,7 @@
 		border: 1px solid transparent;
 		border-radius: 3px;
 		position: relative;
+		z-index: 1;
 		img{
 			width: 273px;
 			height: 273px;
@@ -214,10 +216,10 @@
 		position: relative;
 	}
 	.thumbnail{
-		margin-right:8px;
+		margin-top: 20px;
 		li{
 			border:2px solid transparent;
-			margin-right:6px;
+			margin-right:7  px;
 			position:relative;
 			float: left;
 			&.active{
@@ -453,6 +455,13 @@
 				}
 			}
 		}	
+	}
+	.viewdetail{
+		display: inline-block;
+		color:#aaa;
+		border-bottom: 1px solid #aaa;
+		float: right;
+		margin-top: 20px;
 	}
 }
 
