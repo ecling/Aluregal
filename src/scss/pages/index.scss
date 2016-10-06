@@ -7,6 +7,11 @@
 @import "../layout/header.scss";
 @import "../layout/footer.scss";
 @import "../widget/popup.scss";
+.cms-index-index{
+	.std{
+		display: none;
+	}
+}
 .banners{
 	position: relative;
 	overflow: hidden;
