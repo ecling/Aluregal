@@ -212,9 +212,9 @@ $(function(){
 	$('.J_pro-images').gallaryZoom();
 
 	//product reivew
-	var productPop = $('.J_pop-dimmer').popUp({width: '800px',height: '500px'});
+	//var productPop = $('.J_pop-dimmer').popUp({width: '800px',height: '500px'});
 	$('.reviews').find('.button').on('click',function(e){
-		productPop.showUp();
+		//productPop.showUp();
 		return false;
 	});
 

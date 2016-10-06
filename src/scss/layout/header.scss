@@ -148,6 +148,7 @@ header{
 			font-family: "Cambria";
 			padding: 5px;
 			width: 312px;
+			min-height: 50px;
 			&.active{
 				display: block;
 			}
