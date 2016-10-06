@@ -94,12 +94,6 @@
 			li{
 				float:left;
 				margin-right:3px;
-				.icon-shoucang{
-					color:#fe7726;
-					&.color{
-						color:#cfcfcf;
-					}
-				}
 			}
 			.icon-huoche{
 				font-size:20px;
@@ -351,12 +345,13 @@
 		span,
 		i{
 			font-size:20px;
-			color:#fe7726;
+			
 		}
 		span{
 			vertical-align: middle;
 			font-size:24px;
 			margin-left:25px  ;
+			color:#fe7726;
 		}
 	}
 	.head-a {
@@ -517,7 +512,6 @@
 			font-weight: bold;
 		}
 		i{
-			color:#fe7726;
 			margin-right: 3px;
 			font-size: 18px;
 		}
