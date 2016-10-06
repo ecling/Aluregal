@@ -220,5 +220,5 @@ $(function(){
 
 
 	//new scroll
-	$('.new-in').scrollBox(4,1200);
+	$('.J_scroll-box').scrollBox(4,1200);
 });
