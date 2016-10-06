@@ -52,16 +52,17 @@ $(function(){
 			dimmer.showUp();
 			$.ajax({
 				type:'GET',
-				//url: $('.pro-list').attr('data-url'),
+				url: $('.pro-list').attr('data-url'),
 				data: {"id":id},
 				datetype:'html',
 				beforeSend:function(){
 					$('.J_prev,.J_next').hide();
 				},
 				success:function(date){
-					//$(".J_inner").html(date);
+					$(".J_inner").html(date);
 					$('.J_prev,.J_next').show();
-					dimmer.hideDown()
+					dimmer.hideDown();
+					proSummary();
 				},
 				error:function(){
 					alert("error");

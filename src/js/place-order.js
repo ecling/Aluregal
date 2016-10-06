@@ -27,41 +27,18 @@ $(function(){
 
 	//place to order 
 	$('.J_place-order').on('click',function(e){
-		e.preventDefault();
-		if(validatePlaceForm()){
-			placeOrder();
-		}
-	});
-	//email  */
-	
-	$("#firecheckout-form :input").blur(function(event) {
-		if($(this).is('.required')){
-			$(this).next('p').empty();
-			if (this.value=="") {
-				var error = 'This field is required.';
-				$(this).after('<p class="error">'+error+'</p>');
-			}else{
-				$(this).next('p').empty();
-			}
-		}
-		if ($(this).is('.email')) {
-			$(this).next('p').empty();
-			if (this.value == ''|| (this.value!="" && !/^\w+(\.\w+)*@\w+(\.\w+)+$/.test(this.value))) {
-				var error = 'Please enter a valid email address.';
-				$(this).after('<p class="error">'+error+'</p>');
-			}else{
-				$(this).next('p').empty();
-			}
-		}
-	}).keyup(function(event) {
-		$(this).triggerHandler('blur');
-	}).focus(function(event) {
-		$(this).triggerHandler('blur');
+		//e.preventDefault();
+		validatePlaceForm();
 	});
 
 	var validatePlaceForm = function(){ 
-		return true;
-	}
+		var test = $('#firecheckout-form').validate({
+			errorElement: "p",
+			submitHandler: function(){
+				placeOrder();
+			}
+		});
+	};
 	
 	var updateOrder = function(){
 		$.ajax({
@@ -92,10 +69,11 @@ $(function(){
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
 			success: function(data){
+				console.log(data);
 				if(data.error.length){
 
 				}else{
-					location.href(data.url);
+					window.location.href = data.returnUr;
 				}
 			},
 			error: function(){
@@ -156,10 +134,9 @@ $(function(){
 			$('.cart_right').css({
 				"position": "static",
 				"top":"4px",
-				"left":left}
-			);
+				"left":left
+			});
 		}
-		
 	};
 })();
 

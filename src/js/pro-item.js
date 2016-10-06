@@ -7,10 +7,25 @@ var proSummary = function(){
 		bind();
 	};
 	var bind = function(){
-		options.find('li').on('click',function(){
+		options.find('li').on('click',function(e){
 			var element = $(this);
 			optionSelect(element);
 		});
+
+		$('.qty .j-minus').on('click',function(e){
+			setNumInput($(this).siblings('input'),'minus');
+			return false;
+		});
+
+		$('.qty .j-plus').on('click',function(e){
+			setNumInput($(this).siblings('input'),'plus');
+			return false;
+		});
+
+		$('.qty').find('input').on('blur keyup',function(e){
+			setNumInput($(this));
+		});
+
 		$('.J_add-to-cart button').on('mouseover',function(){
 			optionValidate();
 			$(this).children('.tip').find('p').remove();
@@ -54,6 +69,27 @@ var proSummary = function(){
 			}
 		});
 	};
+
+	var setNumInput = function(input,action){
+		var min = input.attr('min'),
+			max = input.attr('max');
+		num = input.val();
+		if(action=='minus'){
+			newNum = parseInt(num)-1;
+		}else if(action=='plus'){
+			newNum = parseInt(num)+1;
+		}else{
+			newNum = parseInt(num);
+		}				
+		if(isNaN(newNum)||newNum<min){
+			input.val(min);
+		}else if(newNum>max){
+			input.val(max);
+		}else{
+			input.val(newNum);
+		}
+	};
+
 	var addCart = function(){
 		$.ajax({
 			type: "POST",
