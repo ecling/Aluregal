@@ -373,17 +373,6 @@ input.error, textarea.error {
     transition:width 0.1s ease,height 0.1s ease;
 }
 
-.require, .required {
-    &:after {
-        content: "*";
-        font-size: pxToRem(14px);
-        color: $red;
-        display: inline-block;
-        margin-left: 5px;
-        vertical-align: middle;
-    }
-}
-
 .proReview {
     .active {
         color: $basecol;

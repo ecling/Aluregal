@@ -399,7 +399,7 @@
 			</div>	
 			<div class="col2-main fl">
 				<h1 class="h1-center">Address Book</h1>
-				<ul class="addressbook">
+				<ul class="addressbook" style="display: none;">
 					<li class="addressbook_address" data-id="100">
 						<div class="addressbook-head clearfix">
 							<span>01</span>
@@ -451,6 +451,62 @@
 						</a>
 					</li>				
 				</ul>
+				<div class="shipping-address-form  address-form">
+					<form class="clearfix" action="demo_form.asp" method="POST" id="address-form" update-url="data-updateCheckout.json" save-url="data-saveCheckout.json">
+						<div class="Firstname clearfix">
+							<div class="Firstname_left">
+								 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" class="required" title="2 characters at least for your first name." minlength="2">						
+								<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" class="required">
+							</div>
+							<div class="Firstname_right">
+								<label for="Lastname">Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" class="required" minlength="2" title="2 characters at least for your last name.">
+								<label for="E-mail">E-mail address<span class="required "></span></label><input type="text" name="email" id="E-mail" class="required email" title="Please enter a valid email address.">					
+							</div>
+						</div>
+						<div class="AddressLine1 clearfix">
+							<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required" minlength="5" title="Your Address line must contain at least 5 characters.">		
+						</div>
+						<div class="AddressLine2">
+							<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+						</div>
+						<div class="selectd ">
+							<ul >
+							    <li class="fl">
+							    	<label for="jungle">Country / Region<span class="required"></span></label>
+							    	<select class="J_country required" id="jungle" name="jungle" title="Please Select Country.">
+							    		<option value="">Please select Country.</option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
+							    	</select>
+							    </li>
+							    <li class="fr">
+							    	<label for="fruit">States<span class="required"></span></label>
+							    	<select id="fruit" class="J_state-select required" style="display:none" name="fruit" title="Please Select State/Province">
+								    	<option value=""></option>
+							    	  	<option value ="volvo">Volvo</option>
+							    	  	<option value ="saab">Saab</option>
+							    	  	<option value="opel">Opel</option>
+							    	  	<option value="audi">Audi</option>
+							    	</select>
+							    	<input class="J_state-input states required"  type="text" name="states" title="2 characters at least for your State/Province."  />
+							    </li>
+							</ul>
+						</div>
+
+						<div >
+					    	<label for="city">City<span class="required"></span></label>
+					    	<input type="text" name="city" id="city" class="city required" minlength="2" title="2 characters at least for your City.">	
+						</div>	  
+
+						<div class=" zip">
+							<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" class="required" minlength="4" title="Your Post/ZIP Code must contain at least 4 characters.">	
+						</div>
+						<button class="button addressbtn" type="submit">submit</button>
+						<a href="#" class="privacy ">Privacy & Security Policy</a>
+					</form>
+				</div>				
 			</div>
 			<div class="pop-dimmer J_pop-dimmer">
 				<div class="shipping-address-form popup J_popup">

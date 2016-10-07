@@ -115,4 +115,6 @@ jQuery(document).ready(function($) {
 	 		confirm_password: "Enter your password again.",
 	 	},
 	});
+	//address 
+	$("#address-form").validate({errorElement: "p",});
 });
