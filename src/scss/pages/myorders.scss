@@ -778,6 +778,10 @@
 .addressbook_address{
 	p{
 		line-height: 25px;
+		label{
+			font-weight: bold;
+			margin-right: 5px;
+		}
 	}
 	.addressbook-head{
 		border-bottom: 1px dashed #cfcfcf;

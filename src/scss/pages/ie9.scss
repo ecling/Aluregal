@@ -8,6 +8,9 @@ header{
 }
 .popup{
 	width: 960px;
+	&.listpopup{
+		width: 1250px;
+	}
 }
 .cart_right{
 	.fixbox{

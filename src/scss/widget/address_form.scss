@@ -3,6 +3,10 @@
     {
         margin-bottom: 45px;
         padding-left: 10px;
+        &.address-form{
+            width: 715px;
+            margin: 0 auto;
+        }
         input
         {
             font-size: 13px;
@@ -23,6 +27,14 @@
             {
                 color:red;
                 margin-right: 5px;
+                &:after{
+                    content: "*";
+                    font-size: pxToRem(14px);
+                    color: $red;
+                    display: inline-block;
+                    margin-left: 5px;
+                    vertical-align: middle;
+                }
             }
         }
         .Firstname
@@ -93,7 +105,13 @@
                 border-bottom: 1px solid #eeb053;
             }
         }
-        
+        .addressbtn{
+            display: block;
+            width: 200px;
+            line-height: 35px;
+            border-radius: 35px;
+            margin: 20px auto;
+        }
     }
 .popup{
     h2{

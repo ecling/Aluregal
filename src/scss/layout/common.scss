@@ -80,7 +80,12 @@ ul:after,.clearfix:after{
 .disble{
     pointer-events: none;
 }
-
+.icon-shoucang{
+    color:#fe7726;
+    &.color{
+        color:#cfcfcf;
+    }
+}
 
 
 @keyframes bounceIn {
