@@ -1,4 +1,4 @@
 {
-    "returnUr": "order-complete.html",
+    "redirect": "order-complete.html",
     "error": {}
 }

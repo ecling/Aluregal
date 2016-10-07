@@ -10,12 +10,23 @@ $(function(){
 		event.preventDefault();
 		popup.showUp();
 	});
+
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
 	//selected shipping address
 	$().on('change',function(){
 
+	});
+
+	//show address form
+	$().on('click',function(){
+		showForm()
+	});
+
+	//save address
+	$().on('click',function(){
+		saveAdress();
 	});
 
 	//change country on shipping address 
@@ -36,6 +47,14 @@ $(function(){
 		//e.preventDefault();
 		validatePlaceForm();
 	});
+
+	var showForm = function(){
+
+	};
+
+	var saveAdress = function(){
+
+	};
 
 	var validatePlaceForm = function(){ 
 		var test = $('#firecheckout-form').validate({
@@ -75,11 +94,8 @@ $(function(){
 			data: $('#firecheckout-form').serialize(),
 			dataType: "json",
 			success: function(data){
-				console.log(data);
-				if(data.error.length){
-
-				}else{
-					window.location.href = data.returnUr;
+				if(data.redirect){
+					window.location.href = data.redirect;
 				}
 			},
 			error: function(){

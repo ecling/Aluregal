@@ -10,8 +10,9 @@ jQuery(document).ready(function($) {
 				var result = confirm("delete?"),
 					id = $(this).parents("li").attr("data-id");
 				view(id);		
-			});
-			var view = function(id){
+		});
+			
+		var view = function(id){
 				$.ajax({
 					type: 'GET',
 					dataType: 'json',

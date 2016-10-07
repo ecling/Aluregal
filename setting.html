@@ -12,7 +12,6 @@
 		<script type="text/javascript" src="src/js/common.js"></script>
 		<script type="text/javascript" src="src/js/function.js"></script>
 		<script type="text/javascript" src="src/js/account.js"></script>
-		<script type="text/javascript" src="src/js/validate.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
 		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
@@ -417,7 +416,7 @@
 						<div class="account-setting-form fl">
 							<form id="account_setting_form" method="post" action="">
 								<label for="username" class="labeld">Nickname</label>
-								<input type="text" name="username" id="username" class="required" />
+								<input type="text" name="username" id="username" class="required" minlength="2" title="2 characters at least for your Nickname" />
 								<div>
 									<input type="radio" name="radio" id="ms" checked="checked">
 									<label for="ms" class="ms">Ms.</label>
@@ -425,7 +424,7 @@
 									<label for="mr" class="ms">Mr.</label>
 								</div>
 								<label for="email" class="labeld">Email</label>
-								<input type="text" name="email" id="email" class=" required email">
+								<input type="text" name="email" id="email" class="required email" title="Please enter a valid email address">
 								<label for="birthday" class="labeld">Birthday</label>
 								<select name=""	id="day" class="day">
 									<option value="">Day</option>
@@ -448,7 +447,7 @@
 									<option	>2</option>
 								</select>
 								<label for="phone" class="labeld">Phone</label>
-								<input type="text" name="number" id="phone" class="required">
+								<input type="text" name="number" id="phone" class="required" />
 								<button type="submit" class="button Setting_submit">Submit</button>
 							</form>
 						</div>
@@ -460,9 +459,9 @@
 						<div class="account-setting-form fl">
 							<form id="change_email_form" method="post" action="">
 								<label for="Email" class="labeld">Email</label>
-								<input type="text" name="email" id="Email" class="required email">
+								<input type="text" name="email" id="change-email" class="required email" title="Please enter a valid email address">
 								<label for="Confirm" class="labeld">Confirm Email</label>
-								<input type="text" name="confirm_emails" id="Confirm" class="{equalTo:'#Email'} required email">
+								<input type="text" name="confirm_emails" id="Confirm" class="required" equalTo="#change-email" title="Repeat your email address">
 								<button type="submit" class="button Setting_submit">Submit</button>
 							</form>
 						</div>
@@ -474,11 +473,11 @@
 						<div class="account-setting-form fl">
 							<form id="change_password_form" method="post" action="">
 								<label for="Current" class="labeld">Current Password</label>
-								<input type="text" name="password1" id="Current"  required/>
+								<input type="password" name="password1" id="Current"  class="required" title="Provide a password" />
 								<label for="password1" class="labeld">New Password</label>
-								<input type="text" name="password" id="password" class="{required:true,minlength:5}" >
+								<input type="password" name="password" id="password" class="required" minlength="6" title="Provide a password" >
 								<label for="password2" class="labeld">Confirm Password</label>
-								<input type="password" name="confirm_password" class="{required:true,minlength:5,equalTo:'#password'}" id="password2" >
+								<input type="password" name="confirm_password" class="required" equalTo='#password' id="password2" title="Repeat your password" />
 								<button type="submit" class="button Setting_submit">Submit</button>
 							</form>
 						</div>
