@@ -61,7 +61,8 @@ $(function(){
 				success:function(date){
 					$(".J_inner").html(date);
 					$('.J_prev,.J_next').show();
-					dimmer.hideDown()
+					dimmer.hideDown();
+					proSummary();
 				},
 				error:function(){
 					alert("error");
