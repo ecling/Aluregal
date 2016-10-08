@@ -33,8 +33,8 @@ $(function(){
 	if($('.addressbook').length>0){
 		(function(){
 			var loading = $('.J_popup').dimmer(),
-				popup = $('.J_pop-dimmer').popUp(),
-				index = 0;
+				popup = $('.J_pop-dimmer').popUp({width: '800px'}),
+				index = -1;
 			var bind  = function(){
 				$('.addressbook').delegate('.J_delete','click',function(){
 					deleted(this);
@@ -42,6 +42,10 @@ $(function(){
 				});
 				$('.addressbook').delegate('.J_edit','click',function(){
 					showForm(this);
+					return false;
+				});
+				$('.addressbook').delegate('.default','click',function(e){
+					MakeDefault(this);
 					return false;
 				});
 				$('.J_newaddress').on('click',function(){
@@ -54,13 +58,17 @@ $(function(){
 			};
 
 			var deleted = function(element){
-				var url = $(element).attr('url');
+				var url = $(element).attr('href');
 				$.ajax({
 					type: "GET",
 					url: url,
 					dataType: "json",
 					success: function(data){
-						$(element).parents("li").remove();
+						if(data.result){
+							$(element).parents("li").remove();
+						}else{
+							console.log('delete error');
+						}
 					},	
 					error: function(){
 
@@ -69,44 +77,50 @@ $(function(){
 			};
 
 			var showForm = function(element){
-				var id = $(element).parents('li').attr('data-id');
+				var id = $(element).parents('li').attr('data-id'),
+					url = $(element).attr('href');
 				if(id){
 					loading.showUp();
 					popUp.showUp();
 					index = $(element).parents('li').index();
 					$.ajax({
-						type: "",
-						url: "",
+						type: "GET",
+						url: url,
 						dataType: "html",
 						success: function(data){
 							$('.J_inner').html(data);
+							loading.hideDown();
 						},
 						error: function(){
 
 						}
 					});
 				}else{
+					index = -1;
 					popUp.showUp();
 				}
 			};
 
 			var save = function(element){
-				var form = element.parents('form'),
+				var form = $(element).parents('form');
 				form.validate({
 					errorElement: "p",
 					submitHandler: function(){
+						loading.showUp();
 						$.ajax({
 							type: "POST",
 							url: form.attr('action'),
 							data: form.serialize(),
-							dataType: "html",
+							dataType: "json",
 							success: function(data){
-								if(data.action=='insert'){
-									$('.addressbook').append(data.html);
+								loading.hideDown();
+								if(index==-1){
+									$('.addressbook').find('.new_address').before(data.html);
 								}else{
-									var li = $('.addressbook').children('li').index(index);
+									var li = $('.addressbook').children('li').eq(index);
 									li.replaceWith(data.html);
 								}
+								popup.hideDown();
 							},
 							error: function(){
 
@@ -117,7 +131,20 @@ $(function(){
 			};
 
 			var MakeDefault = function(element){
+				if(!$(element).hasClass('defaultStyle')){
+					url = $(element).attr('href');
+					$.ajax({
+						type: "GET",
+						url: url,
+						dataType: "json",
+						success: function(){
 
+						},
+						error: function(){
+
+						}
+					});
+				}
 			};
 			bind();
 		})();

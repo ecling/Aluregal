@@ -63,6 +63,18 @@ app.post('/data-saveCheckout.json', function(req, res) {
   });
 });
 
+app.post('/data-addressSave.json', function(req, res) {
+  fs.readFile('data-addressSave.json', function(err, data) {
+    var comments = JSON.parse(data);
+    //comments.push(req.body);
+    fs.writeFile('data-addressSave.json', JSON.stringify(comments, null, 4), function(err) {
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Cache-Control', 'no-cache');
+      res.send(JSON.stringify(comments));
+    });
+  });
+});
+
 app.listen(8000);
 
 console.log('Server started: http://localhost:8000/');
