@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="src/css/place-order.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>	
+		<script type="text/javascript" src="src/js/validate.js"></script>
 		<script type="text/javascript" src="src/js/function.js"></script>
 		<script type="text/javascript" src="src/js/place-order.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
@@ -215,7 +216,7 @@
 									<p><label>Address:</label><span>xinduhui Los Angeles 20010 California United States</span></p>
 									<p><label>ZIP/Postal Code:</label><span>20010</span>
 									<a href="#" class="edit">Edit</a><i class="iconfont icon-xiugai"></i></p>
-								</div>
+								</div>						
 							</div>
 							<div class="contentd clearfix">
 								<input type="radio" name="1">
@@ -322,7 +323,7 @@
 			<div class="pop-dimmer J_pop-dimmer">
 				<div class="popup J_popup">
 					<div class="shipping-address-form pop-inner J_inner">
-						<form class="clearfix " action="demo_form.asp" method="POST" id="commentForm2" >
+						<form class="clearfix " action="demo_form.asp" method="POST" id="new-form" >
 								<h2>ADD NEW ADDRESS</h2>
 								<div class="Firstname clearfix">
 									<div class="Firstname_left">
@@ -374,7 +375,7 @@
 								<div class=" zip">
 									<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" required/>	
 								</div>
-								<button class="button" type="submit">Submit</button>
+								<button class="button J_saveAdress" type="submit">Submit</button>
 								<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>						
 						</form>
 					</div>

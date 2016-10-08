@@ -10,7 +10,6 @@ $(function(){
 		event.preventDefault();
 		popup.showUp();
 	});
-
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
@@ -18,15 +17,15 @@ $(function(){
 	$().on('change',function(){
 
 	});
-
 	//show address form
 	$().on('click',function(){
 		showForm()
 	});
 
 	//save address
-	$().on('click',function(){
+	$('.J_saveAdress').on('click',function(){
 		saveAdress();
+		return false;
 	});
 
 	//change country on shipping address 
@@ -46,14 +45,18 @@ $(function(){
 	$('.J_place-order').on('click',function(e){
 		//e.preventDefault();
 		validatePlaceForm();
+		return false;
 	});
 
 	var showForm = function(){
-
+		popup.showUp();
 	};
 
 	var saveAdress = function(){
-
+		$('#new-form').serialize();
+		var div = $('.address_list div:first').clone();
+		$('.address_list').prepend(div);
+		updateOrder();
 	};
 
 	var validatePlaceForm = function(){ 
