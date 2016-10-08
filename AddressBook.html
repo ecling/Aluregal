@@ -399,12 +399,12 @@
 			</div>	
 			<div class="col2-main fl">
 				<h1 class="h1-center">Address Book</h1>
-				<ul class="addressbook" style="display: none;">
+				<ul class="addressbook">
 					<li class="addressbook_address" data-id="100">
 						<div class="addressbook-head clearfix">
 							<span>01</span>
-							<a href="#" title="" class="iconfont icon-shanchu J_delete"></a>		
-							<a href="#" title="" class="iconfont icon-xiugai J_edit"></a>
+							<a href="data-addressDelete.json" title="" class="iconfont icon-shanchu J_delete"></a>		
+							<a href="data-addressForm.html" title="" class="iconfont icon-xiugai J_edit"></a>
 							<a href="#" title="" class="defaultStyle default">Default</a>
 						</div>
 						<div class="neirong">											
@@ -451,7 +451,7 @@
 						</a>
 					</li>				
 				</ul>
-				<div class="shipping-address-form  address-form">
+				<div class="shipping-address-form address-form" style="display: none;">
 					<form class="clearfix" action="demo_form.asp" method="POST" id="address-form" update-url="data-updateCheckout.json" save-url="data-saveCheckout.json">
 						<div class="Firstname clearfix">
 							<div class="Firstname_left">
@@ -511,7 +511,7 @@
 			<div class="pop-dimmer J_pop-dimmer">
 				<div class="shipping-address-form popup J_popup">
 					<div class="pop-inner J_inner">
-						<form class="clearfix " action="demo_form.asp" method="POST" id="commentForm2" >
+						<form class="clearfix " action="data-addressSave.json" method="POST" id="commentForm2" >
 							<h2>ADD NEW ADDRESS</h2>
 							<div class="Firstname clearfix">
 								<div class="Firstname_left">
