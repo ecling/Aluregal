@@ -16,13 +16,21 @@ $(function(){
 	});
 	//show address form
 	$('.J_newaddress').on('click',function(){
-		showForm()
+		popUp.showUp();
+		saveAdress();
+		updateOrder();		
 	});
-
+	//edit 
+	$('.address_list').delegate('.J_edit','click',function(){
+		showForm(this);
+		return false;
+		updateOrder();
+	});
 	//save address
-	$('.J_saveAdress').on('click',function(){
+	$('.J_inner').delegate('button','click',function(e){
 		saveAdress(this);
-	});
+		updateOrder();
+	})
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){
@@ -44,8 +52,23 @@ $(function(){
 		return false;
 	});
 
-	var showForm = function(){
-		popup.showUp();
+	var showForm = function(element){
+		var id = $(element).parent('.J_div').attr('data-id'),
+			url = $(element).attr('href');			
+		dimmer.showUp();
+		popUp.showUp();
+		$.ajax({
+			type: "GET",
+			url: url,
+			dataType: "html",
+			success: function(data){
+				$('.J_inner').html(data);
+				dimmer.hideDown();
+			},
+			error: function(){
+
+			}
+		});
 	};
 
 	var saveAdress = function(element){
@@ -72,35 +95,6 @@ $(function(){
 		});
 		
 	};
-	/*var save = function(element){
-		var form = $(element).parents('form');
-		form.validate({
-			errorElement: "p",
-			submitHandler: function(){
-				loading.showUp();
-				$.ajax({
-					type: "POST",
-					url: form.attr('action'),
-					data: form.serialize(),
-					dataType: "json",
-					success: function(data){
-						loading.hideDown();
-						if(index==-1){
-							$('.address_list').find('.J_newaddress').before(data.html);
-						}else{
-							var li = $('.address_list').children('li').eq(index);
-							li.replaceWith(data.html);
-						}
-						popup.hideDown();
-					},
-					error: function(){
-
-					}
-				});
-			}
-		});
-	};*/
-
 	var validatePlaceForm = function(){ 
 		var test = $('#firecheckout-form').validate({
 			errorElement: "p",

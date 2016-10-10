@@ -84,6 +84,7 @@ h3{
     }
     .button
     {
+        height: 40px;
         line-height: 40px;
         border-radius: 40px;
         display: block;
@@ -98,10 +99,10 @@ h3{
     }
     .neirong{
         width: 96%;
+        float: right;
         margin-bottom: 15px;
         font-family: "Cambria";
         vertical-align: -40px;
-        margin-left: 10px;
         padding-bottom: 10px;
         border-bottom: 1px dashed #666;
         p
