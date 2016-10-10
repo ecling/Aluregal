@@ -14,23 +14,24 @@ $(function(){
 	$().on('change',function(){
 
 	});
+
 	//show address form
 	$('.J_newaddress').on('click',function(){
 		popUp.showUp();
 		saveAdress();
 		updateOrder();		
 	});
+
 	//edit 
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
-		updateOrder();
 	});
+
 	//save address
 	$('.J_inner').delegate('button','click',function(e){
 		saveAdress(this);
-		updateOrder();
-	})
+	});
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){
@@ -84,7 +85,8 @@ $(function(){
 					dataType: "json",
 					success: function(data){
 						dimmer.hideDown();
-						$('.address_list').find('.J_newaddress').before(data.html);					
+						$('.address_list').find('.J_newaddress').before(data.html);	
+						updateOrder();				
 						popup.hideDown();
 					},
 					error: function(){
