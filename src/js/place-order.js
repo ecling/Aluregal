@@ -4,34 +4,46 @@ $(function(){
 	var shippingMethodLoad = $('.shippingOptions').children('div').dimmer(),
 		orderSummaryLoad = $('.order_summary').dimmer(),
 		popup = $('.J_pop-dimmer').popUp({width:'800px'}),
-		dimmer = $('.popup').dimmer();
+		dimmer = $('.popup').dimmer(),
+		index = -1;
 	
 	
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
 	//selected shipping address
-	$().on('change',function(){
-
+	$('#firecheckout-form').delegate("input[name='biling_address_id']",'change',function(){
+		orderSummaryLoad.showUp();
+		updateOrder();
+		$('.edit').hide();
+		$(this).siblings('label').find('.edit').show();
 	});
 
 	//show address form
 	$('.J_newaddress').on('click',function(){
-		popUp.showUp();
-		saveAdress();
-		updateOrder();		
+		showForm(this);
+		
 	});
 
 	//edit 
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
+<<<<<<< HEAD
+=======
+		
+>>>>>>> origin/master
 	});
 
 	//save address
 	$('.J_inner').delegate('button','click',function(e){
+<<<<<<< HEAD
 		saveAdress(this);
 	});
+=======
+		saveAdress(this);	
+	})
+>>>>>>> origin/master
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){
@@ -54,22 +66,28 @@ $(function(){
 	});
 
 	var showForm = function(element){
-		var id = $(element).parent('.J_div').attr('data-id'),
-			url = $(element).attr('href');			
-		dimmer.showUp();
-		popUp.showUp();
-		$.ajax({
-			type: "GET",
-			url: url,
-			dataType: "html",
-			success: function(data){
-				$('.J_inner').html(data);
-				dimmer.hideDown();
-			},
-			error: function(){
+		var id = $(element).parents('.J_div').attr('data-id'),
+			url = $(element).attr('href');
+		if(id){			
+			dimmer.showUp();
+			popUp.showUp();
+			index = $(element).parents('.contentd').index();
+			$.ajax({
+				type: "GET",
+				url: url,
+				dataType: "html",
+				success: function(data){
+					$('.J_inner').html(data);
+					dimmer.hideDown();
+				},
+				error: function(){
 
-			}
-		});
+				}
+			});
+		}else{
+			index = -1 ;
+			popUp.showUp();
+		}
 	};
 
 	var saveAdress = function(element){
@@ -85,8 +103,18 @@ $(function(){
 					dataType: "json",
 					success: function(data){
 						dimmer.hideDown();
+<<<<<<< HEAD
 						$('.address_list').find('.J_newaddress').before(data.html);	
 						updateOrder();				
+=======
+
+						if ( index == -1 ){
+							$('.address_list').find('.J_newaddress').before(data.html);
+						}else{
+							var li = $('.address_list').children("div").eq(index);
+							li.replaceWith(data.html);
+						}
+>>>>>>> origin/master
 						popup.hideDown();
 					},
 					error: function(){
