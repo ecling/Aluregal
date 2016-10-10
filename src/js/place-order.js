@@ -5,12 +5,8 @@ $(function(){
 		orderSummaryLoad = $('.order_summary').dimmer(),
 		popup = $('.J_pop-dimmer').popUp({width:'800px'}),
 		dimmer = $('.popup').dimmer();
-	// new address
-	$('.J_newaddress').on('click',function(event) {
-		event.preventDefault();
-		popup.showUp();
-	});
-
+	
+	
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
@@ -18,16 +14,23 @@ $(function(){
 	$().on('change',function(){
 
 	});
-
 	//show address form
-	$().on('click',function(){
-		showForm()
-	});
-
-	//save address
-	$().on('click',function(){
+	$('.J_newaddress').on('click',function(){
+		popUp.showUp();
 		saveAdress();
+		updateOrder();		
 	});
+	//edit 
+	$('.address_list').delegate('.J_edit','click',function(){
+		showForm(this);
+		return false;
+		updateOrder();
+	});
+	//save address
+	$('.J_inner').delegate('button','click',function(e){
+		saveAdress(this);
+		updateOrder();
+	})
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){
@@ -46,16 +49,52 @@ $(function(){
 	$('.J_place-order').on('click',function(e){
 		//e.preventDefault();
 		validatePlaceForm();
+		return false;
 	});
 
-	var showForm = function(){
+	var showForm = function(element){
+		var id = $(element).parent('.J_div').attr('data-id'),
+			url = $(element).attr('href');			
+		dimmer.showUp();
+		popUp.showUp();
+		$.ajax({
+			type: "GET",
+			url: url,
+			dataType: "html",
+			success: function(data){
+				$('.J_inner').html(data);
+				dimmer.hideDown();
+			},
+			error: function(){
 
+			}
+		});
 	};
 
-	var saveAdress = function(){
+	var saveAdress = function(element){
+		var form = $(element).parents('form');
+		form.validate({
+			errorElement: "p",
+			submitHandler: function(){
+				dimmer.showUp();
+				$.ajax({
+					type: "POST",
+					url: form.attr('action'),
+					data: form.serialize(),
+					dataType: "json",
+					success: function(data){
+						dimmer.hideDown();
+						$('.address_list').find('.J_newaddress').before(data.html);					
+						popup.hideDown();
+					},
+					error: function(){
 
+					}
+				});
+			}
+		});
+		
 	};
-
 	var validatePlaceForm = function(){ 
 		var test = $('#firecheckout-form').validate({
 			errorElement: "p",
@@ -64,7 +103,6 @@ $(function(){
 			}
 		});
 	};
-	
 	var updateOrder = function(){
 		$.ajax({
 			type: "POST",
