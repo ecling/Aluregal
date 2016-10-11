@@ -29,21 +29,12 @@ $(function(){
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/master
 	});
 
 	//save address
 	$('.J_inner').delegate('button','click',function(e){
-<<<<<<< HEAD
 		saveAdress(this);
 	});
-=======
-		saveAdress(this);	
-	})
->>>>>>> origin/master
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){
@@ -103,10 +94,6 @@ $(function(){
 					dataType: "json",
 					success: function(data){
 						dimmer.hideDown();
-<<<<<<< HEAD
-						$('.address_list').find('.J_newaddress').before(data.html);	
-						updateOrder();				
-=======
 
 						if ( index == -1 ){
 							$('.address_list').find('.J_newaddress').before(data.html);
@@ -114,7 +101,6 @@ $(function(){
 							var li = $('.address_list').children("div").eq(index);
 							li.replaceWith(data.html);
 						}
->>>>>>> origin/master
 						popup.hideDown();
 					},
 					error: function(){
