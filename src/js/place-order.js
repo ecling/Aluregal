@@ -16,21 +16,23 @@ $(function(){
 		$('.edit').hide();
 		$(this).siblings('label').find('.edit').show();
 	});
+
 	//show address form
 	$('.J_newaddress').on('click',function(){
 		showForm(this);
 		
 	});
+
 	//edit 
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
-		
 	});
+
 	//save address
 	$('.J_inner').delegate('button','click',function(e){
-		saveAdress(this);	
-	})
+		saveAdress(this);
+	});
 
 	//change country on shipping address 
 	$('.J_country').on('change',function(){

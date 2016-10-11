@@ -33,7 +33,7 @@ $(function(){
 	if($('.addressbook').length>0){
 		(function(){
 			var loading = $('.J_popup').dimmer(),
-				popup = $('.J_pop-dimmer').popUp({width: '800px'}),
+				popup = $('.J_pop-dimmer').popUp({width: '800px',height: '683px'}),
 				index = -1;
 			var bind  = function(){
 				$('.addressbook').delegate('.J_delete','click',function(){
@@ -79,26 +79,25 @@ $(function(){
 			var showForm = function(element){
 				var id = $(element).parents('li').attr('data-id'),
 					url = $(element).attr('href');
-				if(id){
-					loading.showUp();
-					popUp.showUp();
-					index = $(element).parents('li').index();
-					$.ajax({
-						type: "GET",
-						url: url,
-						dataType: "html",
-						success: function(data){
-							$('.J_inner').html(data);
-							loading.hideDown();
-						},
-						error: function(){
+				loading.showUp();
+				popUp.showUp();
+				index = $(element).parents('li').index();
+				if(!id){
+					id = -1;
+				}	
+				$.ajax({
+					type: "GET",
+					url: url,
+					dataType: "html",
+					success: function(data){
+						$('.J_inner').html(data);
+						loading.hideDown();
+					},
+					error: function(){
 
-						}
-					});
-				}else{
-					index = -1;
-					popUp.showUp();
-				}
+					}
+				});
+				
 			};
 
 			var save = function(element){
@@ -109,7 +108,7 @@ $(function(){
 						loading.showUp();
 						$.ajax({
 							type: "POST",
-							url: form.attr('action'),
+							url: form.attr('data-url'),
 							data: form.serialize(),
 							dataType: "json",
 							success: function(data){
