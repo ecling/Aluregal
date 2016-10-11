@@ -6,8 +6,6 @@ $(function(){
 		popup = $('.J_pop-dimmer').popUp({width:'800px'}),
 		dimmer = $('.popup').dimmer(),
 		index = -1;
-	
-	
 	//country and States
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 

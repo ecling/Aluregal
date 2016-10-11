@@ -1199,3 +1199,48 @@
 	}
 }
 /*New Password css --end--*/
+
+/*aboutus*/
+.aboutus{
+	>div{
+		margin-bottom: 40px;
+	}
+	font-family: "Cambria";
+	h1{
+		background: #aaa;
+		border: 1px solid #aaa;
+		font-size:20px;
+		font-weight: bold;
+		padding: 10px 0;
+		cursor: pointer;
+		margin-bottom: 15px;
+		color:#cfcfcf;
+		&.active{
+			color:#101010;
+		}
+		&:hover{
+			color:#101010;
+		}
+	}
+	h2{
+		font-size: 16px;
+		font-weight: bold;
+		margin: 15px 0 8px 15px;	
+	}
+	p{	
+		margin-left: 30px;	
+		font-size: 14px;
+		line-height: 16px;	
+	}
+	h3{
+		margin-left: 25px;
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	label{
+		margin-left: 45px;
+		display: block;
+		font-size: 14px;
+		margin-top: 5px;
+	}
+}

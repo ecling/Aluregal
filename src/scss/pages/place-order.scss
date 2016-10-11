@@ -96,7 +96,7 @@ h3{
         padding:10px 10px 0 10px;
         border:1px solid transparent;
         &:hover{
-            border:1px solid #eeb093;
+            border:1px solid #101010;
         }
         input{
             display: block;
@@ -123,16 +123,17 @@ h3{
             }
             .iconfont
             {
-                float: right;
                 margin-right: 5px;               
-                color: #101010;
                 cursor: pointer;
             }
             a
             {
+                font-style: 14px;
                 float: right;
-                color: #101010;
-                border-bottom: 1px solid #101010;
+                color: #aaa;
+                &:hover{
+                    color:#101010;
+                }
             }
         }
     }
@@ -163,9 +164,6 @@ h3{
         display: block;
         width: 100%;
     }
-    span{
-        margin-bottom: 10px;
-    }
     .title{
         font-size: 14px;
         width: 350px;
@@ -186,6 +184,7 @@ h3{
     }
     .checkbox{
         margin-left: 20px;
+        margin-top: 10px;
         .Trackingnumber{
             margin-left: 5px;
         }

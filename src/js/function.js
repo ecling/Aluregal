@@ -432,14 +432,22 @@
 			}else{
 				left = (curPage-1)*num*list_width;
 			}
-			
-			ul.css({
-				"width":totalWidth,
-				"overflow":"hidden",
-				"position":"relative",
-				"transition":"all 800ms ease",
-				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
-			});
+			if(Modernizr.csstransforms3d){
+				ul.css({
+					"width":totalWidth,
+					"overflow":"hidden",
+					"position":"relative",
+					"transition":"all 800ms ease",
+					"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+				});
+			}else{
+				ul.css({
+					"width":totalWidth,
+					"overflow":"hidden",
+					"position":"relative",
+					"left":-left
+				});
+			}
 		};
 		var prev = function(){
 			curPage = curPage-1;
@@ -452,14 +460,22 @@
 			}else{
 				left = left-width;
 			}
-			
-			ul.css({
-				"width":totalWidth,
-				"overflow":"hidden",
-				"position":"relative",
-				"transition":"all 800ms ease",
-				"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
-			});
+			if(Modernizr.csstransforms3d){
+				ul.css({
+					"width":totalWidth,
+					"overflow":"hidden",
+					"position":"relative",
+					"transition":"all 800ms ease",
+					"transform":"translate3d("+"-"+left+"px, 0px, 0px)"
+				});
+			}else{
+				ul.css({
+					"width":totalWidth,
+					"overflow":"hidden",
+					"position":"relative",
+					"left":-left
+				});
+			}
 		};
 		init();
 		ListWidth();
