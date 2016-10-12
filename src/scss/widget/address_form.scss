@@ -37,23 +37,11 @@
                 }
             }
         }
-        .Firstname
-        {
-            input
-            {
-                width: 340px;
-            }
-            .Firstname_right
-            {
-                float: right;
-            }
-            .Firstname_left
-            {
-                float: left;
-            }
-        }
-        .AddressLine2,
-        .AddressLine1
+        .name input{
+            width: 340px;
+        }      
+        .addressline2,
+        .addressline1
         {
             input
             {

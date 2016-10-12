@@ -11,6 +11,7 @@
 		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>	
 		<script type="text/javascript" src="src/js/validate.js"></script>
 		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
 		<script type="text/javascript" src="src/js/place-order.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
@@ -149,64 +150,69 @@
 			<form class="clearfix" action="demo_form.asp" method="POST" id="firecheckout-form" update-url="data-updateCheckout.json" save-url="data-saveCheckout.json">
 				<div class="leftD fl">
 					<div class="shippingAddress clearfix" >
-						<h3 class="add">ShippingAddress</h3>
-						<div class="checkInfo checkNew" style="display:none;">
-							<div class="shipping-address-form">
-								<div class="Firstname clearfix">
-									<div class="Firstname_left">
-										 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" class="required" title="2 characters at least for your first name." minlength="2">						
-										<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" class="required">
-									</div>
-									<div class="Firstname_right">
-										<label for="Lastname">Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" class="required" minlength="2" title="2 characters at least for your last name.">
-										<label for="E-mail">E-mail address<span class="required "></span></label><input type="text" name="email" id="E-mail" class="required email" title="Please enter a valid email address.">					
-									</div>
+						<h3 class="add">ShippingAddress</h3>						
+						<div class="shipping-address-form" >
+							<div class="name clearfix">
+								<div class="fl">							
+									<label for="firstname">First name<span class="required"></span></label>
+									<input type="text" name="firstname" id="firstname" class="required" title="2 characters at least for your first name." minlength="2">	
+								</div>	
+								<div class="fr">
+									<label for="lastname">Last name<span class="required"></span></label>
+									<input type="text" name="lastname" id="lastname" class="required" minlength="2" title="2 characters at least for your last name.">	
+								</div>							
+							
+								<div class="fl">									
+									<label for="phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="phonenumber" class="required">
 								</div>
-								<div class="AddressLine1 clearfix">
-									<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required" minlength="5" title="Your Address line must contain at least 5 characters.">		
-								</div>
-								<div class="AddressLine2">
-									<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
-								</div>
-								<div class="selectd ">
-									<ul >
-									    <li class="fl">
-									    	<label for="jungle">Country / Region<span class="required"></span></label>
-									    	<select class="J_country required" id="jungle" name="jungle" title="Please Select Country.">
-									    		<option value="">Please select Country.</option>
-									    	  	<option value ="volvo">Volvo</option>
-									    	  	<option value ="saab">Saab</option>
-									    	  	<option value="opel">Opel</option>
-									    	  	<option value="audi">Audi</option>
-									    	</select>
-									    </li>
-									    <li class="fr">
-									    	<label for="fruit">States<span class="required"></span></label>
-									    	<select id="fruit" class="J_state-select required" style="display:none" name="fruit" title="Please Select State/Province">
-										    	<option value=""></option>
-									    	  	<option value ="volvo">Volvo</option>
-									    	  	<option value ="saab">Saab</option>
-									    	  	<option value="opel">Opel</option>
-									    	  	<option value="audi">Audi</option>
-									    	</select>
-									    	<input class="J_state-input states required"  type="text" name="states" title="2 characters at least for your State/Province."  />
-									    </li>
-									</ul>
-								</div>
-
-								<div >
-							    	<label for="city">City<span class="required"></span></label>
-							    	<input type="text" name="city" id="city" class="city required" minlength="2" title="2 characters at least for your City.">	
-								</div>	  
-
-								<div class=" zip">
-									<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" class="required" minlength="4" title="Your Post/ZIP Code must contain at least 4 characters.">	
-								</div>
-								<a href="#" class="privacy ">Privacy & Security Policy</a>
+								<div class="fr"> 
+									<label for="email">E-mail address<span class="required "></span></label><input type="text" name="email" id="email" class="required email" title="Please enter a valid email address.">	
+								</div>				
 							</div>
-						</div>
+							<div class="addressline1 clearfix">
+								<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required" minlength="5" title="Your Address line must contain at least 5 characters.">		
+							</div>
+							<div class="addressline2">
+								<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
+							</div>
+							<div class="selectd ">
+								<ul >
+								    <li class="fl">
+								    	<label for="jungle">Country / Region<span class="required"></span></label>
+								    	<select class="J_country required" id="jungle" name="jungle" title="Please Select Country.">
+								    		<option value="">Please select Country.</option>
+								    	  	<option value ="volvo">Volvo</option>
+								    	  	<option value ="saab">Saab</option>
+								    	  	<option value="opel">Opel</option>
+								    	  	<option value="audi">Audi</option>
+								    	</select>
+								    </li>
+								    <li class="fr">
+								    	<label for="fruit">States<span class="required"></span></label>
+								    	<select id="fruit" class="J_state-select required" style="display:none" name="fruit" title="Please Select State/Province">
+									    	<option value=""></option>
+								    	  	<option value ="volvo">Volvo</option>
+								    	  	<option value ="saab">Saab</option>
+								    	  	<option value="opel">Opel</option>
+								    	  	<option value="audi">Audi</option>
+								    	</select>
+								    	<input class="J_state-input states required"  type="text" name="states" title="2 characters at least for your State/Province."  />
+								    </li>
+								</ul>
+							</div>
+
+							<div >
+						    	<label for="city">City<span class="required"></span></label>
+						    	<input type="text" name="city" id="city" class="city required" minlength="2" title="2 characters at least for your City.">	
+							</div>	  
+
+							<div class=" zip">
+								<label>ZIP/Postal Code<span class="required"></span></label><input type="text" name="postalCode" class="required" minlength="4" title="Your Post/ZIP Code must contain at least 4 characters.">	
+							</div>
+							<a href="#" class="privacy ">Privacy & Security Policy</a>
+						</div>					
 						<!-- customer has shipping address-->
-						<div class="address_list">
+						<div class="address_list" >
 							<div class="contentd clearfix">
 								<input type="radio" name="biling_address_id"  checked="true" id="address_1" />
 								<label class="neirong J_div" data-id="100" for="address_1">
@@ -302,7 +308,6 @@
 						<textarea name="message" cols="50" rows="6" class="required-entry" placeholder="Enter here..." ></textarea>
 					</div>
 				</div>
-
 				<div class="cart_right">
 					<div class="fixbox">
 						<div class="order_summary">
@@ -320,26 +325,31 @@
 					</div>
 				</div>
 			</form>
-
 			<div class="pop-dimmer J_pop-dimmer">
 				<div class="popup J_popup">
 					<div class="shipping-address-form pop-inner J_inner">
 						<form class="clearfix " action="data-place-adress.json" method="POST" id="new-form" >
 							<h2>ADD NEW ADDRESS</h2>
-							<div class="Firstname clearfix">
-								<div class="Firstname_left">
-									 <label for="Firstname">First name<span class="required"></span></label><input type="text" name="firstname" id="Firstname" required/>						
-									<label for="Phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="Phonenumber" class="required" />
+							<div class="name clearfix">
+								<div class="fl">							
+									<label for="firstname">First name<span class="required"></span></label>
+									<input type="text" name="firstname" id="firstname" class="required" title="2 characters at least for your first name." minlength="2">	
+								</div>	
+								<div class="fr">
+									<label for="lastname">Last name<span class="required"></span></label>
+									<input type="text" name="lastname" id="lastname" class="required" minlength="2" title="2 characters at least for your last name.">	
+								</div>							
+								<div class="fl">									
+									<label for="phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="phonenumber" class="required">
 								</div>
-								<div class="Firstname_right">
-									<label for="Lastname"></span>Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" required/>
-									<label for="E-mail"></span>E-mail address<span class="required"></span></label><input type="text" name="email" id="E-mail" required/>					
-								</div>
+								<div class="fr"> 
+									<label for="email">E-mail address<span class="required "></span></label><input type="text" name="email" id="email" class="required email" title="Please enter a valid email address.">	
+								</div>				
 							</div>
-							<div class="AddressLine1 clearfix">
-								<label for="Line1"></span>Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" required/>						
+							<div class="addressline1 clearfix">
+								<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required" minlength="5" title="Your Address line must contain at least 5 characters.">		
 							</div>
-							<div class="AddressLine2">
+							<div class="addressline2">
 								<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 							</div>
 							<div class="selectd ">
@@ -380,7 +390,7 @@
 							<a href="#" class="privacy privacy_address">Privacy & Security Policy</a>
 						</form>
 					</div>
-					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
+					<a class="iconfont icon-guanbi close J_close" href="#" title="close"></a>
 				</div>
 			</div>
 		</div>

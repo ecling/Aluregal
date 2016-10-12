@@ -1,23 +1,27 @@
 <form class="clearfix " action="data-addressSave.json" method="POST" id="commentForm2" data-url="data-addressSave.json">
 	<h2>ADD NEW ADDRESS</h2>
-	<div class="Firstname clearfix">
-		<div class="Firstname_left">
-			<label for="Firstname">First name<span class="required"></span></label>
-			<input type="text" name="firstname" id="Firstname" class="required" value="adc" />		
-			<label for="Phonenumber">Phone number<span class="required"></span></label>
-			<input type="text" name="number" id="Phonenumber" class="required" value="150000" />
-		</div>
-		<div class="Firstname_right">
-			<label for="Lastname"></span>Last name<span class="required"></span></label><input type="text" name="lastname" id="Lastname" class="required" value="test" />
-			<label for="E-mail"></span>E-mail address<span class="required"></span></label>
-			<input type="text" name="email" id="E-mail" class="required" value="test@gmail.com" />	
-		</div>
+	<div class="name clearfix">
+		<div class="fl">							
+			<label for="firstname">First name<span class="required"></span></label>
+			<input type="text" name="firstname" id="firstname" class="required" title="2 characters at least for your first name." minlength="2">	
+		</div>	
+		<div class="fr">
+			<label for="lastname">Last name<span class="required"></span></label>
+			<input type="text" name="lastname" id="lastname" class="required" minlength="2" title="2 characters at least for your last name.">	
+		</div>							
 	</div>
-	<div class="AddressLine1 clearfix">
-		<label for="Line1"></span>Address Line1<span class="required"></span></label>
-		<input type="text" name="" id="Line1" class="required" value="longhua minzhi 2536" />						
+	<div class="name clearfix">
+		<div class="fl">									
+			<label for="phonenumber">Phone number<span class="required"></span></label><input type="text" name="number" id="phonenumber" class="required">
+		</div>
+		<div class="fr"> 
+			<label for="email">E-mail address<span class="required "></span></label><input type="text" name="email" id="email" class="required email" title="Please enter a valid email address.">	
+		</div>				
 	</div>
-	<div class="AddressLine2">
+	<div class="addressline1 clearfix">
+		<label for="Line1">Address Line1<span class="required"></span></label><input type="text" name="" id="Line1" class="required" minlength="5" title="Your Address line must contain at least 5 characters.">		
+	</div>
+	<div class="addressline2">
 		<label for="Line2">Address Line2:</label><input type="text" name="" id="Line2" />	
 	</div>
 	<div class="selectd ">

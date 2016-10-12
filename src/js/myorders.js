@@ -7,7 +7,6 @@ jQuery(document).ready(function($) {
 			var J_img = $(this).siblings('.products_show').find('.J_img img');
 			event.preventDefault();
 			index++;
-			console.log(index);
 			if (index > J_img.length-1) {
 				index = 0;
 			}
@@ -17,7 +16,6 @@ jQuery(document).ready(function($) {
 			var J_img = $(this).siblings('.products_show').find('.J_img img');
 			event.preventDefault();
 			index--;
-			console.log(index);
 			if (index < 0 ) {
 				index = J_img.length-1;
 			}
