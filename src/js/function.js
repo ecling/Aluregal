@@ -212,6 +212,7 @@
                     hideDown();
                 }
             });
+            /*
             $(window).resize(function(event) {
                 if(options.isPopUp) {
                     clearTimeout(resizeHandler);
@@ -220,6 +221,7 @@
                     }, 500);
                 }
             });
+			*/
         };
         var showUp = function(){
             options.dimmer.fadeIn('fast', function() {
@@ -424,7 +426,11 @@
 			//var left = ul.css("left");
 			curPage = curPage+1;
 			if(curPage==pageNum){
-				var starNum = (curPage-1)*num-(num-lists.length%num);
+				if(lists.length%num==0){
+					var starNum = (curPage-1)*num;
+				}else{
+					var starNum = (curPage-1)*num-(num-lists.length%num);
+				}
 				left = starNum*list_width;
 			}else if(curPage>pageNum){
 				left = 0;
@@ -446,7 +452,11 @@
 			if(curPage==1){
 				left = 0;
 			}else if(curPage==0){
-				var starNum = (pageNum-1)*num-(num-lists.length%num);
+				if(lists.length%num==0){
+					var starNum = (pageNum-1)*num;
+				}else{
+					var starNum = (pageNum-1)*num-(num-lists.length%num);
+				}
 				left = starNum*list_width;
 				curPage = pageNum;			
 			}else{

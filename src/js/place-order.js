@@ -3,7 +3,7 @@ $(function(){
 (function(){
 	var shippingMethodLoad = $('.shippingOptions').children('div').dimmer(),
 		orderSummaryLoad = $('.order_summary').dimmer(),
-		popup = $('.J_pop-dimmer').popUp({width:'800px'}),
+		popup = $('.J_pop-dimmer').popUp({width:'800px',height: '683px'}),
 		dimmer = $('.popup').dimmer(),
 		index = -1;
 	
@@ -12,7 +12,7 @@ $(function(){
 	$('.J_country').selectUnio('.J_state-select','.J_state-input');
 
 	//selected shipping address
-	$('#firecheckout-form').delegate("input[name='biling_address_id']",'change',function(){
+	$('#firecheckout-form').delegate("input[name='billing_address_id']",'change',function(){
 		orderSummaryLoad.showUp();
 		updateOrder();
 		$('.edit').hide();
@@ -22,7 +22,7 @@ $(function(){
 	//show address form
 	$('.J_newaddress').on('click',function(){
 		showForm(this);
-		
+		return false;
 	});
 
 	//edit 
@@ -59,26 +59,26 @@ $(function(){
 	var showForm = function(element){
 		var id = $(element).parents('.J_div').attr('data-id'),
 			url = $(element).attr('href');
-		if(id){			
-			dimmer.showUp();
-			popUp.showUp();
+		if(id){
 			index = $(element).parents('.contentd').index();
-			$.ajax({
-				type: "GET",
-				url: url,
-				dataType: "html",
-				success: function(data){
-					$('.J_inner').html(data);
-					dimmer.hideDown();
-				},
-				error: function(){
-
-				}
-			});
 		}else{
-			index = -1 ;
-			popUp.showUp();
-		}
+			index = -1;
+		}			
+		dimmer.showUp();
+		popup.showUp();
+		$.ajax({
+			type: "GET",
+			url: url,
+			dataType: "html",
+			success: function(data){
+				$('.J_inner').html(data);
+				dimmer.hideDown();
+			},
+			error: function(){
+
+			}
+		});
+		
 	};
 
 	var saveAdress = function(element){
