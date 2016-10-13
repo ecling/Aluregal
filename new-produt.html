@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>New Product</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<head>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1476253097_6043115.css">
+		<link rel="stylesheet" type="text/css" href="src/css/list.css" />
+		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
+		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/pro-item.js"></script>
+		<script type="text/javascript" src="src/js/list.js"></script>
+		<script type="text/javascript" src="src/js/about.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
+		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
+		<!--[if lt IE 9]> 
+		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
+		<![endif]-->
+	</head>
+	<body class="cms-index-index">
+		<header>
+			<div class="tool w1200 clearfix">
+				<div class="logo fl">
+					<a href="" title=""><img src="src/images/logo.png" alt="logo"></a>
+				</div>
+				<div class="my-orders fr">
+					<div class="my-account">
+						<ul>
+							<li>
+								<span class="iconfont icon-sign"></span>
+								<a href="" title="">Sign in or Register</a>
+							</li>
+							<li>
+								<span class="iconfont icon-account"></span>
+								<a href="" title="">My Account</a>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="signin pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a class="in" href="#" title="">SIGN IN</a>
+									<span class="or">or</span>
+									<a class="iconfont icon-google"   href="#"></a>
+									<a class="iconfont icon-facebook" href="#"></a>
+									<span class="costomer">new costomer</span>
+									<p class="myorders">My orders</p>
+									<p class="mycoupans">My Coupans <span>10</span></p>
+									<p class="mypoints">My Points <span>110</span></p>
+									<span class="line">.................................</span>
+								</div>
+								<div class="sign pop  " style="display: none;">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a href="" title="">My orders</a>
+									<a href="" title="">My Coupans <span>10</span></a>
+									<a href="" title="">My Points <span>110</span></a>
+									<a href="" title="">Logout</a>
+								</div>
+							</li>							
+							<li>
+								<a href="" title="">Help Center</a>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="help pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<div class="help-tel clearfix">
+										<span class="iconfont icon-tel"> </span>
+										<div class="sales fr">
+											<h2>Pre-sales</h2>
+											<p>If you have any questions before making purchase, chat with our customer help center to get more information.</p>
+											<a href="#" title="">Ask For Help Online</a>
+										</div>
+									</div>
+									<div class="help-sale clearfix">
+										<span class="iconfont icon-aftersale"> </span>
+										<div class="sales fr">
+											<h2>After Sales</h2>
+											<p>If you have any questions after making purchase, apply your request and get help from our customer help center for your purchase.</p>
+											<a href="#" title="">Submit The Request</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="currency">
+								<a href="" title=""><strong>Currency:</strong></a>
+								<span class="title">$USD</span>
+								<span class="iconfont icon-tripple-down"></span>
+								<div class="usd pop">
+									<em class="emtop"></em><em class="embottom"></em>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+									<a href="#" title="">asdadada</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="search clearfix">
+						<div class="my-bag fr">
+							<span class="iconfont icon-bag"></span>
+							MY BAG(<span class="pcs">0</span>)
+							<div class="baglist pop">
+								<em class="emtop"></em><em class="embottom"></em>
+								<div class="list clearfix">
+									<a href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+								<div class="list clearfix">
+									<a href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a class="biaoti" href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+								<div class="list clearfix">
+									<a  href="" title="">
+										<img src="src/images/product-02.jpg" alt="">
+									</a>
+									<a  class="biaoti"  href="#">aasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+									<div class="fl">
+										<span class="price">$ 420</span> x <span class="qty">1</span>
+									</div>									
+								</div>
+								<div class="checkout">
+									<button class="button" type="submit">View Bag & Checkout</button>
+								</div>
+							</div>
+						</div>
+						<span class="iconfont icon-search big fr"></span>
+						<div class="search-input fr">
+							<input id="j_search" class="input-text" type="search" placeholder="Search here ..." maxlength="128" value="" name="q">
+							<button title="Search"><i class="iconfont icon-search"></i></button>
+							<ul class="search-select">
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+								<li>sdaaaaaaaaaaaa</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="top-nav clearfix">
+				<ul>
+					<li>
+						<a class="h4" href="http://www.alluregal.com/dresses-4.html">Dresses</a>
+						<div class="nav-bar nav-dresses clearfix">
+							<div class="nav-dl fl">								
+								<dl>
+									<dt><a href="http://www.alluregal.com/maxi-dresses-5.html"><span >Maxi Dresses</span></a>
+									</dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/bodycon-dress-6.html"><span >Bodycon Dress</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sexy-dresses-7.html"><span >Sexy Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/club-dresses-8.html"><span >Club Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/little-black-dresses-9.html"><span >Little Black Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/vintage-dresses-10.html"><span >Vintage Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/short-dresses-11.html"><span >Short Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/two-piece-dresses-12.html"><span >Two Piece Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/chiffon-dresses-13.html"><span >Chiffon Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/summer-dresses-14.html"><span >Summer Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/boho-dresses-15.html"><span >Boho Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/midi-dress-16.html"><span >Midi Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/long-sleeve-dresses-17.html"><span >Long Sleeve Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/plus-size-dresses-18.html"><span >Plus Size Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/floral-dresses-19.html"><span >Floral Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/off-the-shoulder-dress-20.html"><span >Off The Shoulder Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/casual-dresses-21.html"><span >Casual Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/tshirt-dresses-22.html"><span >Tshirt Dresses</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/party-dresses-91.html"><span >Party Dresses</span></a></dt>
+								</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="h23" href="http://www.alluregal.com/tops-23.html">Tops</a>
+						<div class="nav-bar tops clearfix ">
+							<div class="nav-dl top fl">													
+								<dl>
+									<dt><a href="http://www.alluregal.com/t-shirts-24.html"><span >T-Shirts</span></a></dt>
+											<dd><a href="http://www.alluregal.com/long-sleeve-t-shirts-25.html"><span >Long Sleeve T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/vintage-t-shirts-26.html"><span >Vintage T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/black-t-shirts-27.html"><span >Black T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/sleeveless-t-shirts-28.html"><span >Sleeveless T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/plain-t-shirts-29.html"><span >Plain T-Shirts</span></a></dd>
+											<dd><a href="http://www.alluregal.com/round-neck-t-shirt-30.html"><span >Round Neck T-Shirt</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/swimwear-31.html"><span >Swimwear</span></a></dt>
+											<dd><a href="http://www.alluregal.com/bikinis-32.html"><span >Bikinis</span></a></dd>
+											<dd><a href="http://www.alluregal.com/one-pieces-33.html"><span >One-Pieces</span></a></dd>
+											<dd><a href="http://www.alluregal.com/tankinis-34.html"><span >Tankinis</span></a></dd>
+											<dd><a href="http://www.alluregal.com/cover-ups-35.html"><span >Cover Ups</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/blouses-36.html"><span >Blouses</span></a></dt>
+											<dd><a href="http://www.alluregal.com/casual-blouse-37.html"><span >Casual Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/white-blouse-38.html"><span >White Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/floral-blouse-39.html"><span >Floral Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/chiffon-blouse-40.html"><span >Chiffon Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/lace-blouse-94.html"><span >Lace Blouse</span></a></dd>
+											<dd><a href="http://www.alluregal.com/sleeveless-blouse-41.html"><span >Sleeveless Blouse</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sweatshirt-42.html"><span >Sweatshirt</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/sweater-43.html"><span >Sweater</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/tank-tops-44.html"><span >Tank Tops</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/kimono-45.html"><span >Kimono</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/jacket-46.html"><span >Jacket</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/bodysuit-47.html"><span >Bodysuit</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/outerwear-48.html"><span >Outerwear</span></a></dt>
+									<dd><a href="http://www.alluregal.com/casual-outerwear-49.html"><span >Casual Outerwear</span></a></dd>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/two-piece-outfits-50.html"><span >Two Piece Outfits</span></a></dt>
+								</dl>
+								<dl>
+									<dt><a href="http://www.alluregal.com/lingerie-sleepwear-51.html"><span >Lingerie & Sleepwear</span></a></dt>
+									<dd><a href="http://www.alluregal.com/bras-52.html"><span >Bras</span></a></dd>
+									<dd><a href="http://www.alluregal.com/panties-53.html"><span >Panties</span></a></dd>
+									<dd><a href="http://www.alluregal.com/sleepwear-54.html"><span >Sleepwear</span></a></dd>
+									<dd><a href="http://www.alluregal.com/teddies-55.html"><span >Teddies</span></a></dd>
+								</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="h56" href="http://www.alluregal.com/bottoms-56.html">Bottoms</a>
+						<div class="nav-bar Bottoms">
+							<div class="nav-dl fl">
+								<dl>
+								<dt><a href="http://www.alluregal.com/skirts-57.html"><span >Skirts</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/pants-58.html"><span >Pants</span></a></dt>
+											<dd><a href="http://www.alluregal.com/casual-pants-92.html"><span >Casual Pants</span></a></dd>
+											<dd><a href="http://www.alluregal.com/jeans-93.html"><span >Jeans</span></a></dd>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/jumpsuits-59.html"><span >Jumpsuits</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/leggings-60.html"><span >Leggings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/shorts-61.html"><span >Short Pants</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="h62" href="http://www.alluregal.com/jewelry-62.html">Jewelry</a>
+						<div class="nav-bar Jewelry clearfix">
+							<div class="nav-dl fl">							
+								<dl>
+								<dt><a href="http://www.alluregal.com/necklaces-63.html"><span >Necklaces</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/earrings-64.html"><span >Earrings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/rings-65.html"><span >Rings</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/body-jewelry-66.html"><span >Body Jewelry</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/bracelets-67.html"><span >Bracelets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/brooches-68.html"><span >Brooches</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/hair-jewelry-69.html"><span >Hair Jewelry</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/anklets-70.html"><span >Anklets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sweater-chains-71.html"><span >Sweater Chains</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/watches-72.html"><span >Watches</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li >
+						<a class="h73" href="http://www.alluregal.com/shoes-73.html">Shoes</a>
+						<div class="nav-bar Shoes clearfix">
+							<div class="nav-dl fl">
+								<dl>
+								<dt><a href="http://www.alluregal.com/boots-74.html"><span >Boots</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sneakers-75.html"><span >Sneakers</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/flats-76.html"><span >Flats</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/sandals-77.html"><span >Sandals</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/heels-wedges-78.html"><span >Heels + Wedges</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="h79" href="http://www.alluregal.com/bags-79.html">Bags</a>
+						<div class="nav-bar Bags clearfix">
+							<div class="nav-dl fl">
+								
+							
+								<dl>
+								<dt><a href="http://www.alluregal.com/wallets-80.html"><span >Wallets</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/tote-bags-81.html"><span >Tote Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/crossbody-bags-82.html"><span >Crossbody Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/clutches-bags-83.html"><span >Clutches Bags</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/backpacks-bags-84.html"><span >Backpacks Bags</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="h85" href="http://www.alluregal.com/accessories-85.html">Accessories</a>
+						<div class="nav-bar Accessories clearfix">
+							<div class="nav-dl fl">								
+								<dl>
+								<dt><a href="http://www.alluregal.com/sunglasses-86.html"><span >Sunglasses</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/hats-87.html"><span >Hats</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/scarves-88.html"><span >Scarves</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/belts-89.html"><span >Belts</span></a></dt>
+										</dl>
+								<dl>
+								<dt><a href="http://www.alluregal.com/socks-tights-90.html"><span >Socks&Tights</span></a></dt>
+										</dl>
+							</div>
+							<div class="nav-img fr">
+								<a href="#" title=""><img src="src/images/x.jpg" alt=""></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div class="content w1200 clearfix">
+			<div class="home">
+				<a href="#" title="">Home</a> / <a href="#" title="">Women</a> / <a href="#" title="">Tops</a> /
+				<div class="tips">
+					Type:Slip
+					<span class="iconfont icon-x"></span>
+				</div>
+			</div>			
+			<div class="list-head clearfix">
+				<div class="shop-by fr">
+					<span class="moren">Recommend <i class="iconfont icon-tripple-down"></i>
+						<ul class="showshop">
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+						</ul>
+					</span>									
+				</div>
+				<span class="fr">SHOP BY :</span>
+			</div>
+			<div class="warp clearfix">
+				<div class="col2-left fl">
+					<div class="J_aboutus" >
+					<dl>
+						<dt class="active"><i class="iconfont icon-xiajiantou"></i><a href="#" title="">Information</a></dt>
+						<div>
+							<dd><a href="#" title="">About Us</a>
+								<span><a href="#" title="">Privacy Policy</a></span>
+								<span><a href="#" title="">Privacy Policy</a></span>
+								<span><a href="#" title="">Privacy Policy</a></span>
+							</dd>
+							<dd><a href="#" title="">Privacy Policy</a></dd>
+							<dd><a href="#" title="">Site Map</a></dd>
+							<dd><a href="#" title="">Advanced Search</a></dd>
+							<dd><a href="#" title="">Orders and Returns</a></dd>
+							<dd><a href="#" title="">Support Center</a></dd>
+							<dd><a href="#" title="">Legal Window</a></dd>
+							<dd><a href="#" title="">Contact Us</a></dd>
+						</div>				
+					</dl>
+					<dl>
+						<dt><i class="iconfont icon-xiajiantou"></i><a href="#" title="">Why Buy From Us</a></dt>
+						<div>
+							<dd><a href="#" title="">About Us</a></dd>
+							<dd><a href="#" title="">Privacy Policy</a></dd>
+							<dd><a href="#" title="">Site Map</a></dd>
+							<dd><a href="#" title="">Advanced Search</a></dd>
+							<dd><a href="#" title="">Orders and Returns</a></dd>
+							<dd><a href="#" title="">Support Center</a></dd>
+							<dd><a href="#" title="">Legal Window</a></dd>
+							<dd><a href="#" title="">Contact Us</a></dd>
+						</div>
+					</dl>
+					<dl>
+						<dt><i class="iconfont icon-xiajiantou"></i><a href="#" title="">My Account</a></dt>
+						<div>
+							<dd><a href="#" title="">About Us</a></dd>
+							<dd><a href="#" title="">Privacy Policy</a></dd>
+							<dd><a href="#" title="">Site Map</a></dd>
+							<dd><a href="#" title="">Advanced Search</a></dd>
+							<dd><a href="#" title="">Orders and Returns</a></dd>
+							<dd><a href="#" title="">Support Center</a></dd>
+							<dd><a href="#" title="">Legal Window</a></dd>
+							<dd><a href="#" title="">Contact Us</a></dd>
+						</div>
+					</dl>
+					</div>
+				</div>	
+				<div class="col2-main fl">
+					<ul class="list-center pro-list" data-url="data-quickview.html">
+						<li  data-id="0">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt="" width="273px" height="273px"></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li data-id="100">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="200">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first"   data-id="300">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li data-id="400">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="500">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin" data-url="data-wish.json?id=10"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first" data-id="600">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li  data-id="700">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="0">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt="" width="273px" height="273px"></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first"  data-id="100">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin" data-url="xxxx.json?id=10" ></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li  data-id="200">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="300">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pager">
+			    <ul>
+			    	<li><a href="#" class="iconfont icon-prev"></a></li>
+			        <li class="current">1</li>
+    			    <li><a href="#">2</a></li>
+    			    <li><a href="#">3</a></li>
+    			    <li><a href="#">4</a></li>
+    			    <li><a href="#">5</a></li>
+    			    <li><a href="#">6</a></li>
+    			    <li><a href="#">7</a></li>
+    			    <li><a href="#">8</a></li>
+    			    <li><a href="#">9</a></li>
+    			    <li class="more"><a href="#">...</a></li>
+    			    <li><a href="#">200</a></li>
+    			    <li class="mgr"><a href="#" class="iconfont icon-next"></a></li>
+			    </ul>
+			</div>				
+			<div class="pop-dimmer J_pop-dimmer">
+				<div class="popup J_popup  listpopup">
+					<div class="product-cont clearfix pop-inner J_inner">
+									
+					</div>
+					<a class="iconfont icon-j-prev J_prev" href="#" title=""></a>
+					<a class="iconfont icon-j-next J_next" href="#" title=""></a>	
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
+				</div>
+			</div>
+		</div>	
+		<footer class="w1200">
+			<div class="content clearfix">
+				<div class="cms_list fl">
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="" rel="nofollow">Our Info</a></dt>
+						<dd><a href="" rel="nofollow">About Us</a></dd>
+						<dd><a href="" rel="nofollow">Contact Us</a></dd>
+						<dd><a href="" rel="nofollow">Privacy Policy</a></dd>
+					</dl>
+				</div>
+				<div class="newsletter fr">
+					<h2>FIND US ON <strong>:</strong></h2>
+					<ul class="social clearfix">
+						<li><a href=""><i class="iconfont icon-facebook"></i></a></li>
+						<li><a href=""><i class="iconfont icon-twitter"></i></a></li>
+						<li><a href=""><i class="iconfont icon-play"></i></a></li>
+						<li><a href=""><i class="iconfont icon-google"></i></a></li>
+						<li><a href=""><i class="iconfont icon-vk"></i></a></li>
+						<li><a href=""><i class="iconfont icon-blogger"></i></a></li>
+						<li><a href=""><i class="iconfont icon-vk"></i></a></li>
+					</ul>
+					<h2>NEWSLETTER</h2>
+					<form id="newsletter">
+						<div>
+							<input type="email" name="email" class="" id="" maxlength="" placeholder="Enter Your E-mail Address" required />
+							<button>JOIN</button>
+						</div>
+					</form>
+				</div>
+				<div class="qIndex clearfix">
+					Quick Index:    
+					<ul>
+		                <li><a href="/tags-product-A.html">A</a></li>
+		                <li><a href="/tags-product-B.html">B</a></li>
+		                <li><a href="/tags-product-C.html">C</a></li>
+		                <li><a href="/tags-product-D.html">D</a></li>
+		                <li><a href="/tags-product-E.html">E</a></li>
+		                <li><a href="/tags-product-F.html">F</a></li>
+		                <li><a href="/tags-product-G.html">G</a></li>
+		                <li><a href="/tags-product-H.html">H</a></li>
+		                <li><a href="/tags-product-I.html">I</a></li>
+		                <li><a href="/tags-product-J.html">J</a></li>
+		                <li><a href="/tags-product-K.html">K</a></li>
+		                <li><a href="/tags-product-L.html">L</a></li>
+		                <li><a href="/tags-product-M.html">M</a></li>
+		                <li><a href="/tags-product-N.html">N</a></li>
+		                <li><a href="/tags-product-O.html">O</a></li>
+		                <li><a href="/tags-product-P.html">P</a></li>
+		                <li><a href="/tags-product-Q.html">Q</a></li>
+		                <li><a href="/tags-product-R.html">R</a></li>
+		                <li><a href="/tags-product-S.html">S</a></li>
+		                <li><a href="/tags-product-T.html">T</a></li>
+		                <li><a href="/tags-product-U.html">U</a></li>
+		                <li><a href="/tags-product-V.html">V</a></li>
+		                <li><a href="/tags-product-W.html">W</a></li>
+		                <li><a href="/tags-product-X.html">X</a></li>
+		                <li><a href="/tags-product-Y.html">Y</a></li>
+		                <li><a href="/tags-product-Z.html">Z</a></li>
+		                <li><a href="/tags-product-0-9.html">0-9</a></li>
+		                <li><a href="/tags-product-0-9.html">Sitemap</a></li>
+		                <li><a href="/tags-product-0-9.html">Mobile Site</a></li>
+	    			</ul>
+				</div>
+				<div class="friendlyImg">
+					<img src="src/images/paypal.jpg" alt="">
+				</div>
+				<div class="copyright">© 2015 highqualitybuy.com All Rights Reserved</div>
+			</div>
+		</footer>
+	</body>
+</html>

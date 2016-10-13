@@ -116,5 +116,5 @@ jQuery(document).ready(function($) {
 	 	},
 	});
 	//address 
-	$("#address-form").validate({errorElement: "p",});
+	$("#address-edit-form").validate({errorElement: "p",});
 });

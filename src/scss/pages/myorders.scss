@@ -88,14 +88,14 @@
 			}
 		}
 		dt{
-			font-size: 16px;
 			margin-bottom: 10px;
+			font-size: 16px;
 			&.active{
-				color:red;
 				a{
 					color:red;
 				}
 				i{
+					color:red;
 					transform:rotate(0deg);
 				}
 			}
@@ -104,6 +104,9 @@
 					color:red;
 				}
 			}
+			a{
+				color:#101010;
+			}
 			i{
 				display: inline-block;
 				transform:rotate(-90deg);
@@ -111,8 +114,13 @@
 		}
 		dd{
 			line-height: 30px;
-			font-size: 13px;
-			padding-left:30px;
+			font-size: 14px;
+			padding-left:17px;
+			color:#333;
+			span{
+				display: block;
+				padding-left: 13px;
+			}
 		}
 	}
 }
@@ -1227,6 +1235,19 @@
 .aboutus{
 	>div{
 		margin-bottom: 40px;
+		min-height: 50px;
+		img{
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		em{
+			color:red;
+			font-size: 18px;
+		}
+		a{
+			margin-left: 3px;
+			border-bottom: 1px solid #101010;
+		}
 	}
 	font-family: "Cambria";
 	h1{
