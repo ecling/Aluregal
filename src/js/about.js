@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 			option.eq(0).find('div,dl').show();
 			element.on('click',  function(event) {
 				event.preventDefault();
-				$(this).addClass('active').next().slideToggle()
+				$(this).toggleClass('active').next().slideToggle()
 				.parent().siblings().find(element).removeClass('active')
 				.next().slideUp();
 			});
