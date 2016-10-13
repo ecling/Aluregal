@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Step</title>
+	<title>New Product</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<head>
-		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1474513310_1476254.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1476253097_6043115.css">
+		<link rel="stylesheet" type="text/css" href="src/css/list.css" />
 		<link rel="stylesheet" type="text/css" href="src/css/myorders.css" />
 		<script type="text/javascript" src="src/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="src/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="src/js/function.js"></script>
+		<script type="text/javascript" src="src/js/pro-item.js"></script>
+		<script type="text/javascript" src="src/js/list.js"></script>
 		<script type="text/javascript" src="src/js/about.js"></script>
+		<script type="text/javascript" src="src/js/common.js"></script>
 		<script type="text/javascript" src="src/js/modernizr.custom.26361.js"></script>
 		<!--[if lt IE 9]> 
-		<link rel="stylesheet" type="text/css" href="src/css/ie9.css" />
+		<link rel="stylesheet" type="text/css" href="dist/css/ie9.css" />
 		<![endif]-->
 	</head>
-	<body>
+	<body class="cms-index-index">
 		<header>
 			<div class="tool w1200 clearfix">
 				<div class="logo fl">
@@ -214,7 +220,7 @@
 					</li>
 					<li>
 						<a class="h23" href="http://www.alluregal.com/tops-23.html">Tops</a>
-						<div class="nav-bar tops clearfix "  style="z-index: 1000;">
+						<div class="nav-bar tops clearfix ">
 							<div class="nav-dl top fl">													
 								<dl>
 									<dt><a href="http://www.alluregal.com/t-shirts-24.html"><span >T-Shirts</span></a></dt>
@@ -427,13 +433,39 @@
 				</ul>
 			</div>
 		</header>
-		<div class="wrap clearfix w1200">
-			<div class="col2-left fl">
-				<div class="J_aboutus" >
+		<div class="content w1200 clearfix">
+			<div class="home">
+				<a href="#" title="">Home</a> / <a href="#" title="">Women</a> / <a href="#" title="">Tops</a> /
+				<div class="tips">
+					Type:Slip
+					<span class="iconfont icon-x"></span>
+				</div>
+			</div>			
+			<div class="list-head clearfix">
+				<div class="shop-by fr">
+					<span class="moren">Recommend <i class="iconfont icon-tripple-down"></i>
+						<ul class="showshop">
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+							<li><a href="#" title="">adadssda</a></li>
+						</ul>
+					</span>									
+				</div>
+				<span class="fr">SHOP BY :</span>
+			</div>
+			<div class="warp clearfix">
+				<div class="col2-left fl">
+					<div class="J_aboutus" >
 					<dl>
-						<dt class="active"><i class="iconfont icon-tripple-down"></i><a href="#" title="">Information</a></dt>
+						<dt class="active"><i class="iconfont icon-xiajiantou"></i><a href="#" title="">Information</a></dt>
 						<div>
-							<dd><a href="#" title="">About Us</a></dd>
+							<dd><a href="#" title="">About Us</a>
+								<span><a href="#" title="">Privacy Policy</a></span>
+								<span><a href="#" title="">Privacy Policy</a></span>
+								<span><a href="#" title="">Privacy Policy</a></span>
+							</dd>
 							<dd><a href="#" title="">Privacy Policy</a></dd>
 							<dd><a href="#" title="">Site Map</a></dd>
 							<dd><a href="#" title="">Advanced Search</a></dd>
@@ -444,60 +476,246 @@
 						</div>				
 					</dl>
 					<dl>
-						<dt><i class="iconfont icon-tripple-down"></i><a href="#" title="">Why Buy From Us</a></dt>
+						<dt><i class="iconfont icon-xiajiantou"></i><a href="#" title="">Why Buy From Us</a></dt>
 						<div>
-							
+							<dd><a href="#" title="">About Us</a></dd>
+							<dd><a href="#" title="">Privacy Policy</a></dd>
+							<dd><a href="#" title="">Site Map</a></dd>
+							<dd><a href="#" title="">Advanced Search</a></dd>
+							<dd><a href="#" title="">Orders and Returns</a></dd>
+							<dd><a href="#" title="">Support Center</a></dd>
+							<dd><a href="#" title="">Legal Window</a></dd>
+							<dd><a href="#" title="">Contact Us</a></dd>
 						</div>
 					</dl>
 					<dl>
-						<dt><i class="iconfont icon-tripple-down"></i><a href="#" title="">My Account</a></dt>
+						<dt><i class="iconfont icon-xiajiantou"></i><a href="#" title="">My Account</a></dt>
 						<div>
-							
+							<dd><a href="#" title="">About Us</a></dd>
+							<dd><a href="#" title="">Privacy Policy</a></dd>
+							<dd><a href="#" title="">Site Map</a></dd>
+							<dd><a href="#" title="">Advanced Search</a></dd>
+							<dd><a href="#" title="">Orders and Returns</a></dd>
+							<dd><a href="#" title="">Support Center</a></dd>
+							<dd><a href="#" title="">Legal Window</a></dd>
+							<dd><a href="#" title="">Contact Us</a></dd>
 						</div>
 					</dl>
+					</div>
+				</div>	
+				<div class="col2-main fl">
+					<ul class="list-center pro-list" data-url="data-quickview.html">
+						<li  data-id="0">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt="" width="273px" height="273px"></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li data-id="100">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="200">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first"   data-id="300">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li data-id="400">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="500">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin" data-url="data-wish.json?id=10"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first" data-id="600">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li  data-id="700">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="0">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt="" width="273px" height="273px"></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="first"  data-id="100">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin" data-url="xxxx.json?id=10" ></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li  data-id="200">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+						<li class="mgr" data-id="300">
+							<a href="#" title=""><img class="pro-img" data-src="src/images/xxx.jpg" alt=""></a>
+							<a class="biaoti" href="#" title="">asdasgdaaoskdasdasgdaaoskdasdasgdaaoskdasdasgdaaoskd
+							asdasgdaaoskdasdasgdaaoskd</a>
+							<div class="clearfix" >
+								<span class="price">$7.90</span>
+								<span class="orig">$7.90</span>					
+								<span class="iconfont icon-xinshixin"></span>
+								<span class="off fr">50% OFF</span>
+							</div>
+							<div class="quickview">
+								<i class="iconfont icon-shandian"></i>
+								QUICK VIEW
+							</div>
+						</li>
+					</ul>
 				</div>
-			</div>	
-			<div class="col2-main fl">
-				<h1 class="h1-center">ABOUT US</h1>	
-				<div class="aboutus J_aboutus">
-					<div>
-						<h1>Step-01</h1>
-						<div>
-							<img src="src/images/step-01.jpg" alt="">
-						</div>
-					</div>
-					<div>
-						<h1>Step-02</h1>
-						<div>
-							<img src="src/images/step-02.jpg" alt="">
-							<p><em>*</em>If available. View more info about “Coupon Code” and ”Bonus Point”<a href="#" alt="">here</a>.</p>
-						</div>
-					</div>
-					<div>
-						<h1>Step-03</h1>
-						<div>
-							<img src="src/images/step-03.jpg" alt="">
-						</div>
-					</div>
-					<div>
-						<h1>Step-04</h1>
-						<div>
-							<img src="src/images/step-04.jpg" alt="">
-						</div>
-					</div>
-					<div>
-						<h1>Step-05</h1>
-						<p>Finally, complete your payment information to complete your purchase.</p>
-					</div>
-					<div>
-						<h1>NOTES:</h1>
-						<p>
-						We’ll begin processing your order upon receipt of your payment and we’ll also send you an order email about order details.</p>
-					</div>
-				</div>
-						
 			</div>
-		</div>
+			<div class="pager">
+			    <ul>
+			    	<li><a href="#" class="iconfont icon-prev"></a></li>
+			        <li class="current">1</li>
+    			    <li><a href="#">2</a></li>
+    			    <li><a href="#">3</a></li>
+    			    <li><a href="#">4</a></li>
+    			    <li><a href="#">5</a></li>
+    			    <li><a href="#">6</a></li>
+    			    <li><a href="#">7</a></li>
+    			    <li><a href="#">8</a></li>
+    			    <li><a href="#">9</a></li>
+    			    <li class="more"><a href="#">...</a></li>
+    			    <li><a href="#">200</a></li>
+    			    <li class="mgr"><a href="#" class="iconfont icon-next"></a></li>
+			    </ul>
+			</div>				
+			<div class="pop-dimmer J_pop-dimmer">
+				<div class="popup J_popup  listpopup">
+					<div class="product-cont clearfix pop-inner J_inner">
+									
+					</div>
+					<a class="iconfont icon-j-prev J_prev" href="#" title=""></a>
+					<a class="iconfont icon-j-next J_next" href="#" title=""></a>	
+					<a class="iconfont icon-guanbi close J_close" href="#" title=""></a>
+				</div>
+			</div>
+		</div>	
 		<footer class="w1200">
 			<div class="content clearfix">
 				<div class="cms_list fl">
