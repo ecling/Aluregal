@@ -537,6 +537,29 @@
 /* All Orders css --end-- */
 
 /*Order Reviews css*/
+.col2-set{
+	overflow: hidden;
+	margin-top: 50px;
+	.col-1{
+		width: 45%;
+		float: left;
+	}	
+	.col-2{
+		width: 45%;
+		float: right;
+	}
+	.box{
+		.box-title{
+			border-bottom: 1px dashed #cfcfcf;
+			padding-bottom: 20px;
+			font-size: 14px;	
+		}
+		.box-content{
+			padding-top: 10px;
+		}
+	}
+}
+
 .order_reviews_head{
 	h2,h3{
 		display: inline-block;

@@ -153,6 +153,10 @@ header{
 			&.active{
 				display: block;
 			}
+			.empty{
+				text-align: center;
+				margin: 10px 0;
+			}
 			.srco{
 				width:300px;
 				max-height: 400px;

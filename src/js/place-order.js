@@ -23,7 +23,7 @@ $(function(){
 		return false;
 	});
 
-	//edit 
+	//edit address
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
@@ -47,12 +47,41 @@ $(function(){
 		updateOrder();
 	});
 
+	//checkbox Tracking Number
+	$('#firecheckout-form').delegate('input[name="tracking_number"]','change',function(){
+		trackingNnumber(this);
+	});
+
 	//place to order 
 	$('.J_place-order').on('click',function(e){
 		//e.preventDefault();
 		validatePlaceForm();
 		return false;
 	});
+
+	var trackingNnumber = function(element){
+		orderSummaryLoad.showUp();
+		if($(element).is(':checked')){
+			var is_checked = 1;
+		}else{
+			var is_checked = 0;
+		}
+		$.ajax({
+			type: "POST",
+			url: "/hqshippinginsurance/index/trackingnumber/",
+			data: {checked:is_checked},
+			dataType: "json",
+			success: function(data){
+				orderSummaryLoad.hideDown();
+				if(data.update_section){
+					$('.order_summary').html(data.update_section);
+				}
+			},
+			error: function(){
+
+			}
+		});
+	};
 
 	var showForm = function(element){
 		var id = $(element).parents('.J_div').attr('data-id'),
