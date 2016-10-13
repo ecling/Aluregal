@@ -1211,18 +1211,27 @@
 
 /*aboutus*/
 .aboutus{
-		img{
-			margin: 30px auto;
-			margin-bottom: 20px;
-		}
-		em{
-			color:red;
-			font-size: 18px;
-		}
-		a{
-			margin-left: 3px;
-			border-bottom: 1px solid #101010;
-		}
+	.couponcode{
+		font-size: 16px;
+		font-family: "Cambria";
+		width: 700px;
+		margin: 0 auto;
+	}
+	>div{
+		padding-bottom: 30px;
+	}
+	img{
+		margin: 30px auto;
+		margin-bottom: 20px;
+	}
+	em{
+		color:red;
+		font-size: 18px;
+	}
+	a{
+		margin-left: 3px;
+		border-bottom: 1px solid #101010;
+	}
 	h1{
 		background: #aaa;
 		border: 1px solid #aaa;
@@ -1260,5 +1269,22 @@
 		display: block;
 		font-size: 14px;
 		margin-top: 5px;
+	}
+}
+.found{
+	margin: 100px auto;
+	position: relative;
+	width: 630px;
+	height: 165px;
+	img{
+		margin: 0 auto;
+	}
+	a{
+		position: absolute;
+		bottom: 20px;
+		left: 285px;
+		border-bottom: 1px solid #dc6969;
+		color:#dc6969;
+		font-size: 14px;
 	}
 }

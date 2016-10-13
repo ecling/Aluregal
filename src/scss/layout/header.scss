@@ -265,8 +265,10 @@ header{
 	.top-nav{
 		margin-top: 13px;
 		ul{
-			margin-left: 330px;
+			margin: 0 auto;
 			position: relative;
+			text-align: center;
+			width: 820px;
 		}
 		li{	
 			float: left;
@@ -274,6 +276,9 @@ header{
 			margin-right: 60px;
 			font-family: "Cambria";
 			border-bottom: 3px solid transparent;
+			&.mgr{
+				margin-right: 0;
+			}
 			&:hover{
 				border-bottom: 3px solid red;
 				>a{
