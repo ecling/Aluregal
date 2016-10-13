@@ -90,7 +90,7 @@ $(function(){
 			index = $(element).parents('.contentd').index();
 		}else{
 			index = -1;
-		}			
+		}	
 		dimmer.showUp();
 		popup.showUp();
 		$.ajax({
@@ -116,17 +116,16 @@ $(function(){
 				dimmer.showUp();
 				$.ajax({
 					type: "POST",
-					url: form.attr('action'),
-					data: form.serialize(),
+					url: form.attr('data-url'),
+					data: form.serialize() + "&type=option",
 					dataType: "json",
 					success: function(data){
 						dimmer.hideDown();
-
 						if ( index == -1 ){
-							$('.address_list').find('.J_newaddress').before(data.html);
+							$('.address_list').find('.J_newaddress').before(data);
 						}else{
 							var li = $('.address_list').children("div").eq(index);
-							li.replaceWith(data.html);
+							li.replaceWith(data);
 						}
 						popup.hideDown();
 					},

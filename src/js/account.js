@@ -83,8 +83,8 @@ $(function(){
 				popUp.showUp();
 				index = $(element).parents('li').index();
 				if(!id){
-					id = -1;
-				}	
+					index = -1;
+				}
 				$.ajax({
 					type: "GET",
 					url: url,
@@ -109,15 +109,16 @@ $(function(){
 						$.ajax({
 							type: "POST",
 							url: form.attr('data-url'),
-							data: form.serialize(),
+							data: form.serialize() + "&type=list",
 							dataType: "json",
 							success: function(data){
 								loading.hideDown();
+								console.log(index);
 								if(index==-1){
-									$('.addressbook').find('.new_address').before(data.html);
+									$('.addressbook').find('.new_address').before(data);
 								}else{
 									var li = $('.addressbook').children('li').eq(index);
-									li.replaceWith(data.html);
+									li.replaceWith(data);
 								}
 								popup.hideDown();
 							},

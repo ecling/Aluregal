@@ -212,7 +212,6 @@
                     hideDown();
                 }
             });
-            /*
             $(window).resize(function(event) {
                 if(options.isPopUp) {
                     clearTimeout(resizeHandler);
@@ -221,7 +220,6 @@
                     }, 500);
                 }
             });
-			*/
         };
         var showUp = function(){
             options.dimmer.fadeIn('fast', function() {
