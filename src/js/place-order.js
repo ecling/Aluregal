@@ -23,7 +23,7 @@ $(function(){
 		return false;
 	});
 
-	//edit 
+	//edit address
 	$('.address_list').delegate('.J_edit','click',function(){
 		showForm(this);
 		return false;
@@ -47,12 +47,41 @@ $(function(){
 		updateOrder();
 	});
 
+	//checkbox Tracking Number
+	$('#firecheckout-form').delegate('input[name="tracking_number"]','change',function(){
+		trackingNnumber(this);
+	});
+
 	//place to order 
 	$('.J_place-order').on('click',function(e){
 		//e.preventDefault();
 		validatePlaceForm();
 		return false;
 	});
+
+	var trackingNnumber = function(element){
+		orderSummaryLoad.showUp();
+		if($(element).is(':checked')){
+			var is_checked = 1;
+		}else{
+			var is_checked = 0;
+		}
+		$.ajax({
+			type: "POST",
+			url: "/hqshippinginsurance/index/trackingnumber/",
+			data: {checked:is_checked},
+			dataType: "json",
+			success: function(data){
+				orderSummaryLoad.hideDown();
+				if(data.update_section){
+					$('.order_summary').html(data.update_section);
+				}
+			},
+			error: function(){
+
+			}
+		});
+	};
 
 	var showForm = function(element){
 		var id = $(element).parents('.J_div').attr('data-id'),
@@ -61,7 +90,7 @@ $(function(){
 			index = $(element).parents('.contentd').index();
 		}else{
 			index = -1;
-		}			
+		}	
 		dimmer.showUp();
 		popup.showUp();
 		$.ajax({
@@ -87,17 +116,16 @@ $(function(){
 				dimmer.showUp();
 				$.ajax({
 					type: "POST",
-					url: form.attr('action'),
-					data: form.serialize(),
+					url: form.attr('data-url'),
+					data: form.serialize() + "&type=option",
 					dataType: "json",
 					success: function(data){
 						dimmer.hideDown();
-
 						if ( index == -1 ){
-							$('.address_list').find('.J_newaddress').before(data.html);
+							$('.address_list').find('.J_newaddress').before(data);
 						}else{
 							var li = $('.address_list').children("div").eq(index);
-							li.replaceWith(data.html);
+							li.replaceWith(data);
 						}
 						popup.hideDown();
 					},
