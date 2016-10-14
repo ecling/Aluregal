@@ -23,6 +23,7 @@ $(function(){
 				success: function(data){
 					loading.hideDown();
 					miniCart.find('.pop').html(data.html);
+					miniCart.find('.pcs').text(data.qty);
 				},
 				error: function(){
 					miniCart.attr('data-loaded',0);
